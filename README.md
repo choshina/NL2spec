@@ -26,7 +26,6 @@ are frozen in this artifact.
 Requires MATLAB, JDK 17, Maven and Z3 4.8.12 (see [Setup](#setup)).
 
 ```sh
-git clone <repo-url> STL_repair && cd STL_repair
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt     # numpy, pandas, matplotlib, scipy, z3-solver==4.8.12.0
 mvn -q -DskipTests compile          # Java search and evaluator -> target/classes
