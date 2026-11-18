@@ -1,0 +1,536 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": true,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "responsibility",
+    "responsibility_enabled": true,
+    "self_coefficient_enabled": true
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": true,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "responsibility",
+      "responsibility_enabled": true,
+      "self_coefficient_enabled": true
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [],
+    "ceclass_class_limit": 10,
+    "ceclass_k": 1,
+    "ceclass_schedule": "refine",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "",
+    "derived_signal_definitions": {},
+    "discrete_signals": [],
+    "domain_config": {
+      "boolean_signals": [],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": false,
+          "max": 10.0,
+          "min": 0.0,
+          "source": "dist_dining_table",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 10.0,
+          "min": 0.0,
+          "source": "dist_dresser",
+          "static": false
+        }
+      ],
+      "time_end": 15.0,
+      "time_start": 0.0,
+      "time_step": 1.0
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_stdp_ce145",
+    "fairness_check": {
+      "allowed": {
+        "llm_ce": [
+          "repair_backend"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_stdp_ce145/_stage0/heldout/STDP__stl_034",
+    "initial_trace_ids": [],
+    "k_gen": 12,
+    "k_gen_init": 12,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "sgrl",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "dist_dining_table": [
+        0.0,
+        10.0
+      ],
+      "dist_dresser": [
+        0.0,
+        10.0
+      ]
+    },
+    "signals": [
+      "dist_dining_table",
+      "dist_dresser"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 15.0,
+    "time_start": 0.0,
+    "time_step": 1.0,
+    "total_query_budget": 64,
+    "type_priority": true
+  },
+  "config_hash": "2ea744b43ce4d52b8bfebbb1b9f223532ca0f99ddbb97892f664926d96579778",
+  "cost": {
+    "candidate_evaluations": 1,
+    "generated_traces": 21,
+    "oracle_queries": 19,
+    "rounds": 2,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.07144999999999999,
+      "matlab_csv_write_s": 0.287435,
+      "matlab_jobs": 21,
+      "matlab_launches": 1,
+      "matlab_startup_s": 23.35766210481989,
+      "matlab_wall_s": 55.111610849853605,
+      "python_csv_read_s": 0.00427768740337342,
+      "smt_encode_s": 32.531365,
+      "solves_performed": 21,
+      "solves_requested": 21,
+      "time_grid": {
+        "actual_points": 16,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 16,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 21,
+      "z3_sat": 21,
+      "z3_solve_s": 5.079759,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    },
+    "wall_time_s": 78.25659346499015
+  },
+  "experiment_tag": "restless_stdp_ce145",
+  "fairness_check": {
+    "allowed": {
+      "llm_ce": [
+        "repair_backend"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 3,
+      "ast_nodes": 4,
+      "atom_count": 2,
+      "signal_count": 2,
+      "temporal_count": 1,
+      "temporal_depth": 1
+    },
+    "fault_types": [
+      "replace_always_with_and"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "STDP__stl_034",
+    "n_nodes": 4,
+    "reachable_edit_distance": null,
+    "source": "STDP",
+    "split": "test"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [],
+  "logical_run_id": "STDP__STDP__stl_034__llm_ce__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": true,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "responsibility",
+        "responsibility_enabled": true,
+        "self_coefficient_enabled": true
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [],
+      "ceclass_class_limit": 10,
+      "ceclass_k": 1,
+      "ceclass_schedule": "refine",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "",
+      "derived_signal_definitions": {},
+      "discrete_signals": [],
+      "domain_config": {
+        "boolean_signals": [],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": false,
+            "max": 10.0,
+            "min": 0.0,
+            "source": "dist_dining_table",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 10.0,
+            "min": 0.0,
+            "source": "dist_dresser",
+            "static": false
+          }
+        ],
+        "time_end": 15.0,
+        "time_start": 0.0,
+        "time_step": 1.0
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_stdp_ce145",
+      "fairness_check": {
+        "allowed": {
+          "llm_ce": [
+            "repair_backend"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_stdp_ce145/_stage0/heldout/STDP__stl_034",
+      "initial_trace_ids": [],
+      "k_gen": 12,
+      "k_gen_init": 12,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "sgrl",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "dist_dining_table": [
+          0.0,
+          10.0
+        ],
+        "dist_dresser": [
+          0.0,
+          10.0
+        ]
+      },
+      "signals": [
+        "dist_dining_table",
+        "dist_dresser"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 15.0,
+      "time_start": 0.0,
+      "time_step": 1.0,
+      "total_query_budget": 64,
+      "type_priority": true
+    },
+    "edits": [
+      {
+        "edit": "replace_always_with_and",
+        "faulty_node": "n0",
+        "faulty_path": "root",
+        "faulty_subformula": "GLOBALLY I=[0,15][AND[dist_dining_table < 2.9,dist_dresser > 2.3]]",
+        "oracle_path": "root",
+        "oracle_subformula": "AND[EVENTUALLY I=[0,15][dist_dining_table < 2.9],GLOBALLY I=[0,15][dist_dresser > 2.3]]"
+      }
+    ],
+    "fault_nodes": [
+      "n0"
+    ],
+    "fault_types": [
+      "replace_always_with_and"
+    ],
+    "faulty_formula": "GLOBALLY I=[0,15][AND[dist_dining_table < 2.9,dist_dresser > 2.3]]",
+    "formula_row": 1,
+    "gold_formula": "AND[EVENTUALLY I=[0,15][dist_dining_table < 2.9],GLOBALLY I=[0,15][dist_dresser > 2.3]]",
+    "in_scope": false,
+    "instance_id": "STDP__stl_034",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "llm_ce",
+    "num_faults": 1,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "llm_ce",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 19,
+    "Q_requested": 21,
+    "Q_star": 5,
+    "atoms_preserved": 1.0,
+    "candidate_pool": [
+      "AND[EVENTUALLY I=[0,15][dist_dining_table < 2.9],GLOBALLY I=[0,15][dist_dresser > 2.3]]"
+    ],
+    "candidate_pool_equivalence": {
+      "AND[EVENTUALLY I=[0,15][dist_dining_table < 2.9],GLOBALLY I=[0,15][dist_dresser > 2.3]]": "equivalent"
+    },
+    "canonical_exact": true,
+    "edits_applied": 3,
+    "equivalence": {
+      "method": "canonical_exact",
+      "time_s": 0.0,
+      "verdict": "equivalent"
+    },
+    "exact": true,
+    "final_formula": "AND[EVENTUALLY I=[0,15][dist_dining_table < 2.9],GLOBALLY I=[0,15][dist_dresser > 2.3]]",
+    "first_success_round": 1,
+    "fitness_evals_star": 1,
+    "fitness_evals_total": 1,
+    "heldout_bool_agree": 1.0,
+    "heldout_sign_agree": 0.92,
+    "observed_trace_set": {
+      "boolean_agreement": 1.0,
+      "edits_skipped_by_type": 0,
+      "edits_trialled_total": 0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 2,
+        "q_to_first_ce": 5,
+        "queries": 5,
+        "round": 1,
+        "schedule": "refine"
+      },
+      "first_gate": null,
+      "gate_expansions": [],
+      "heldout_bool_agree": 1.0,
+      "heldout_count": 200,
+      "heldout_incomplete": false,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.92,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.0,
+      "robustness_sign_agreement": 1.0,
+      "trace_count": 32
+    },
+    "plausible": true,
+    "pool_contains_equivalent": true,
+    "q_censored": false,
+    "repaired_formula": "AND[EVENTUALLY I=[0,15][dist_dining_table < 2.9],GLOBALLY I=[0,15][dist_dresser > 2.3]]",
+    "search": {
+      "completed": 1,
+      "process_failures": 0,
+      "started": 1,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "horizon": null,
+      "method": "canonical_exact",
+      "result": "equivalent",
+      "time_s": 0.0,
+      "timeout": false
+    },
+    "status": "repaired",
+    "ted_to_initial": 3,
+    "ted_to_oracle": 0,
+    "time_s": {
+      "labelling": 3.9409449531231076,
+      "other": 2.80580444005318,
+      "search": 16.296804428100586,
+      "tracegen": 55.11119274212979
+    },
+    "train_accuracy": 1.0,
+    "training_consistent": true,
+    "wall_time_s": 78.25626722106244
+  },
+  "rounds": [
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 0,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "STDP__STDP__stl_034__llm_ce__seed0__2ea744b43ce4__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 1,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 1
+    },
+    {
+      "candidate_evaluations": 0,
+      "round": 2,
+      "search_completed": 0,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 0,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "repaired",
+  "trace_metrics": {
+    "avg_num_signals": 2.0,
+    "avg_trace_length": 16.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 0,
+    "num_generated": 21,
+    "num_oracle_queried": 19,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 19,
+    "time_disambiguation_s": 0.0,
+    "time_s": {
+      "labelling": 3.9409449531231076,
+      "other": 2.80580444005318,
+      "search": 16.296804428100586,
+      "tracegen": 55.11119274212979
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.07144999999999999,
+      "matlab_csv_write_s": 0.287435,
+      "matlab_jobs": 21,
+      "matlab_launches": 1,
+      "matlab_startup_s": 23.35766210481989,
+      "matlab_wall_s": 55.111610849853605,
+      "python_csv_read_s": 0.00427768740337342,
+      "smt_encode_s": 32.531365,
+      "solves_performed": 21,
+      "solves_requested": 21,
+      "time_grid": {
+        "actual_points": 16,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 16,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 21,
+      "z3_sat": 21,
+      "z3_solve_s": 5.079759,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    }
+  },
+  "versions": {
+    "dataset_hash": "",
+    "protocol_hash": ""
+  }
+}

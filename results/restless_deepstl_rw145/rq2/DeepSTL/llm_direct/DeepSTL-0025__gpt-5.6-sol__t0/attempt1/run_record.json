@@ -1,0 +1,69 @@
+{
+  "attempt": 1,
+  "complete": true,
+  "experiment_tag": "restless_deepstl_rw145",
+  "instance": {
+    "instance_id": "DeepSTL-0025__gpt-5.6-sol__t0",
+    "source": "DeepSTL",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_run": false,
+  "meta": {
+    "instance_id": "DeepSTL-0025__gpt-5.6-sol__t0",
+    "seed": 0,
+    "source": "DeepSTL"
+  },
+  "method": "llm_direct",
+  "result": {
+    "Q": 0,
+    "Q_requested": 0,
+    "Q_star": null,
+    "candidate_pool": [
+      "OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[EVENTUALLY I=[0,0][GLOBALLY I=[0,40][AND[UgZ2 > 5,UgZ2 < 6]]],EVENTUALLY I=[1,1][GLOBALLY I=[0,39][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[2,2][GLOBALLY I=[0,38][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[3,3][GLOBALLY I=[0,37][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[4,4][GLOBALLY I=[0,36][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[5,5][GLOBALLY I=[0,35][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[6,6][GLOBALLY I=[0,34][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[7,7][GLOBALLY I=[0,33][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[8,8][GLOBALLY I=[0,32][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[9,9][GLOBALLY I=[0,31][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[10,10][GLOBALLY I=[0,30][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[11,11][GLOBALLY I=[0,29][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[12,12][GLOBALLY I=[0,28][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[13,13][GLOBALLY I=[0,27][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[14,14][GLOBALLY I=[0,26][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[15,15][GLOBALLY I=[0,25][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[16,16][GLOBALLY I=[0,24][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[17,17][GLOBALLY I=[0,23][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[18,18][GLOBALLY I=[0,22][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[19,19][GLOBALLY I=[0,21][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[20,20][GLOBALLY I=[0,20][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[21,21][GLOBALLY I=[0,19][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[22,22][GLOBALLY I=[0,18][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[23,23][GLOBALLY I=[0,17][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[24,24][GLOBALLY I=[0,16][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[25,25][GLOBALLY I=[0,15][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[26,26][GLOBALLY I=[0,14][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[27,27][GLOBALLY I=[0,13][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[28,28][GLOBALLY I=[0,12][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[29,29][GLOBALLY I=[0,11][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[30,30][GLOBALLY I=[0,10][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[31,31][GLOBALLY I=[0,9][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[32,32][GLOBALLY I=[0,8][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[33,33][GLOBALLY I=[0,7][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[34,34][GLOBALLY I=[0,6][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[35,35][GLOBALLY I=[0,5][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[36,36][GLOBALLY I=[0,4][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[37,37][GLOBALLY I=[0,3][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[38,38][GLOBALLY I=[0,2][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[39,39][GLOBALLY I=[0,1][AND[UgZ2 > 5,UgZ2 < 6]]]],GLOBALLY I=[0,40][SAl2W <= 5]]"
+    ],
+    "edits_applied": 0,
+    "equivalence": {
+      "method": "smt",
+      "time_s": 157.66217220795806,
+      "verdict": "not_equivalent"
+    },
+    "final_formula": "OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[OR[EVENTUALLY I=[0,0][GLOBALLY I=[0,40][AND[UgZ2 > 5,UgZ2 < 6]]],EVENTUALLY I=[1,1][GLOBALLY I=[0,39][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[2,2][GLOBALLY I=[0,38][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[3,3][GLOBALLY I=[0,37][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[4,4][GLOBALLY I=[0,36][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[5,5][GLOBALLY I=[0,35][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[6,6][GLOBALLY I=[0,34][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[7,7][GLOBALLY I=[0,33][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[8,8][GLOBALLY I=[0,32][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[9,9][GLOBALLY I=[0,31][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[10,10][GLOBALLY I=[0,30][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[11,11][GLOBALLY I=[0,29][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[12,12][GLOBALLY I=[0,28][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[13,13][GLOBALLY I=[0,27][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[14,14][GLOBALLY I=[0,26][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[15,15][GLOBALLY I=[0,25][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[16,16][GLOBALLY I=[0,24][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[17,17][GLOBALLY I=[0,23][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[18,18][GLOBALLY I=[0,22][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[19,19][GLOBALLY I=[0,21][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[20,20][GLOBALLY I=[0,20][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[21,21][GLOBALLY I=[0,19][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[22,22][GLOBALLY I=[0,18][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[23,23][GLOBALLY I=[0,17][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[24,24][GLOBALLY I=[0,16][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[25,25][GLOBALLY I=[0,15][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[26,26][GLOBALLY I=[0,14][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[27,27][GLOBALLY I=[0,13][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[28,28][GLOBALLY I=[0,12][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[29,29][GLOBALLY I=[0,11][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[30,30][GLOBALLY I=[0,10][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[31,31][GLOBALLY I=[0,9][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[32,32][GLOBALLY I=[0,8][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[33,33][GLOBALLY I=[0,7][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[34,34][GLOBALLY I=[0,6][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[35,35][GLOBALLY I=[0,5][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[36,36][GLOBALLY I=[0,4][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[37,37][GLOBALLY I=[0,3][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[38,38][GLOBALLY I=[0,2][AND[UgZ2 > 5,UgZ2 < 6]]]],EVENTUALLY I=[39,39][GLOBALLY I=[0,1][AND[UgZ2 > 5,UgZ2 < 6]]]],GLOBALLY I=[0,40][SAl2W <= 5]]",
+    "fitness_evals_star": null,
+    "fitness_evals_total": 0,
+    "observed_trace_set": {
+      "first_eq": {
+        "ce_found": false,
+        "q_to_first_ce": null,
+        "queries": 0
+      }
+    },
+    "plausible": false,
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "smt",
+      "result": "not_equivalent",
+      "time_s": 157.66217220795806,
+      "verdict": "not_equivalent"
+    },
+    "status": "not_repaired",
+    "ted_to_initial": 238,
+    "ted_to_oracle": null,
+    "time_s": {
+      "labelling": 0.0,
+      "other": 0.7162787090055645,
+      "search": 156.9458934989525,
+      "tracegen": 0.0
+    },
+    "wall_time_s": 157.66217220795806
+  },
+  "run_id": "B3__DeepSTL-0025__gpt-5.6-sol__t0__llm_direct__seed0__attempt1",
+  "schema_version": "3.0",
+  "status": "not_repaired",
+  "trace_metrics": {
+    "num_generated": 0,
+    "num_oracle_queried": 0,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 0,
+    "time_disambiguation_s": 0.0
+  }
+}

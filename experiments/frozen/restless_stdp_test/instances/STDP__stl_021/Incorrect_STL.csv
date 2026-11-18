@@ -1,0 +1,2 @@
+formula
+"G[0,20](F[0,20](dist_wardrobe < 0.7) ∧ dist_sofa > 3.0 ∧ dist_dresser > 2.8)"

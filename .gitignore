@@ -1,0 +1,37 @@
+.idea/
+.vscode/
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+.venv/
+.env
+.jdks/
+.hg/
+target/
+output/
+*.log
+model.txt
+stl_translation.smt2
+
+# Bundled third-party documentation and reproducible benchmark artifacts.
+stl-trace-generation/breach/Doc/
+stl-trace-generation/breach/Examples/Legacy/
+stl-trace-generation/breach/Examples/Tests/
+stl-trace-generation/CE-class-C534/paper_figures/
+stl-trace-generation/CE-class-C534/viz_results/
+stl-trace-generation/CE-class-C534/results_100/
+stl-trace-generation/CE-class-C534/results_long_bs/
+
+# Local launch helpers and IDE metadata.
+job.sh
+to_Ulysses.sh
+STLRealTrafficRulesEvolutionaryInference.iml
+
+# Dataset CSV files are source inputs and must remain versioned. Generated CSV
+# files belong under output/, which is ignored above.
+!dataset/**/*.csv
+.venv-z3build/
+dist/

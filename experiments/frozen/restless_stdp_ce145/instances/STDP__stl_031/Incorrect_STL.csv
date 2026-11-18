@@ -1,0 +1,2 @@
+formula
+"G[0,25](dist_sofa < 1.3) ∧ F[0,25](dist_wardrobe < 2.2) ∧ G[0,25](dist_dining_table > 2.6)"

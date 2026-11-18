@@ -1,0 +1,2 @@
+formula
+"G[0,20](dist_fridge < 2.7 ∧ dist_dining_table > 3.8 ∧ dist_sofa > 2.5)"

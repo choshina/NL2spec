@@ -1,0 +1,11 @@
+# The repair orchestration uses only the Python standard library.
+# CE-class-C534 and stl_epoch are vendored in this repository.
+# Keep this file so EC2/CI setup has a stable installation entry point.
+numpy>=1.24
+matplotlib>=3.7
+# table aggregation, CSV merging, and plotting
+pandas>=2.0
+# analysis/restless_summary.py: Wilcoxon signed-rank test
+scipy>=1.10
+# Z3 CLI used by ATG and the equivalence check (the paper used 4.8.12); the wheel ships the `z3` binary
+z3-solver==4.8.12.0

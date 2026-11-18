@@ -1,0 +1,58 @@
+{
+  "uid": "DeepSTL-0063__gpt-5.6-sol__t0",
+  "source": "DeepSTL",
+  "family": "DeepSTL",
+  "upstream_method": "gpt-5.6-sol",
+  "record_id": "DeepSTL-0063__gpt-5.6-sol__t0",
+  "split": "test",
+  "cohort": "confirmed_fault",
+  "phase": "formal",
+  "experiment_tag": "deepstl_v1",
+  "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+  "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+  "reachable_edit_distance": 2,
+  "G_i": [
+    [],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "G_i_paths": [
+    "root",
+    "root.left.left.right"
+  ],
+  "total_query_budget": null,
+  "methods": [
+    "respstl",
+    "noloc",
+    "no_responsibility",
+    "randloc",
+    "oracleloc",
+    "no_self_coeff",
+    "no_gate",
+    "no_distinguish"
+  ],
+  "profile": "ec2",
+  "params": {
+    "rounds": 10,
+    "repair_iterations": 30,
+    "repair_population": 30,
+    "localization_top_k": 3,
+    "matlab_timeout": 300
+  },
+  "heldout": {
+    "random": 100,
+    "ceclass": 100,
+    "seed": 910241,
+    "k_gen": 8
+  },
+  "config": "experiments/frozen/deepstl_v1/instances/DeepSTL-0063__gpt-5.6-sol__t0/config.json",
+  "requirement_id": "DeepSTL-REQ-0045"
+}

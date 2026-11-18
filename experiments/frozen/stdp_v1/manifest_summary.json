@@ -1,0 +1,10 @@
+{
+  "tag": "stdp_v1",
+  "source": "STDP",
+  "input": "benchmarks/STDP/instances.jsonl",
+  "instances": 10,
+  "dev": 0,
+  "test": 10,
+  "excluded": 0,
+  "split_seed": 20260101
+}

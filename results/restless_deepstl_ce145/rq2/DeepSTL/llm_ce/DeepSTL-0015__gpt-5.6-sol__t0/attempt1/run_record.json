@@ -1,0 +1,36 @@
+{
+  "attempt": 1,
+  "complete": false,
+  "instance": {
+    "instance_id": "DeepSTL-0015__gpt-5.6-sol__t0",
+    "source": "DeepSTL",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "meta": {
+    "instance_id": "DeepSTL-0015__gpt-5.6-sol__t0",
+    "seed": 0,
+    "source": "DeepSTL"
+  },
+  "method": "llm_ce",
+  "partial_metrics": {
+    "Q_disambiguation": 0,
+    "Q_eq": 55,
+    "Q_total": 55,
+    "disambiguation_in_flight_s": 0.0,
+    "disambiguation_open_since": null,
+    "time_disambiguation_s": 0.0,
+    "time_s": {
+      "labelling": 21.036899910424836,
+      "other": 741.8550632887054,
+      "search": 481.15251874923706,
+      "tracegen": 532.0559009403223
+    },
+    "written_at": 1794503870.7020934
+  },
+  "result": {},
+  "run_id": "B3__DeepSTL-0015__gpt-5.6-sol__t0__llm_ce__seed0__attempt1",
+  "schema_version": "3.0",
+  "status": "crash",
+  "terminal_reason": "time limit exceeded (1800 s)",
+  "terminal_state": "runtime_failure"
+}

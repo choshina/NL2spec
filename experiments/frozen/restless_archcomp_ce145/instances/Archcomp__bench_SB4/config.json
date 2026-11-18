@@ -1,0 +1,36 @@
+{
+  "dataset_name": "Archcomp",
+  "benchmark": "Archcomp",
+  "instance_id": "Archcomp__bench_SB4",
+  "source": "Archcomp",
+  "formula_row": 1,
+  "oracle_formula_row": 1,
+  "signals": [
+    {
+      "source": "b1",
+      "target": "b1",
+      "min": 0.0,
+      "max": 40.0
+    },
+    {
+      "source": "b2",
+      "target": "b2",
+      "min": 0.0,
+      "max": 80.0
+    }
+  ],
+  "boolean_signals": [],
+  "discrete_signals": [],
+  "derived_signal_definitions": {},
+  "one_hot_groups": {},
+  "time_start": 0.0,
+  "time_end": 24.0,
+  "time_step": 1.0,
+  "ceclass_k": 1,
+  "k_gen": 12,
+  "ceclass_class_limit": 10,
+  "round_trace_budget": 16,
+  "generation_mode": "ceclass",
+  "llm_formula_csv": "experiments/frozen/archcomp_v1/instances/Archcomp__bench_SB4/Incorrect_STL.csv",
+  "oracle_formula_csv": "experiments/frozen/archcomp_v1/instances/Archcomp__bench_SB4/Oracle_STL.csv"
+}

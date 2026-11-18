@@ -1,0 +1,649 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": false,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "off",
+    "responsibility_enabled": false,
+    "self_coefficient_enabled": false
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": false,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "off",
+      "responsibility_enabled": false,
+      "self_coefficient_enabled": false
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [],
+    "ceclass_class_limit": 5,
+    "ceclass_k": 1,
+    "ceclass_schedule": "refine",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "derived_signal_definitions": {},
+    "discrete_signals": [],
+    "domain_config": {
+      "boolean_signals": [],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": false,
+          "max": 53.9,
+          "min": 44.1,
+          "source": "LtDR",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 40.15,
+          "min": 32.85,
+          "source": "NBh3gDgf",
+          "static": false
+        }
+      ],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_deepstl_v2n",
+    "fairness_check": {
+      "allowed": {
+        "noloc": [
+          "repair_localization"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_deepstl_v2n/_stage0/heldout/DeepSTL-0052__gpt-5.6-sol__t0",
+    "initial_trace_ids": [],
+    "k_gen": 8,
+    "k_gen_init": 8,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "off",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "LtDR": [
+        44.1,
+        53.9
+      ],
+      "NBh3gDgf": [
+        32.85,
+        40.15
+      ]
+    },
+    "signals": [
+      "LtDR",
+      "NBh3gDgf"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 40.0,
+    "time_start": 0.0,
+    "time_step": 1.0,
+    "total_query_budget": 64,
+    "type_priority": true,
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "config_hash": "5195b965d8310c243702209a03d1363f4b388371980ff4591ecef5f4fab533d0",
+  "cost": {
+    "candidate_evaluations": 902,
+    "generated_traces": 2690,
+    "oracle_queries": 28,
+    "rounds": 3,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.09958900000000001,
+      "matlab_csv_write_s": 0.740119,
+      "matlab_jobs": 36,
+      "matlab_launches": 1,
+      "matlab_startup_s": 21.54927129097344,
+      "matlab_wall_s": 63.703841289971024,
+      "python_csv_read_s": 0.010048869124148041,
+      "smt_encode_s": 40.81199900000001,
+      "solves_performed": 36,
+      "solves_requested": 36,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 36,
+      "z3_sat": 34,
+      "z3_solve_s": 3.8021129999999994,
+      "z3_unknown": 0,
+      "z3_unsat": 2
+    },
+    "wall_time_s": 101.55218044400681
+  },
+  "experiment_tag": "restless_deepstl_v2n",
+  "fairness_check": {
+    "allowed": {
+      "noloc": [
+        "repair_localization"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 3,
+      "ast_nodes": 4,
+      "atom_count": 2,
+      "signal_count": 2,
+      "temporal_count": 1,
+      "temporal_depth": 1
+    },
+    "fault_types": [
+      "flip_boolean",
+      "flip_predicate_direction"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "DeepSTL-0052__gpt-5.6-sol__t0",
+    "n_nodes": 4,
+    "reachable_edit_distance": null,
+    "source": "DeepSTL",
+    "split": "test",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [],
+  "logical_run_id": "B3__DeepSTL-0052__gpt-5.6-sol__t0__noloc__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": false,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "off",
+        "responsibility_enabled": false,
+        "self_coefficient_enabled": false
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [],
+      "ceclass_class_limit": 5,
+      "ceclass_k": 1,
+      "ceclass_schedule": "refine",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+      "derived_signal_definitions": {},
+      "discrete_signals": [],
+      "domain_config": {
+        "boolean_signals": [],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": false,
+            "max": 53.9,
+            "min": 44.1,
+            "source": "LtDR",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 40.15,
+            "min": 32.85,
+            "source": "NBh3gDgf",
+            "static": false
+          }
+        ],
+        "time_end": 40.0,
+        "time_start": 0.0,
+        "time_step": 1.0
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_deepstl_v2n",
+      "fairness_check": {
+        "allowed": {
+          "noloc": [
+            "repair_localization"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_deepstl_v2n/_stage0/heldout/DeepSTL-0052__gpt-5.6-sol__t0",
+      "initial_trace_ids": [],
+      "k_gen": 8,
+      "k_gen_init": 8,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "off",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "LtDR": [
+          44.1,
+          53.9
+        ],
+        "NBh3gDgf": [
+          32.85,
+          40.15
+        ]
+      },
+      "signals": [
+        "LtDR",
+        "NBh3gDgf"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0,
+      "total_query_budget": 64,
+      "type_priority": true,
+      "upstream_method": "gpt-5.6-sol"
+    },
+    "edits": [
+      {
+        "edit": "flip_boolean",
+        "faulty_node": "n1",
+        "faulty_path": "root.child",
+        "faulty_subformula": "AND[NBh3gDgf >= 36.5,LtDR < 49]",
+        "oracle_path": "root.child",
+        "oracle_subformula": "OR[NBh3gDgf < 36.5,LtDR < 49]"
+      },
+      {
+        "edit": "flip_predicate_direction",
+        "faulty_node": "n2",
+        "faulty_path": "root.child.left",
+        "faulty_subformula": "NBh3gDgf >= 36.5",
+        "oracle_path": "root.child.left",
+        "oracle_subformula": "NBh3gDgf < 36.5"
+      }
+    ],
+    "fault_nodes": [
+      "n1",
+      "n2"
+    ],
+    "fault_types": [
+      "flip_boolean",
+      "flip_predicate_direction"
+    ],
+    "faulty_formula": "EVENTUALLY I=[6,10][AND[NBh3gDgf >= 36.5,LtDR < 49]]",
+    "formula_row": 1,
+    "gold_formula": "EVENTUALLY I=[6,10][OR[NBh3gDgf < 36.5,LtDR < 49]]",
+    "in_scope": true,
+    "instance_id": "DeepSTL-0052__gpt-5.6-sol__t0",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "noloc",
+    "num_faults": 2,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "noloc",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 28,
+    "Q_requested": 2690,
+    "Q_star": 4,
+    "atoms_preserved": 0.5,
+    "candidate_pool": [
+      "EVENTUALLY I=[6, 10][AND[NBh3gDgf <= 36.5,LtDR < 49.0]]",
+      "EVENTUALLY I=[6, 10][OR[EVENTUALLY I=[6, 10][LtDR < 49.0],NBh3gDgf <= 36.5]]",
+      "EVENTUALLY I=[6, 10][OR[EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5],EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][LtDR < 49.0]]]]]",
+      "EVENTUALLY I=[6, 10][OR[GLOBALLY I=[6, 10][LtDR < 49.0],GLOBALLY I=[6, 10][NOT[NBh3gDgf >= 36.5]]]]",
+      "GLOBALLY I=[6, 10][EVENTUALLY I=[6, 10][OR[NBh3gDgf <= 36.5,NOT[LtDR > 49.0]]]]",
+      "GLOBALLY I=[6, 10][EVENTUALLY I=[6, 10][OR[NOT[LtDR > 49.0],EVENTUALLY I=[6, 10][NOT[NBh3gDgf >= 36.5]]]]]",
+      "GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][OR[NBh3gDgf >= 36.5,EVENTUALLY I=[6, 10][LtDR < 49.0]]]]",
+      "GLOBALLY I=[6, 10][OR[EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5],EVENTUALLY I=[6, 10][LtDR < 49.0]]]",
+      "GLOBALLY I=[6, 10][OR[EVENTUALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]],EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]]",
+      "GLOBALLY I=[6, 10][OR[GLOBALLY I=[6, 10][LtDR < 49.0],EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5]]]",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][LtDR < 49.0]],EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf >= 36.5]]]",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][LtDR < 49.0]]",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5]],LtDR < 49.0]",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5]],GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5]],LtDR < 49.0]",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NOT[LtDR > 49.0]]],GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]]]",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NOT[LtDR > 49.0]]],NOT[NBh3gDgf >= 36.5]]",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]]]]",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf <= 36.5]],EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]]",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][EVENTUALLY I=[6, 10][LtDR < 49.0]]]",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]]]",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf >= 36.5]],EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf >= 36.5]],GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]],EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf >= 36.5]]]]",
+      "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][LtDR < 49.0]]]",
+      "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],EVENTUALLY I=[6, 10][LtDR < 49.0]]",
+      "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],EVENTUALLY I=[6, 10][NOT[LtDR > 49.0]]]",
+      "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]]",
+      "OR[EVENTUALLY I=[6, 10][NOT[LtDR > 49.0]],GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]]]",
+      "OR[GLOBALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]",
+      "OR[GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]],EVENTUALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]]]",
+      "OR[GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]],NOT[NBh3gDgf <= 36.5]]",
+      "OR[GLOBALLY I=[6, 10][LtDR < 49.0],EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5]]",
+      "OR[GLOBALLY I=[6, 10][LtDR < 49.0],GLOBALLY I=[6, 10][NOT[NBh3gDgf >= 36.5]]]",
+      "OR[GLOBALLY I=[6, 10][NBh3gDgf <= 36.5],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]]",
+      "OR[GLOBALLY I=[6, 10][NBh3gDgf <= 36.5],GLOBALLY I=[6, 10][LtDR < 49.0]]",
+      "OR[GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]",
+      "OR[GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]],LtDR < 49.0]"
+    ],
+    "candidate_pool_equivalence": {
+      "EVENTUALLY I=[6, 10][AND[NBh3gDgf <= 36.5,LtDR < 49.0]]": "not_equivalent",
+      "EVENTUALLY I=[6, 10][OR[EVENTUALLY I=[6, 10][LtDR < 49.0],NBh3gDgf <= 36.5]]": "not_equivalent",
+      "EVENTUALLY I=[6, 10][OR[EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5],EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][LtDR < 49.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[6, 10][OR[GLOBALLY I=[6, 10][LtDR < 49.0],GLOBALLY I=[6, 10][NOT[NBh3gDgf >= 36.5]]]]": "not_equivalent",
+      "GLOBALLY I=[6, 10][EVENTUALLY I=[6, 10][OR[NBh3gDgf <= 36.5,NOT[LtDR > 49.0]]]]": "not_equivalent",
+      "GLOBALLY I=[6, 10][EVENTUALLY I=[6, 10][OR[NOT[LtDR > 49.0],EVENTUALLY I=[6, 10][NOT[NBh3gDgf >= 36.5]]]]]": "not_equivalent",
+      "GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][OR[NBh3gDgf >= 36.5,EVENTUALLY I=[6, 10][LtDR < 49.0]]]]": "not_equivalent",
+      "GLOBALLY I=[6, 10][OR[EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5],EVENTUALLY I=[6, 10][LtDR < 49.0]]]": "not_equivalent",
+      "GLOBALLY I=[6, 10][OR[EVENTUALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]],EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]]": "not_equivalent",
+      "GLOBALLY I=[6, 10][OR[GLOBALLY I=[6, 10][LtDR < 49.0],EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][LtDR < 49.0]],EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf >= 36.5]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][LtDR < 49.0]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5]],LtDR < 49.0]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5]],GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5]],LtDR < 49.0]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NOT[LtDR > 49.0]]],GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][NOT[LtDR > 49.0]]],NOT[NBh3gDgf >= 36.5]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf <= 36.5]],EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][EVENTUALLY I=[6, 10][LtDR < 49.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf >= 36.5]],EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf >= 36.5]],GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]],EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][GLOBALLY I=[6, 10][NBh3gDgf >= 36.5]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],EVENTUALLY I=[6, 10][EVENTUALLY I=[6, 10][LtDR < 49.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],EVENTUALLY I=[6, 10][LtDR < 49.0]]": "equivalent",
+      "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],EVENTUALLY I=[6, 10][NOT[LtDR > 49.0]]]": "equivalent",
+      "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[6, 10][NOT[LtDR > 49.0]],GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]],EVENTUALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][LtDR < 49.0]],NOT[NBh3gDgf <= 36.5]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][LtDR < 49.0],EVENTUALLY I=[6, 10][NBh3gDgf >= 36.5]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][LtDR < 49.0],GLOBALLY I=[6, 10][NOT[NBh3gDgf >= 36.5]]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][NBh3gDgf <= 36.5],GLOBALLY I=[6, 10][GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][NBh3gDgf <= 36.5],GLOBALLY I=[6, 10][LtDR < 49.0]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]],GLOBALLY I=[6, 10][NOT[LtDR > 49.0]]]": "not_equivalent",
+      "OR[GLOBALLY I=[6, 10][NOT[NBh3gDgf <= 36.5]],LtDR < 49.0]": "not_equivalent"
+    },
+    "canonical_exact": false,
+    "edits_applied": 5,
+    "equivalence": {
+      "method": "smt",
+      "time_s": 0.030127740988973528,
+      "verdict": "equivalent"
+    },
+    "exact": false,
+    "final_formula": "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],EVENTUALLY I=[6, 10][LtDR < 49.0]]",
+    "first_success_round": 2,
+    "fitness_evals_star": 5,
+    "fitness_evals_total": 902,
+    "heldout_bool_agree": 1.0,
+    "heldout_sign_agree": 0.885,
+    "observed_trace_set": {
+      "boolean_agreement": 1.0,
+      "edits_skipped_by_type": 0,
+      "edits_trialled_total": 0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 2,
+        "queries": 2,
+        "round": 1,
+        "schedule": "refine"
+      },
+      "first_gate": null,
+      "gate_expansions": [],
+      "heldout_bool_agree": 1.0,
+      "heldout_count": 200,
+      "heldout_incomplete": false,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.885,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.0,
+      "robustness_sign_agreement": 1.0,
+      "trace_count": 57
+    },
+    "plausible": true,
+    "pool_contains_equivalent": true,
+    "q_censored": false,
+    "repaired_formula": "OR[EVENTUALLY I=[6, 10][NBh3gDgf <= 36.5],EVENTUALLY I=[6, 10][LtDR < 49.0]]",
+    "search": {
+      "completed": 2,
+      "process_failures": 0,
+      "started": 2,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "smt",
+      "result": "equivalent",
+      "time_s": 0.030127740988973528,
+      "timeout": false,
+      "verdict": "equivalent"
+    },
+    "status": "repaired",
+    "ted_to_initial": 5,
+    "ted_to_oracle": 4,
+    "time_s": {
+      "labelling": 23.606931521731894,
+      "other": 2.9360383540042676,
+      "search": 7.951499113987666,
+      "tracegen": 63.703065048961435
+    },
+    "train_accuracy": 1.0,
+    "training_consistent": true,
+    "wall_time_s": 101.55150295700878
+  },
+  "rounds": [
+    {
+      "fitness_evals": 2,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 25,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 0,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 3,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "B3__DeepSTL-0052__gpt-5.6-sol__t0__noloc__seed0__5195b965d831__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 2,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 1
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 2,
+      "search_completed": 1,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 38
+    },
+    {
+      "candidate_evaluations": 0,
+      "round": 3,
+      "search_completed": 0,
+      "search_log": "round_03/search_log.jsonl",
+      "search_started": 0,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "repaired",
+  "trace_metrics": {
+    "avg_num_signals": 2.0,
+    "avg_trace_length": 41.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 9,
+    "num_generated": 2690,
+    "num_oracle_queried": 28,
+    "num_oracle_queried_disambiguation": 9,
+    "num_oracle_queried_eq": 19,
+    "time_disambiguation_s": 40.1845178604126,
+    "time_s": {
+      "labelling": 23.606931521731894,
+      "other": 2.9360383540042676,
+      "search": 7.951499113987666,
+      "tracegen": 63.703065048961435
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.09958900000000001,
+      "matlab_csv_write_s": 0.740119,
+      "matlab_jobs": 36,
+      "matlab_launches": 1,
+      "matlab_startup_s": 21.54927129097344,
+      "matlab_wall_s": 63.703841289971024,
+      "python_csv_read_s": 0.010048869124148041,
+      "smt_encode_s": 40.81199900000001,
+      "solves_performed": 36,
+      "solves_requested": 36,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 36,
+      "z3_sat": 34,
+      "z3_solve_s": 3.8021129999999994,
+      "z3_unknown": 0,
+      "z3_unsat": 2
+    }
+  },
+  "versions": {
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb"
+  }
+}

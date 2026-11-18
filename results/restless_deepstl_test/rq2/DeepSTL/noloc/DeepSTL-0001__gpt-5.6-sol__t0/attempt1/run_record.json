@@ -1,0 +1,657 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": false,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "off",
+    "responsibility_enabled": false,
+    "self_coefficient_enabled": false
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": false,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "off",
+      "responsibility_enabled": false,
+      "self_coefficient_enabled": false
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [],
+    "ceclass_class_limit": 5,
+    "ceclass_k": 1,
+    "ceclass_schedule": "refine",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "derived_signal_definitions": {},
+    "discrete_signals": [],
+    "domain_config": {
+      "boolean_signals": [],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": false,
+          "max": 2.0,
+          "min": 0.0,
+          "source": "P39cYhPy",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 108.9,
+          "min": 78.3,
+          "source": "Y",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 2903.45,
+          "min": 1726.95,
+          "source": "dBt3",
+          "static": false
+        }
+      ],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_deepstl_v2n",
+    "fairness_check": {
+      "allowed": {
+        "noloc": [
+          "repair_localization"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_deepstl_v2n/_stage0/heldout/DeepSTL-0001__gpt-5.6-sol__t0",
+    "initial_trace_ids": [],
+    "k_gen": 8,
+    "k_gen_init": 8,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "off",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "P39cYhPy": [
+        0.0,
+        2.0
+      ],
+      "Y": [
+        78.3,
+        108.9
+      ],
+      "dBt3": [
+        1726.95,
+        2903.45
+      ]
+    },
+    "signals": [
+      "P39cYhPy",
+      "Y",
+      "dBt3"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 40.0,
+    "time_start": 0.0,
+    "time_step": 1.0,
+    "total_query_budget": 64,
+    "type_priority": true,
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "config_hash": "da0f08eab2904b582fc3372d731b73270a3621602e2aa63875f5165aa7a4d488",
+  "cost": {
+    "candidate_evaluations": 902,
+    "generated_traces": 4129,
+    "oracle_queries": 27,
+    "rounds": 3,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.09782500000000001,
+      "matlab_csv_write_s": 0.491102,
+      "matlab_jobs": 29,
+      "matlab_launches": 1,
+      "matlab_startup_s": 25.976821846804675,
+      "matlab_wall_s": 96.61497854976915,
+      "python_csv_read_s": 0.008642975066322833,
+      "smt_encode_s": 70.775238,
+      "solves_performed": 38,
+      "solves_requested": 38,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 38,
+      "z3_sat": 33,
+      "z3_solve_s": 4.911379999999998,
+      "z3_unknown": 0,
+      "z3_unsat": 5
+    },
+    "wall_time_s": 142.21003824402578
+  },
+  "experiment_tag": "restless_deepstl_v2n",
+  "fairness_check": {
+    "allowed": {
+      "noloc": [
+        "repair_localization"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 6,
+      "ast_nodes": 13,
+      "atom_count": 5,
+      "signal_count": 3,
+      "temporal_count": 3,
+      "temporal_depth": 3
+    },
+    "fault_types": [
+      "replace_or_with_not",
+      "flip_predicate_direction"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "DeepSTL-0001__gpt-5.6-sol__t0",
+    "n_nodes": 13,
+    "reachable_edit_distance": null,
+    "source": "DeepSTL",
+    "split": "test",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [],
+  "logical_run_id": "B3__DeepSTL-0001__gpt-5.6-sol__t0__noloc__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": false,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "off",
+        "responsibility_enabled": false,
+        "self_coefficient_enabled": false
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [],
+      "ceclass_class_limit": 5,
+      "ceclass_k": 1,
+      "ceclass_schedule": "refine",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+      "derived_signal_definitions": {},
+      "discrete_signals": [],
+      "domain_config": {
+        "boolean_signals": [],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": false,
+            "max": 2.0,
+            "min": 0.0,
+            "source": "P39cYhPy",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 108.9,
+            "min": 78.3,
+            "source": "Y",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 2903.45,
+            "min": 1726.95,
+            "source": "dBt3",
+            "static": false
+          }
+        ],
+        "time_end": 40.0,
+        "time_start": 0.0,
+        "time_step": 1.0
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_deepstl_v2n",
+      "fairness_check": {
+        "allowed": {
+          "noloc": [
+            "repair_localization"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_deepstl_v2n/_stage0/heldout/DeepSTL-0001__gpt-5.6-sol__t0",
+      "initial_trace_ids": [],
+      "k_gen": 8,
+      "k_gen_init": 8,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "off",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "P39cYhPy": [
+          0.0,
+          2.0
+        ],
+        "Y": [
+          78.3,
+          108.9
+        ],
+        "dBt3": [
+          1726.95,
+          2903.45
+        ]
+      },
+      "signals": [
+        "P39cYhPy",
+        "Y",
+        "dBt3"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0,
+      "total_query_budget": 64,
+      "type_priority": true,
+      "upstream_method": "gpt-5.6-sol"
+    },
+    "edits": [
+      {
+        "edit": "replace_or_with_not",
+        "faulty_node": "n3",
+        "faulty_path": "root.child.left.left",
+        "faulty_subformula": "OR[dBt3 < 1990.9,dBt3 > 2639.5]",
+        "oracle_path": "root.child.left.left",
+        "oracle_subformula": "NOT[AND[dBt3 > 1990.9,dBt3 < 2639.5]]"
+      },
+      {
+        "edit": "flip_predicate_direction",
+        "faulty_node": "n8",
+        "faulty_path": "root.child.left.right.right",
+        "faulty_subformula": "Y > 99",
+        "oracle_path": "root.child.left.right.right",
+        "oracle_subformula": "Y <= 99"
+      }
+    ],
+    "fault_nodes": [
+      "n3",
+      "n8"
+    ],
+    "fault_types": [
+      "replace_or_with_not",
+      "flip_predicate_direction"
+    ],
+    "faulty_formula": "GLOBALLY I=[0,13][IMPLIES[OR[OR[dBt3 < 1990.9,dBt3 > 2639.5],AND[Y > 88.2,Y > 99]],EVENTUALLY I=[0,13][GLOBALLY I=[0,13][NOT[P39cYhPy <= 1]]]]]",
+    "formula_row": 1,
+    "gold_formula": "GLOBALLY I=[0,13][IMPLIES[OR[NOT[AND[dBt3 > 1990.9,dBt3 < 2639.5]],AND[Y > 88.2,Y <= 99]],EVENTUALLY I=[0,13][GLOBALLY I=[0,13][NOT[P39cYhPy <= 1]]]]]",
+    "in_scope": false,
+    "instance_id": "DeepSTL-0001__gpt-5.6-sol__t0",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "noloc",
+    "num_faults": 2,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "noloc",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 27,
+    "Q_requested": 4129,
+    "Q_star": null,
+    "atoms_preserved": 0.4,
+    "candidate_pool": [
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,AND[OR[dBt3 > 1990.9,NOT[dBt3 < 2639.5]],AND[NOT[Y < 88.2],Y > 99.0]]]]]]",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][NOT[IMPLIES[AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],OR[Y < 88.2,Y > 99.0]],NOT[P39cYhPy <= 1.0]]]]]]",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][NOT[IMPLIES[NOT[P39cYhPy <= 1.0],AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],OR[NOT[Y > 88.2],Y > 99.0]]]]]]]",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,AND[OR[NOT[dBt3 < 1990.9],dBt3 < 2639.5],AND[Y > 88.2,Y > 99.0]]]]]]",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[AND[GLOBALLY I=[0, 13][OR[dBt3 > 1990.9,NOT[dBt3 > 2639.5]]],GLOBALLY I=[0, 13][OR[Y > 88.2,NOT[Y < 99.0]]]],NOT[P39cYhPy <= 1.0]]]]",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,AND[OR[dBt3 < 1990.9,dBt3 < 2639.5],OR[Y < 88.2,Y > 99.0]]]]]",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,GLOBALLY I=[0, 13][AND[OR[dBt3 > 1990.9,NOT[dBt3 < 2639.5]],AND[NOT[Y < 88.2],Y > 99.0]]]]]]",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][NOT[IMPLIES[AND[EVENTUALLY I=[0, 13][AND[dBt3 > 1990.9,dBt3 > 2639.5]],GLOBALLY I=[0, 13][AND[Y > 88.2,Y > 99.0]]],NOT[P39cYhPy >= 1.0]]]]]",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],AND[OR[dBt3 > 1990.9,dBt3 < 2639.5],AND[NOT[Y > 88.2],Y > 99.0]]]]]]",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[OR[OR[dBt3 < 1990.9,dBt3 > 2639.5],OR[Y > 88.2,NOT[Y < 99.0]]],NOT[P39cYhPy <= 1.0]]]]]",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],AND[OR[dBt3 > 1990.9,dBt3 < 2639.5],AND[Y > 88.2,Y > 99.0]]]]]]",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[EVENTUALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],AND[Y < 88.2,Y > 99.0]]]]]",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[GLOBALLY I=[0, 13][P39cYhPy <= 1.0],AND[OR[NOT[dBt3 > 1990.9],dBt3 < 2639.5],AND[NOT[Y < 88.2],Y > 99.0]]]]]",
+      "EVENTUALLY I=[0, 13][IMPLIES[GLOBALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],EVENTUALLY I=[0, 13][AND[AND[dBt3 < 1990.9,NOT[dBt3 < 2639.5]],AND[NOT[Y < 88.2],Y < 99.0]]]]]",
+      "EVENTUALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],EVENTUALLY I=[0, 13][AND[OR[EVENTUALLY I=[0, 13][dBt3 > 1990.9],EVENTUALLY I=[0, 13][dBt3 > 2639.5]],EVENTUALLY I=[0, 13][OR[NOT[Y > 88.2],Y > 99.0]]]]]]",
+      "EVENTUALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],EVENTUALLY I=[0, 13][AND[OR[dBt3 < 1990.9,dBt3 < 2639.5],OR[NOT[Y > 88.2],Y > 99.0]]]]]",
+      "EVENTUALLY I=[0, 13][NOT[IMPLIES[NOT[P39cYhPy <= 1.0],AND[EVENTUALLY I=[0, 13][OR[dBt3 > 1990.9,NOT[dBt3 < 2639.5]]],EVENTUALLY I=[0, 13][AND[NOT[Y < 88.2],Y < 99.0]]]]]]",
+      "GLOBALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[EVENTUALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],AND[AND[dBt3 > 1990.9,NOT[dBt3 < 2639.5]],AND[Y < 88.2,Y > 99.0]]]]]",
+      "GLOBALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],AND[AND[NOT[dBt3 > 1990.9],NOT[dBt3 < 2639.5]],AND[NOT[Y < 88.2],Y < 99.0]]]]]",
+      "GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[AND[EVENTUALLY I=[0, 13][OR[dBt3 > 1990.9,dBt3 > 2639.5]],GLOBALLY I=[0, 13][OR[Y < 88.2,Y < 99.0]]],NOT[P39cYhPy <= 1.0]]]]",
+      "GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],OR[Y > 88.2,NOT[Y < 99.0]]],GLOBALLY I=[0, 13][NOT[P39cYhPy <= 1.0]]]]]",
+      "GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[OR[OR[dBt3 > 1990.9,dBt3 > 2639.5],OR[Y < 88.2,NOT[Y < 99.0]]],EVENTUALLY I=[0, 13][NOT[P39cYhPy <= 1.0]]]]]",
+      "GLOBALLY I=[0, 13][IMPLIES[OR[OR[NOT[dBt3 < 1990.9],dBt3 < 2639.5],AND[GLOBALLY I=[0, 13][Y < 88.2],EVENTUALLY I=[0, 13][Y > 99.0]]],P39cYhPy >= 1.0]]",
+      "GLOBALLY I=[0, 13][IMPLIES[OR[OR[dBt3 < 1990.9,dBt3 < 2639.5],AND[Y > 88.2,Y > 99.0]],EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[P39cYhPy <= 1.0]]]]]",
+      "GLOBALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,EVENTUALLY I=[0, 13][AND[OR[dBt3 > 1990.9,dBt3 < 2639.5],AND[GLOBALLY I=[0, 13][Y < 88.2],GLOBALLY I=[0, 13][NOT[Y < 99.0]]]]]]]",
+      "IMPLIES[GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[P39cYhPy >= 1.0]]],AND[OR[NOT[dBt3 < 1990.9],NOT[dBt3 < 2639.5]],AND[NOT[Y > 88.2],Y > 99.0]]]",
+      "IMPLIES[GLOBALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],EVENTUALLY I=[0, 13][AND[AND[NOT[Y < 88.2],NOT[Y > 99.0]],AND[GLOBALLY I=[0, 13][dBt3 < 1990.9],GLOBALLY I=[0, 13][NOT[dBt3 < 2639.5]]]]]]",
+      "IMPLIES[NOT[P39cYhPy >= 1.0],EVENTUALLY I=[0, 13][AND[OR[dBt3 < 1990.9,dBt3 > 2639.5],AND[Y > 88.2,NOT[Y < 99.0]]]]]",
+      "IMPLIES[NOT[P39cYhPy >= 1.0],GLOBALLY I=[0, 13][AND[EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][AND[dBt3 > 2639.5,dBt3 < 1990.9]]],EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][OR[Y < 88.2,NOT[Y < 99.0]]]]]]]",
+      "NOT[IMPLIES[AND[OR[dBt3 > 1990.9,dBt3 < 2639.5],AND[Y > 88.2,Y > 99.0]],EVENTUALLY I=[0, 13][NOT[P39cYhPy >= 1.0]]]]"
+    ],
+    "candidate_pool_equivalence": {
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,AND[OR[dBt3 > 1990.9,NOT[dBt3 < 2639.5]],AND[NOT[Y < 88.2],Y > 99.0]]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][NOT[IMPLIES[AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],OR[Y < 88.2,Y > 99.0]],NOT[P39cYhPy <= 1.0]]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][NOT[IMPLIES[NOT[P39cYhPy <= 1.0],AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],OR[NOT[Y > 88.2],Y > 99.0]]]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,AND[OR[NOT[dBt3 < 1990.9],dBt3 < 2639.5],AND[Y > 88.2,Y > 99.0]]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[AND[GLOBALLY I=[0, 13][OR[dBt3 > 1990.9,NOT[dBt3 > 2639.5]]],GLOBALLY I=[0, 13][OR[Y > 88.2,NOT[Y < 99.0]]]],NOT[P39cYhPy <= 1.0]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,AND[OR[dBt3 < 1990.9,dBt3 < 2639.5],OR[Y < 88.2,Y > 99.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,GLOBALLY I=[0, 13][AND[OR[dBt3 > 1990.9,NOT[dBt3 < 2639.5]],AND[NOT[Y < 88.2],Y > 99.0]]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][NOT[IMPLIES[AND[EVENTUALLY I=[0, 13][AND[dBt3 > 1990.9,dBt3 > 2639.5]],GLOBALLY I=[0, 13][AND[Y > 88.2,Y > 99.0]]],NOT[P39cYhPy >= 1.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],AND[OR[dBt3 > 1990.9,dBt3 < 2639.5],AND[NOT[Y > 88.2],Y > 99.0]]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[OR[OR[dBt3 < 1990.9,dBt3 > 2639.5],OR[Y > 88.2,NOT[Y < 99.0]]],NOT[P39cYhPy <= 1.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],AND[OR[dBt3 > 1990.9,dBt3 < 2639.5],AND[Y > 88.2,Y > 99.0]]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[EVENTUALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],AND[Y < 88.2,Y > 99.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[GLOBALLY I=[0, 13][P39cYhPy <= 1.0],AND[OR[NOT[dBt3 > 1990.9],dBt3 < 2639.5],AND[NOT[Y < 88.2],Y > 99.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][IMPLIES[GLOBALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],EVENTUALLY I=[0, 13][AND[AND[dBt3 < 1990.9,NOT[dBt3 < 2639.5]],AND[NOT[Y < 88.2],Y < 99.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],EVENTUALLY I=[0, 13][AND[OR[EVENTUALLY I=[0, 13][dBt3 > 1990.9],EVENTUALLY I=[0, 13][dBt3 > 2639.5]],EVENTUALLY I=[0, 13][OR[NOT[Y > 88.2],Y > 99.0]]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],EVENTUALLY I=[0, 13][AND[OR[dBt3 < 1990.9,dBt3 < 2639.5],OR[NOT[Y > 88.2],Y > 99.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 13][NOT[IMPLIES[NOT[P39cYhPy <= 1.0],AND[EVENTUALLY I=[0, 13][OR[dBt3 > 1990.9,NOT[dBt3 < 2639.5]]],EVENTUALLY I=[0, 13][AND[NOT[Y < 88.2],Y < 99.0]]]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[EVENTUALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],AND[AND[dBt3 > 1990.9,NOT[dBt3 < 2639.5]],AND[Y < 88.2,Y > 99.0]]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][EVENTUALLY I=[0, 13][IMPLIES[NOT[P39cYhPy >= 1.0],AND[AND[NOT[dBt3 > 1990.9],NOT[dBt3 < 2639.5]],AND[NOT[Y < 88.2],Y < 99.0]]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[AND[EVENTUALLY I=[0, 13][OR[dBt3 > 1990.9,dBt3 > 2639.5]],GLOBALLY I=[0, 13][OR[Y < 88.2,Y < 99.0]]],NOT[P39cYhPy <= 1.0]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],OR[Y > 88.2,NOT[Y < 99.0]]],GLOBALLY I=[0, 13][NOT[P39cYhPy <= 1.0]]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[OR[OR[dBt3 > 1990.9,dBt3 > 2639.5],OR[Y < 88.2,NOT[Y < 99.0]]],EVENTUALLY I=[0, 13][NOT[P39cYhPy <= 1.0]]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][IMPLIES[OR[OR[NOT[dBt3 < 1990.9],dBt3 < 2639.5],AND[GLOBALLY I=[0, 13][Y < 88.2],EVENTUALLY I=[0, 13][Y > 99.0]]],P39cYhPy >= 1.0]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][IMPLIES[OR[OR[dBt3 < 1990.9,dBt3 < 2639.5],AND[Y > 88.2,Y > 99.0]],EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[P39cYhPy <= 1.0]]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][IMPLIES[P39cYhPy <= 1.0,EVENTUALLY I=[0, 13][AND[OR[dBt3 > 1990.9,dBt3 < 2639.5],AND[GLOBALLY I=[0, 13][Y < 88.2],GLOBALLY I=[0, 13][NOT[Y < 99.0]]]]]]]": "not_equivalent",
+      "IMPLIES[GLOBALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[P39cYhPy >= 1.0]]],AND[OR[NOT[dBt3 < 1990.9],NOT[dBt3 < 2639.5]],AND[NOT[Y > 88.2],Y > 99.0]]]": "not_equivalent",
+      "IMPLIES[GLOBALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],EVENTUALLY I=[0, 13][AND[AND[NOT[Y < 88.2],NOT[Y > 99.0]],AND[GLOBALLY I=[0, 13][dBt3 < 1990.9],GLOBALLY I=[0, 13][NOT[dBt3 < 2639.5]]]]]]": "not_equivalent",
+      "IMPLIES[NOT[P39cYhPy >= 1.0],EVENTUALLY I=[0, 13][AND[OR[dBt3 < 1990.9,dBt3 > 2639.5],AND[Y > 88.2,NOT[Y < 99.0]]]]]": "not_equivalent",
+      "IMPLIES[NOT[P39cYhPy >= 1.0],GLOBALLY I=[0, 13][AND[EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][AND[dBt3 > 2639.5,dBt3 < 1990.9]]],EVENTUALLY I=[0, 13][EVENTUALLY I=[0, 13][OR[Y < 88.2,NOT[Y < 99.0]]]]]]]": "not_equivalent",
+      "NOT[IMPLIES[AND[OR[dBt3 > 1990.9,dBt3 < 2639.5],AND[Y > 88.2,Y > 99.0]],EVENTUALLY I=[0, 13][NOT[P39cYhPy >= 1.0]]]]": "not_equivalent"
+    },
+    "canonical_exact": false,
+    "edits_applied": 11,
+    "equivalence": {
+      "method": "smt",
+      "time_s": 0.06704897002782673,
+      "verdict": "not_equivalent"
+    },
+    "exact": false,
+    "final_formula": "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[EVENTUALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],AND[Y < 88.2,Y > 99.0]]]]]",
+    "first_success_round": null,
+    "fitness_evals_star": null,
+    "fitness_evals_total": 902,
+    "heldout_bool_agree": 0.91,
+    "heldout_sign_agree": 0.865,
+    "observed_trace_set": {
+      "boolean_agreement": 1.0,
+      "edits_skipped_by_type": 0,
+      "edits_trialled_total": 0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 1,
+        "queries": 2,
+        "round": 1,
+        "schedule": "refine"
+      },
+      "first_gate": null,
+      "gate_expansions": [],
+      "heldout_bool_agree": 0.91,
+      "heldout_count": 200,
+      "heldout_incomplete": false,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.865,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.1585857837290909,
+      "robustness_sign_agreement": 1.0,
+      "trace_count": 55
+    },
+    "plausible": true,
+    "pool_contains_equivalent": false,
+    "q_censored": true,
+    "repaired_formula": "EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][IMPLIES[EVENTUALLY I=[0, 13][NOT[P39cYhPy >= 1.0]],AND[OR[dBt3 > 1990.9,dBt3 > 2639.5],AND[Y < 88.2,Y > 99.0]]]]]",
+    "search": {
+      "completed": 2,
+      "process_failures": 0,
+      "started": 2,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "smt",
+      "result": "not_equivalent",
+      "time_s": 0.06704897002782673,
+      "timeout": false,
+      "verdict": "not_equivalent"
+    },
+    "status": "plausible_only",
+    "ted_to_initial": 11,
+    "ted_to_oracle": 14,
+    "time_s": {
+      "labelling": 24.08560558105819,
+      "other": 3.4414382430841215,
+      "search": 13.12549832003424,
+      "tracegen": 96.61435109889135
+    },
+    "train_accuracy": 1.0,
+    "training_consistent": true,
+    "wall_time_s": 142.20963278599083
+  },
+  "rounds": [
+    {
+      "fitness_evals": 2,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 23,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 0,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 3,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "B3__DeepSTL-0001__gpt-5.6-sol__t0__noloc__seed0__da0f08eab290__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 2,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 1
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 2,
+      "search_completed": 1,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 29
+    },
+    {
+      "candidate_evaluations": 0,
+      "round": 3,
+      "search_completed": 0,
+      "search_log": "round_03/search_log.jsonl",
+      "search_started": 0,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "plausible_only",
+  "trace_metrics": {
+    "avg_num_signals": 3.0,
+    "avg_trace_length": 41.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 7,
+    "num_generated": 4129,
+    "num_oracle_queried": 27,
+    "num_oracle_queried_disambiguation": 7,
+    "num_oracle_queried_eq": 20,
+    "time_disambiguation_s": 74.12819051742554,
+    "time_s": {
+      "labelling": 24.08560558105819,
+      "other": 3.4414382430841215,
+      "search": 13.12549832003424,
+      "tracegen": 96.61435109889135
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.09782500000000001,
+      "matlab_csv_write_s": 0.491102,
+      "matlab_jobs": 29,
+      "matlab_launches": 1,
+      "matlab_startup_s": 25.976821846804675,
+      "matlab_wall_s": 96.61497854976915,
+      "python_csv_read_s": 0.008642975066322833,
+      "smt_encode_s": 70.775238,
+      "solves_performed": 38,
+      "solves_requested": 38,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 38,
+      "z3_sat": 33,
+      "z3_solve_s": 4.911379999999998,
+      "z3_unknown": 0,
+      "z3_unsat": 5
+    }
+  },
+  "versions": {
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb"
+  }
+}

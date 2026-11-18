@@ -1,0 +1,1760 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": true,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "responsibility",
+    "responsibility_enabled": true,
+    "self_coefficient_enabled": true
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": true,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "responsibility",
+      "responsibility_enabled": true,
+      "self_coefficient_enabled": true
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [
+      "eq_JGVpmcKo4_10"
+    ],
+    "ceclass_class_limit": 5,
+    "ceclass_k": 1,
+    "ceclass_schedule": "none",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "derived_signal_definitions": {
+      "eq_JGVpmcKo4_10": {
+        "left": "JGVpmcKo4",
+        "op": "equals",
+        "value": "10"
+      }
+    },
+    "discrete_signals": [
+      "eq_JGVpmcKo4_10"
+    ],
+    "domain_config": {
+      "boolean_signals": [
+        "eq_JGVpmcKo4_10"
+      ],
+      "derived_signal_definitions": {
+        "eq_JGVpmcKo4_10": {
+          "left": "JGVpmcKo4",
+          "op": "equals",
+          "value": "10"
+        }
+      },
+      "signals": [
+        {
+          "discrete": false,
+          "max": 11.0,
+          "min": 9.0,
+          "source": "JGVpmcKo4",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 6.0,
+          "min": 0.0,
+          "source": "MBgItwcIX",
+          "static": false
+        },
+        {
+          "discrete": true,
+          "max": 1.0,
+          "min": 0.0,
+          "source": "eq_JGVpmcKo4_10",
+          "static": false
+        }
+      ],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_deepstl_test",
+    "fairness_check": {
+      "allowed": {
+        "no_ceclass": [
+          "ceclass_schedule"
+        ],
+        "no_self_coeff": [
+          "repair_localization_self_coefficient_cap"
+        ],
+        "noloc": [
+          "repair_localization"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_deepstl_test/_stage0/heldout/DeepSTL-0061__gpt-5.6-sol__t0",
+    "initial_trace_ids": [],
+    "k_gen": 8,
+    "k_gen_init": 8,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "sgrl",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "JGVpmcKo4": [
+        9.0,
+        11.0
+      ],
+      "MBgItwcIX": [
+        0.0,
+        6.0
+      ],
+      "eq_JGVpmcKo4_10": [
+        0.0,
+        1.0
+      ]
+    },
+    "signals": [
+      "JGVpmcKo4",
+      "MBgItwcIX",
+      "eq_JGVpmcKo4_10"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 40.0,
+    "time_start": 0.0,
+    "time_step": 1.0,
+    "total_query_budget": 64,
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "config_hash": "dfbf484bf1d28d3260aec55933fc8353b2f44254fdee6802a87c95da331a04dd",
+  "cost": {
+    "candidate_evaluations": 9000,
+    "generated_traces": 288,
+    "oracle_queries": 32,
+    "rounds": 10,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.14400499999999997,
+      "matlab_csv_write_s": 1.057597,
+      "matlab_jobs": 44,
+      "matlab_launches": 1,
+      "matlab_startup_s": 42.10346677596225,
+      "matlab_wall_s": 206.24831483294838,
+      "python_csv_read_s": 0.19401174795348197,
+      "smt_encode_s": 146.03764900000007,
+      "solves_performed": 288,
+      "solves_requested": 288,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 288,
+      "z3_sat": 288,
+      "z3_solve_s": 27.232969000000008,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    },
+    "wall_time_s": 294.4458675439819
+  },
+  "experiment_tag": "restless_deepstl_test",
+  "fairness_check": {
+    "allowed": {
+      "no_ceclass": [
+        "ceclass_schedule"
+      ],
+      "no_self_coeff": [
+        "repair_localization_self_coefficient_cap"
+      ],
+      "noloc": [
+        "repair_localization"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 4,
+      "ast_nodes": 6,
+      "atom_count": 3,
+      "signal_count": 2,
+      "temporal_count": 1,
+      "temporal_depth": 1
+    },
+    "fault_types": [
+      "flip_boolean",
+      "flip_predicate_direction"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "DeepSTL-0061__gpt-5.6-sol__t0",
+    "n_nodes": 6,
+    "reachable_edit_distance": null,
+    "source": "DeepSTL",
+    "split": "test",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [
+    {
+      "fault_ranks": {
+        "n3": 4,
+        "n4": 5
+      },
+      "fault_recall_in_slice": 0.5,
+      "initial_gate_edit_candidates": 33,
+      "initial_gate_reduction_ratio": 0.15384615384615385,
+      "mutation_attempts_reported": 39,
+      "positive_muse_attempts": 12,
+      "ranking": [
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -0.5321132623,
+          "evidence": 0.2691068087,
+          "muse": -0.3333333333,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 1,
+          "report_rank": 10
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": 0.8497805814,
+          "evidence": 0.221783385,
+          "muse": 0.4444444444,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 2,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": 0.6275583592,
+          "evidence": 0.221783385,
+          "muse": 0.3333333333,
+          "node_id": "n1",
+          "node_type": "IMPLIES",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": 0.6156664014,
+          "evidence": 0.1979994694,
+          "muse": 0.3333333333,
+          "node_id": "n3",
+          "node_type": "OR",
+          "path": "root/child/right",
+          "rank": 4,
+          "report_rank": 3
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -0.1894507041,
+          "evidence": 0.0655430363,
+          "muse": -0.1111111111,
+          "node_id": "n4",
+          "node_type": "PROP",
+          "path": "root/child/right/left",
+          "rank": 5,
+          "report_rank": 9
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -0.3603302644,
+          "evidence": 0.0237839156,
+          "muse": -0.1111111111,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 6,
+          "report_rank": 12
+        }
+      ],
+      "repair_slice": [
+        "n5",
+        "n0",
+        "n1",
+        "n3"
+      ],
+      "repair_slice_size": 4,
+      "reports": [
+        "round_01/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 1,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {},
+      "fault_recall_in_slice": 0.0,
+      "initial_gate_edit_candidates": 24,
+      "initial_gate_reduction_ratio": 0.0,
+      "mutation_attempts_reported": 40,
+      "positive_muse_attempts": 15,
+      "ranking": [
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": 1.2358630952,
+          "evidence": 0.7217261905,
+          "muse": 0.4375,
+          "node_id": "n1",
+          "node_type": "GLOBALLY",
+          "path": "root/child",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "wrap_global_inf",
+          "edit_score": 0.1173811541,
+          "evidence": 0.5893077628,
+          "muse": 0.1363636364,
+          "node_id": "n0",
+          "node_type": "NOT",
+          "path": "root",
+          "rank": 2,
+          "report_rank": 7
+        }
+      ],
+      "repair_slice": [
+        "n1",
+        "n0"
+      ],
+      "repair_slice_size": 2,
+      "reports": [
+        "round_02/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 2,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": false
+    },
+    {
+      "fault_ranks": {
+        "n3": 5,
+        "n4": 6
+      },
+      "fault_recall_in_slice": 0.0,
+      "initial_gate_edit_candidates": 15,
+      "initial_gate_reduction_ratio": 0.2857142857142857,
+      "mutation_attempts_reported": 34,
+      "positive_muse_attempts": 3,
+      "ranking": [
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": 0.938240394,
+          "evidence": 0.8764807879,
+          "muse": 0.25,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -2.560230318,
+          "evidence": 0.7668409513,
+          "muse": -1.3968253968,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 2,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -3.389603659,
+          "evidence": 0.5541260153,
+          "muse": -1.8333333333,
+          "node_id": "n1",
+          "node_type": "NOT",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -2.9866850321,
+          "evidence": 0.4710743802,
+          "muse": -1.6111111111,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 4,
+          "report_rank": 3
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": -4.2859860198,
+          "evidence": 0.3169168494,
+          "muse": -2.2222222222,
+          "node_id": "n3",
+          "node_type": "OR",
+          "path": "root/child/right",
+          "rank": 5,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -8.5799319728,
+          "evidence": 0.1734693878,
+          "muse": -4.3333333333,
+          "node_id": "n4",
+          "node_type": "PROP",
+          "path": "root/child/right/left",
+          "rank": 6,
+          "report_rank": 7
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_03/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 3,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {},
+      "fault_recall_in_slice": 0.0,
+      "initial_gate_edit_candidates": 15,
+      "initial_gate_reduction_ratio": 0.11764705882352944,
+      "mutation_attempts_reported": 30,
+      "positive_muse_attempts": 4,
+      "ranking": [
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": 0.8763983546,
+          "evidence": 0.9106914461,
+          "muse": 0.2105263158,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -1.5684266815,
+          "evidence": 0.9067363805,
+          "muse": -0.9358974359,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 2,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -2.4226646807,
+          "evidence": 0.6283548491,
+          "muse": -1.3684210526,
+          "node_id": "n1",
+          "node_type": "NOT",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -2.0977961433,
+          "evidence": 0.4710743802,
+          "muse": -1.1666666667,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 4,
+          "report_rank": 3
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_04/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 4,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": false
+    },
+    {
+      "fault_ranks": {
+        "n3": 5,
+        "n4": 6
+      },
+      "fault_recall_in_slice": 0.0,
+      "initial_gate_edit_candidates": 18,
+      "initial_gate_reduction_ratio": 0.3076923076923077,
+      "mutation_attempts_reported": 39,
+      "positive_muse_attempts": 8,
+      "ranking": [
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": 0.839944402,
+          "evidence": 0.9106580347,
+          "muse": 0.1923076923,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -1.1753285516,
+          "evidence": 0.9067363805,
+          "muse": -0.7393483709,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 2,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -1.9935287993,
+          "evidence": 0.6283270168,
+          "muse": -1.1538461538,
+          "node_id": "n1",
+          "node_type": "NOT",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -1.7168437623,
+          "evidence": 0.4710743802,
+          "muse": -0.9761904762,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 4,
+          "report_rank": 3
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": -2.508208242,
+          "evidence": 0.3169168494,
+          "muse": -1.3333333333,
+          "node_id": "n3",
+          "node_type": "OR",
+          "path": "root/child/right",
+          "rank": 5,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -5.5323129252,
+          "evidence": 0.1734693878,
+          "muse": -2.8095238095,
+          "node_id": "n4",
+          "node_type": "PROP",
+          "path": "root/child/right/left",
+          "rank": 6,
+          "report_rank": 7
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_05/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 5,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {
+        "n3": 5,
+        "n4": 6
+      },
+      "fault_recall_in_slice": 0.0,
+      "initial_gate_edit_candidates": 18,
+      "initial_gate_reduction_ratio": 0.3076923076923077,
+      "mutation_attempts_reported": 39,
+      "positive_muse_attempts": 8,
+      "ranking": [
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": 0.8189570282,
+          "evidence": 0.9106413291,
+          "muse": 0.1818181818,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -0.9573725505,
+          "evidence": 0.9067363805,
+          "muse": -0.6303703704,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 2,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -1.7464495103,
+          "evidence": 0.6283131006,
+          "muse": -1.0303030303,
+          "node_id": "n1",
+          "node_type": "NOT",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -1.5052035507,
+          "evidence": 0.4710743802,
+          "muse": -0.8703703704,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 4,
+          "report_rank": 3
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": -2.2119119457,
+          "evidence": 0.3169168494,
+          "muse": -1.1851851852,
+          "node_id": "n3",
+          "node_type": "OR",
+          "path": "root/child/right",
+          "rank": 5,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -5.0243764172,
+          "evidence": 0.1734693878,
+          "muse": -2.5555555556,
+          "node_id": "n4",
+          "node_type": "PROP",
+          "path": "root/child/right/left",
+          "rank": 6,
+          "report_rank": 7
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_06/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 6,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {
+        "n3": 5,
+        "n4": 6
+      },
+      "fault_recall_in_slice": 0.0,
+      "initial_gate_edit_candidates": 21,
+      "initial_gate_reduction_ratio": 0.4,
+      "mutation_attempts_reported": 48,
+      "positive_muse_attempts": 9,
+      "ranking": [
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": 0.8053156528,
+          "evidence": 0.9106313056,
+          "muse": 0.175,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -0.8188214481,
+          "evidence": 0.9067363805,
+          "muse": -0.5610948192,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 2,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -1.5858476246,
+          "evidence": 0.6283047509,
+          "muse": -0.95,
+          "node_id": "n1",
+          "node_type": "NOT",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -1.370523416,
+          "evidence": 0.4710743802,
+          "muse": -0.803030303,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 4,
+          "report_rank": 3
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": -2.0233597571,
+          "evidence": 0.3169168494,
+          "muse": -1.0909090909,
+          "node_id": "n3",
+          "node_type": "OR",
+          "path": "root/child/right",
+          "rank": 5,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -4.701144094,
+          "evidence": 0.1734693878,
+          "muse": -2.3939393939,
+          "node_id": "n4",
+          "node_type": "PROP",
+          "path": "root/child/right/left",
+          "rank": 6,
+          "report_rank": 7
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_07/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 7,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {
+        "n3": 5,
+        "n4": 6
+      },
+      "fault_recall_in_slice": 0.0,
+      "initial_gate_edit_candidates": 21,
+      "initial_gate_reduction_ratio": 0.4,
+      "mutation_attempts_reported": 48,
+      "positive_muse_attempts": 9,
+      "ranking": [
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": 0.7957378436,
+          "evidence": 0.9106246234,
+          "muse": 0.170212766,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -0.7229658361,
+          "evidence": 0.9067363805,
+          "muse": -0.5131670132,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 2,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -1.4730844503,
+          "evidence": 0.6282991844,
+          "muse": -0.8936170213,
+          "node_id": "n1",
+          "node_type": "NOT",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -1.2772833227,
+          "evidence": 0.4710743802,
+          "muse": -0.7564102564,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 4,
+          "report_rank": 3
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": -1.8928236266,
+          "evidence": 0.3169168494,
+          "muse": -1.0256410256,
+          "node_id": "n3",
+          "node_type": "OR",
+          "path": "root/child/right",
+          "rank": 5,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -4.4773678702,
+          "evidence": 0.1734693878,
+          "muse": -2.2820512821,
+          "node_id": "n4",
+          "node_type": "PROP",
+          "path": "root/child/right/left",
+          "rank": 6,
+          "report_rank": 7
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_08/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 8,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {},
+      "fault_recall_in_slice": 0.0,
+      "initial_gate_edit_candidates": 22,
+      "initial_gate_reduction_ratio": 0.08333333333333337,
+      "mutation_attempts_reported": 38,
+      "positive_muse_attempts": 9,
+      "ranking": [
+        {
+          "best_operator": "flip_temporal",
+          "edit_score": 0.7886432585,
+          "evidence": 0.9106198503,
+          "muse": 0.1666666667,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -0.6527041612,
+          "evidence": 0.9067363805,
+          "muse": -0.4780361757,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 2,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -2.0960946902,
+          "evidence": 0.6522550641,
+          "muse": -1.2111111111,
+          "node_id": "n1",
+          "node_type": "NOT",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -1.2089072544,
+          "evidence": 0.4710743802,
+          "muse": -0.7222222222,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 4,
+          "report_rank": 3
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_09/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 9,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": false,
+      "top5_hit": false
+    },
+    {
+      "fault_ranks": {
+        "n3": 3,
+        "n4": 5
+      },
+      "fault_recall_in_slice": 0.5,
+      "initial_gate_edit_candidates": 44,
+      "initial_gate_reduction_ratio": 0.16981132075471694,
+      "mutation_attempts_reported": 53,
+      "positive_muse_attempts": 3,
+      "ranking": [
+        {
+          "best_operator": "flip_temporal",
+          "edit_score": 0.4279700725,
+          "evidence": 0.781866071,
+          "muse": 0.0185185185,
+          "node_id": "n0",
+          "node_type": "EVENTUALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -1.4998077053,
+          "evidence": 0.781866071,
+          "muse": -0.8703703704,
+          "node_id": "n1",
+          "node_type": "IMPLIES",
+          "path": "root/child",
+          "rank": 2,
+          "report_rank": 9
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -0.2087870943,
+          "evidence": 0.6972406262,
+          "muse": -0.2037037037,
+          "node_id": "n3",
+          "node_type": "OR",
+          "path": "root/child/right",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -1.8603736699,
+          "evidence": 0.6566111508,
+          "muse": -1.0943396226,
+          "node_id": "n5",
+          "node_type": "PROP",
+          "path": "root/child/right/right",
+          "rank": 4,
+          "report_rank": 12
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": 0.1733833814,
+          "evidence": 0.3467667628,
+          "muse": 0.0,
+          "node_id": "n4",
+          "node_type": "PROP",
+          "path": "root/child/right/left",
+          "rank": 5,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -0.0364355014,
+          "evidence": 0.2271289971,
+          "muse": 0.0,
+          "node_id": "n2",
+          "node_type": "BOOL",
+          "path": "root/child/left",
+          "rank": 6,
+          "report_rank": 7
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n1",
+        "n3",
+        "n5"
+      ],
+      "repair_slice_size": 4,
+      "reports": [
+        "round_10/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 10,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": true,
+      "top5_hit": true
+    }
+  ],
+  "logical_run_id": "B3__DeepSTL-0061__gpt-5.6-sol__t0__no_ceclass__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": true,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "responsibility",
+        "responsibility_enabled": true,
+        "self_coefficient_enabled": true
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [
+        "eq_JGVpmcKo4_10"
+      ],
+      "ceclass_class_limit": 5,
+      "ceclass_k": 1,
+      "ceclass_schedule": "none",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+      "derived_signal_definitions": {
+        "eq_JGVpmcKo4_10": {
+          "left": "JGVpmcKo4",
+          "op": "equals",
+          "value": "10"
+        }
+      },
+      "discrete_signals": [
+        "eq_JGVpmcKo4_10"
+      ],
+      "domain_config": {
+        "boolean_signals": [
+          "eq_JGVpmcKo4_10"
+        ],
+        "derived_signal_definitions": {
+          "eq_JGVpmcKo4_10": {
+            "left": "JGVpmcKo4",
+            "op": "equals",
+            "value": "10"
+          }
+        },
+        "signals": [
+          {
+            "discrete": false,
+            "max": 11.0,
+            "min": 9.0,
+            "source": "JGVpmcKo4",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 6.0,
+            "min": 0.0,
+            "source": "MBgItwcIX",
+            "static": false
+          },
+          {
+            "discrete": true,
+            "max": 1.0,
+            "min": 0.0,
+            "source": "eq_JGVpmcKo4_10",
+            "static": false
+          }
+        ],
+        "time_end": 40.0,
+        "time_start": 0.0,
+        "time_step": 1.0
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_deepstl_test",
+      "fairness_check": {
+        "allowed": {
+          "no_ceclass": [
+            "ceclass_schedule"
+          ],
+          "no_self_coeff": [
+            "repair_localization_self_coefficient_cap"
+          ],
+          "noloc": [
+            "repair_localization"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_deepstl_test/_stage0/heldout/DeepSTL-0061__gpt-5.6-sol__t0",
+      "initial_trace_ids": [],
+      "k_gen": 8,
+      "k_gen_init": 8,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "sgrl",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "JGVpmcKo4": [
+          9.0,
+          11.0
+        ],
+        "MBgItwcIX": [
+          0.0,
+          6.0
+        ],
+        "eq_JGVpmcKo4_10": [
+          0.0,
+          1.0
+        ]
+      },
+      "signals": [
+        "JGVpmcKo4",
+        "MBgItwcIX",
+        "eq_JGVpmcKo4_10"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0,
+      "total_query_budget": 64,
+      "upstream_method": "gpt-5.6-sol"
+    },
+    "edits": [
+      {
+        "edit": "flip_boolean",
+        "faulty_node": "n3",
+        "faulty_path": "root.child.right",
+        "faulty_subformula": "OR[MBgItwcIX <= 1,MBgItwcIX < 5]",
+        "oracle_path": "root.child.right",
+        "oracle_subformula": "AND[MBgItwcIX > 1,MBgItwcIX < 5]"
+      },
+      {
+        "edit": "flip_predicate_direction",
+        "faulty_node": "n4",
+        "faulty_path": "root.child.right.left",
+        "faulty_subformula": "MBgItwcIX <= 1",
+        "oracle_path": "root.child.right.left",
+        "oracle_subformula": "MBgItwcIX > 1"
+      }
+    ],
+    "fault_nodes": [
+      "n3",
+      "n4"
+    ],
+    "fault_types": [
+      "flip_boolean",
+      "flip_predicate_direction"
+    ],
+    "faulty_formula": "GLOBALLY I=[0,40][IMPLIES[eq_JGVpmcKo4_10,OR[MBgItwcIX <= 1,MBgItwcIX < 5]]]",
+    "formula_row": 1,
+    "gold_formula": "GLOBALLY I=[0,40][IMPLIES[eq_JGVpmcKo4_10,AND[MBgItwcIX > 1,MBgItwcIX < 5]]]",
+    "in_scope": true,
+    "instance_id": "DeepSTL-0061__gpt-5.6-sol__t0",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "no_ceclass",
+    "num_faults": 2,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "no_ceclass",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 32,
+    "Q_requested": 288,
+    "Q_star": null,
+    "atoms_preserved": 0.6666666666666666,
+    "candidate_pool": [],
+    "candidate_pool_equivalence": {},
+    "canonical_exact": false,
+    "edits_applied": 2,
+    "equivalence": {
+      "method": "smt",
+      "time_s": 0.04060648797894828,
+      "verdict": "not_equivalent"
+    },
+    "exact": false,
+    "final_formula": "NOT[IMPLIES[eq_JGVpmcKo4_10,OR[MBgItwcIX <= 1.0,MBgItwcIX > 5.0]]]",
+    "first_success_round": null,
+    "fitness_evals_star": null,
+    "fitness_evals_total": 9000,
+    "heldout_bool_agree": 0.18,
+    "heldout_sign_agree": 0.11,
+    "observed_trace_set": {
+      "boolean_agreement": 0.7,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 3,
+        "queries": 15,
+        "round": 1,
+        "schedule": "none"
+      },
+      "first_gate": {
+        "formula_nodes": 6,
+        "gate": [
+          "root",
+          "root/child",
+          "root/child/right",
+          "root/child/right/right"
+        ],
+        "levels": 3,
+        "source": "round_01/repair_attempt_00/repair_output/first_gate.json"
+      },
+      "heldout_bool_agree": 0.18,
+      "heldout_count": 200,
+      "heldout_incomplete": false,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.11,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.5312500546875001,
+      "robustness_sign_agreement": 0.7,
+      "trace_count": 160
+    },
+    "plausible": false,
+    "pool_contains_equivalent": false,
+    "q_censored": true,
+    "repaired_formula": "NOT[IMPLIES[eq_JGVpmcKo4_10,OR[MBgItwcIX <= 1.0,MBgItwcIX > 5.0]]]",
+    "search": {
+      "completed": 10,
+      "process_failures": 0,
+      "started": 10,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "smt",
+      "result": "not_equivalent",
+      "time_s": 0.04060648797894828,
+      "timeout": false,
+      "verdict": "not_equivalent"
+    },
+    "status": "not_repaired",
+    "ted_to_initial": 2,
+    "ted_to_oracle": 4,
+    "time_s": {
+      "labelling": 24.78401338501135,
+      "other": 0.0,
+      "search": 53.851055436971365,
+      "tracegen": 206.24750897311606
+    },
+    "train_accuracy": 0.7,
+    "training_consistent": false,
+    "wall_time_s": 294.4452461609908
+  },
+  "rounds": [
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n5",
+        "n0",
+        "n1",
+        "n3"
+      ],
+      "node_scores": {
+        "root": 0.221783385,
+        "root/child": 0.221783385,
+        "root/child/left": 0.0237839156,
+        "root/child/right": 0.1979994694,
+        "root/child/right/left": 0.0655430363,
+        "root/child/right/right": 0.2691068087
+      },
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n1",
+        "n0"
+      ],
+      "node_scores": {
+        "root": 0.5893077628,
+        "root/child": 0.7217261905
+      },
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.8764807879,
+        "root/child": 0.5541260153,
+        "root/child/left": 0.7668409513,
+        "root/child/right": 0.3169168494,
+        "root/child/right/left": 0.1734693878,
+        "root/child/right/right": 0.4710743802
+      },
+      "round": 3,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.9106914461,
+        "root/child": 0.6283548491,
+        "root/child/left": 0.9067363805,
+        "root/child/right/right": 0.4710743802
+      },
+      "round": 4,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.9106580347,
+        "root/child": 0.6283270168,
+        "root/child/left": 0.9067363805,
+        "root/child/right": 0.3169168494,
+        "root/child/right/left": 0.1734693878,
+        "root/child/right/right": 0.4710743802
+      },
+      "round": 5,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.9106413291,
+        "root/child": 0.6283131006,
+        "root/child/left": 0.9067363805,
+        "root/child/right": 0.3169168494,
+        "root/child/right/left": 0.1734693878,
+        "root/child/right/right": 0.4710743802
+      },
+      "round": 6,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.9106313056,
+        "root/child": 0.6283047509,
+        "root/child/left": 0.9067363805,
+        "root/child/right": 0.3169168494,
+        "root/child/right/left": 0.1734693878,
+        "root/child/right/right": 0.4710743802
+      },
+      "round": 7,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.9106246234,
+        "root/child": 0.6282991844,
+        "root/child/left": 0.9067363805,
+        "root/child/right": 0.3169168494,
+        "root/child/right/left": 0.1734693878,
+        "root/child/right/right": 0.4710743802
+      },
+      "round": 8,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n2",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.9106198503,
+        "root/child": 0.6522550641,
+        "root/child/left": 0.9067363805,
+        "root/child/right/right": 0.4710743802
+      },
+      "round": 9,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n1",
+        "n3",
+        "n5"
+      ],
+      "node_scores": {
+        "root": 0.781866071,
+        "root/child": 0.781866071,
+        "root/child/left": 0.2271289971,
+        "root/child/right": 0.6972406262,
+        "root/child/right/left": 0.3467667628,
+        "root/child/right/right": 0.6566111508
+      },
+      "round": 10,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "B3__DeepSTL-0061__gpt-5.6-sol__t0__no_ceclass__seed0__dfbf484bf1d2__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 900,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 2,
+      "search_completed": 1,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 3,
+      "search_completed": 1,
+      "search_log": "round_03/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 4,
+      "search_completed": 1,
+      "search_log": "round_04/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 5,
+      "search_completed": 1,
+      "search_log": "round_05/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 6,
+      "search_completed": 1,
+      "search_log": "round_06/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 7,
+      "search_completed": 1,
+      "search_log": "round_07/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 8,
+      "search_completed": 1,
+      "search_log": "round_08/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 9,
+      "search_completed": 1,
+      "search_log": "round_09/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 10,
+      "search_completed": 1,
+      "search_log": "round_10/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "not_repaired",
+  "trace_metrics": {
+    "avg_num_signals": 3.0,
+    "avg_trace_length": 41.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 0,
+    "num_generated": 288,
+    "num_oracle_queried": 32,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 32,
+    "time_disambiguation_s": 0.0,
+    "time_s": {
+      "labelling": 24.78401338501135,
+      "other": 0.0,
+      "search": 53.851055436971365,
+      "tracegen": 206.24750897311606
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.14400499999999997,
+      "matlab_csv_write_s": 1.057597,
+      "matlab_jobs": 44,
+      "matlab_launches": 1,
+      "matlab_startup_s": 42.10346677596225,
+      "matlab_wall_s": 206.24831483294838,
+      "python_csv_read_s": 0.19401174795348197,
+      "smt_encode_s": 146.03764900000007,
+      "solves_performed": 288,
+      "solves_requested": 288,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 288,
+      "z3_sat": 288,
+      "z3_solve_s": 27.232969000000008,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    }
+  },
+  "versions": {
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb"
+  }
+}

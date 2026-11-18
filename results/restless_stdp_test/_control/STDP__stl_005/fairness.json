@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "reference": "restless",
+  "seed": 0,
+  "allowed": {
+    "restless": [],
+    "noloc": [
+      "repair_localization"
+    ],
+    "no_self_coeff": [
+      "repair_localization_self_coefficient_cap"
+    ],
+    "no_ceclass": [
+      "ceclass_schedule"
+    ]
+  },
+  "illegal_differences": {}
+}

@@ -1,0 +1,2 @@
+formula
+"AND[IMPLIES[ap_liftmode_is_wingborne,kias < 90],IMPLIES[kias < 90,ap_liftmode_is_wingborne]]"

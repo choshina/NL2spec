@@ -1,0 +1,31 @@
+{
+  "dataset_name": "DeepSTL",
+  "benchmark": "DeepSTL",
+  "instance_id": "DeepSTL-0049__gpt-5.6-sol__t0",
+  "source": "DeepSTL",
+  "llm_formula_csv": "experiments/frozen/deepstl_v1/instances/DeepSTL-0049__gpt-5.6-sol__t0/Incorrect_STL.csv",
+  "oracle_formula_csv": "experiments/frozen/deepstl_v1/instances/DeepSTL-0049__gpt-5.6-sol__t0/Oracle_STL.csv",
+  "formula_row": 1,
+  "oracle_formula_row": 1,
+  "signals": [
+    {
+      "source": "mp84Ctzd",
+      "target": "mp84Ctzd",
+      "min": 31.113,
+      "max": 38.027,
+      "discrete": false
+    }
+  ],
+  "boolean_signals": [],
+  "discrete_signals": [],
+  "one_hot_groups": {},
+  "derived_signal_definitions": {},
+  "time_start": 0.0,
+  "time_end": 40.0,
+  "time_step": 1.0,
+  "ceclass_k": 1,
+  "k_gen": 8,
+  "ceclass_class_limit": 5,
+  "round_trace_budget": 10,
+  "generation_mode": "ceclass"
+}

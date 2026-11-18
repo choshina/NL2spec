@@ -1,0 +1,822 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": false,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "off",
+    "responsibility_enabled": false,
+    "self_coefficient_enabled": false
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": false,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "off",
+      "responsibility_enabled": false,
+      "self_coefficient_enabled": false
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [
+      "ap_q22_is_AE2fHF"
+    ],
+    "ceclass_class_limit": 5,
+    "ceclass_k": 1,
+    "ceclass_schedule": "refine",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "derived_signal_definitions": {},
+    "discrete_signals": [
+      "ap_q22_is_AE2fHF"
+    ],
+    "domain_config": {
+      "boolean_signals": [
+        "ap_q22_is_AE2fHF"
+      ],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": false,
+          "max": 1641.97,
+          "min": 1343.43,
+          "source": "PA7JJ",
+          "static": false
+        },
+        {
+          "discrete": true,
+          "max": 1.0,
+          "min": 0.0,
+          "source": "ap_q22_is_AE2fHF",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 8.0,
+          "min": 6.0,
+          "source": "e",
+          "static": false
+        }
+      ],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_deepstl_v2n",
+    "fairness_check": {
+      "allowed": {
+        "noloc": [
+          "repair_localization"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_deepstl_v2n/_stage0/heldout/DeepSTL-0092__gpt-5.6-sol__t0",
+    "initial_trace_ids": [],
+    "k_gen": 8,
+    "k_gen_init": 8,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "off",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "PA7JJ": [
+        1343.43,
+        1641.97
+      ],
+      "ap_q22_is_AE2fHF": [
+        0.0,
+        1.0
+      ],
+      "e": [
+        6.0,
+        8.0
+      ]
+    },
+    "signals": [
+      "PA7JJ",
+      "ap_q22_is_AE2fHF",
+      "e"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 40.0,
+    "time_start": 0.0,
+    "time_step": 1.0,
+    "total_query_budget": 64,
+    "type_priority": true,
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "config_hash": "5b583d13d4c0cb7cfdf62aacf31aa51e417d4602a4d32efca336b1221bfc85e8",
+  "cost": {
+    "candidate_evaluations": 1802,
+    "generated_traces": 33392,
+    "oracle_queries": 37,
+    "rounds": 4,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.125384,
+      "matlab_csv_write_s": 1.8423479999999999,
+      "matlab_jobs": 143,
+      "matlab_launches": 1,
+      "matlab_startup_s": 51.67922298445016,
+      "matlab_wall_s": 647.8416747224401,
+      "python_csv_read_s": 0.16824496700428426,
+      "smt_encode_s": 570.4556639999996,
+      "solves_performed": 144,
+      "solves_requested": 144,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 144,
+      "z3_sat": 112,
+      "z3_solve_s": 17.395222,
+      "z3_unknown": 0,
+      "z3_unsat": 32
+    },
+    "wall_time_s": 950.9665617789724
+  },
+  "experiment_tag": "restless_deepstl_v2n",
+  "fairness_check": {
+    "allowed": {
+      "noloc": [
+        "repair_localization"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 5,
+      "ast_nodes": 7,
+      "atom_count": 3,
+      "signal_count": 3,
+      "temporal_count": 1,
+      "temporal_depth": 1
+    },
+    "fault_types": [
+      "flip_predicate_direction"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "DeepSTL-0092__gpt-5.6-sol__t0",
+    "n_nodes": 7,
+    "reachable_edit_distance": null,
+    "source": "DeepSTL",
+    "split": "test",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [],
+  "logical_run_id": "B3__DeepSTL-0092__gpt-5.6-sol__t0__noloc__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": false,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "off",
+        "responsibility_enabled": false,
+        "self_coefficient_enabled": false
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [
+        "ap_q22_is_AE2fHF"
+      ],
+      "ceclass_class_limit": 5,
+      "ceclass_k": 1,
+      "ceclass_schedule": "refine",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+      "derived_signal_definitions": {},
+      "discrete_signals": [
+        "ap_q22_is_AE2fHF"
+      ],
+      "domain_config": {
+        "boolean_signals": [
+          "ap_q22_is_AE2fHF"
+        ],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": false,
+            "max": 1641.97,
+            "min": 1343.43,
+            "source": "PA7JJ",
+            "static": false
+          },
+          {
+            "discrete": true,
+            "max": 1.0,
+            "min": 0.0,
+            "source": "ap_q22_is_AE2fHF",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 8.0,
+            "min": 6.0,
+            "source": "e",
+            "static": false
+          }
+        ],
+        "time_end": 40.0,
+        "time_start": 0.0,
+        "time_step": 1.0
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_deepstl_v2n",
+      "fairness_check": {
+        "allowed": {
+          "noloc": [
+            "repair_localization"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_deepstl_v2n/_stage0/heldout/DeepSTL-0092__gpt-5.6-sol__t0",
+      "initial_trace_ids": [],
+      "k_gen": 8,
+      "k_gen_init": 8,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "off",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "PA7JJ": [
+          1343.43,
+          1641.97
+        ],
+        "ap_q22_is_AE2fHF": [
+          0.0,
+          1.0
+        ],
+        "e": [
+          6.0,
+          8.0
+        ]
+      },
+      "signals": [
+        "PA7JJ",
+        "ap_q22_is_AE2fHF",
+        "e"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0,
+      "total_query_budget": 64,
+      "type_priority": true,
+      "upstream_method": "gpt-5.6-sol"
+    },
+    "edits": [
+      {
+        "edit": "flip_predicate_direction",
+        "faulty_node": "n6",
+        "faulty_path": "root.child.right",
+        "faulty_subformula": "PA7JJ >= 1492.7",
+        "oracle_path": "root.child.right",
+        "oracle_subformula": "PA7JJ < 1492.7"
+      }
+    ],
+    "fault_nodes": [
+      "n6"
+    ],
+    "fault_types": [
+      "flip_predicate_direction"
+    ],
+    "faulty_formula": "GLOBALLY I=[0,40][IMPLIES[AND[NOT[e > 7],ap_q22_is_AE2fHF],PA7JJ >= 1492.7]]",
+    "formula_row": 1,
+    "gold_formula": "GLOBALLY I=[0,40][IMPLIES[AND[NOT[e > 7],ap_q22_is_AE2fHF],PA7JJ < 1492.7]]",
+    "in_scope": true,
+    "instance_id": "DeepSTL-0092__gpt-5.6-sol__t0",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "noloc",
+    "num_faults": 1,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "noloc",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 37,
+    "Q_requested": 33392,
+    "Q_star": 21,
+    "atoms_preserved": 1.0,
+    "candidate_pool": [
+      "EVENTUALLY I=[0, 1][GLOBALLY I=[0, 1][IMPLIES[NOT[NOT[PA7JJ >= 1492.7]],AND[e < 7.0,NOT[ap_q22_is_AE2fHF]]]]]",
+      "EVENTUALLY I=[0, 1][IMPLIES[NOT[NOT[PA7JJ >= 1492.7]],AND[EVENTUALLY I=[0, 1][e < 7.0],GLOBALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]]]]",
+      "EVENTUALLY I=[0, 1][IMPLIES[OR[e > 7.0,NOT[ap_q22_is_AE2fHF]],NOT[NOT[PA7JJ <= 1492.7]]]]",
+      "EVENTUALLY I=[0, 40][IMPLIES[AND[NOT[e < 7.0],ap_q22_is_AE2fHF],PA7JJ >= 1492.7]]",
+      "EVENTUALLY I=[0, 40][IMPLIES[AND[e > 7.0,ap_q22_is_AE2fHF],PA7JJ >= 1492.7]]",
+      "EVENTUALLY I=[0, 40][IMPLIES[OR[e > 7.0,NOT[ap_q22_is_AE2fHF]],NOT[PA7JJ >= 1492.7]]]",
+      "EVENTUALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,AND[e < 7.0,ap_q22_is_AE2fHF]]]",
+      "EVENTUALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,AND[e > 7.0,NOT[ap_q22_is_AE2fHF]]]]",
+      "EVENTUALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,OR[e < 7.0,ap_q22_is_AE2fHF]]]",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[NOT[ap_q22_is_AE2fHF],EVENTUALLY I=[0, 1][e < 7.0]],GLOBALLY I=[0, 1][NOT[NOT[PA7JJ <= 1492.7]]]]]",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[NOT[ap_q22_is_AE2fHF],EVENTUALLY I=[0, 1][e < 7.0]],GLOBALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[NOT[e > 7.0],NOT[ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[NOT[e > 7.0],NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[e > 7.0,NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[NOT[e < 7.0],ap_q22_is_AE2fHF],PA7JJ <= 1492.7]]",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[NOT[e < 7.0],ap_q22_is_AE2fHF],PA7JJ >= 1492.7]]",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[ap_q22_is_AE2fHF,NOT[e > 7.0]],NOT[PA7JJ >= 1492.7]]]",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[ap_q22_is_AE2fHF,NOT[e > 7.0]],PA7JJ <= 1492.7]]",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[ap_q22_is_AE2fHF,e < 7.0],PA7JJ <= 1492.7]]",
+      "GLOBALLY I=[0, 40][IMPLIES[NOT[NOT[PA7JJ >= 1492.7]],AND[e > 7.0,NOT[ap_q22_is_AE2fHF]]]]",
+      "GLOBALLY I=[0, 40][IMPLIES[OR[e < 7.0,ap_q22_is_AE2fHF],NOT[PA7JJ >= 1492.7]]]",
+      "GLOBALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,OR[NOT[ap_q22_is_AE2fHF],NOT[e < 7.0]]]]",
+      "GLOBALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,OR[NOT[e < 7.0],ap_q22_is_AE2fHF]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e < 7.0],EVENTUALLY I=[0, 1][ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 1][NOT[NOT[PA7JJ >= 1492.7]]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e < 7.0],GLOBALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],GLOBALLY I=[0, 1][NOT[NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e < 7.0],NOT[ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 1][NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e > 7.0],EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e > 7.0],EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e > 7.0],NOT[EVENTUALLY I=[0, 1][ap_q22_is_AE2fHF]]],NOT[NOT[EVENTUALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],PA7JJ <= 1492.7]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][PA7JJ <= 1492.7]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],PA7JJ <= 1492.7]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e > 7.0]],EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e > 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e > 7.0]],GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][PA7JJ <= 1492.7]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[e > 7.0]]],NOT[EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF],NOT[e > 7.0]],GLOBALLY I=[0, 40][PA7JJ <= 1492.7]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][e < 7.0],ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][e < 7.0],ap_q22_is_AE2fHF],NOT[PA7JJ <= 1492.7]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][e > 7.0],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][NOT[NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][e > 7.0],ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 1][NOT[e > 7.0]],NOT[ap_q22_is_AE2fHF]],NOT[PA7JJ >= 1492.7]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 1][e < 7.0],ap_q22_is_AE2fHF],NOT[GLOBALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e < 7.0]],ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[NOT[PA7JJ >= 1492.7]]]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e < 7.0]],ap_q22_is_AE2fHF],PA7JJ <= 1492.7]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e > 7.0]],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e > 7.0]],NOT[ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][e < 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][e < 7.0],ap_q22_is_AE2fHF],EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][e > 7.0],EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]]",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][e > 7.0],NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][NOT[NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[AND[NOT[e < 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[AND[NOT[e < 7.0],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[AND[NOT[e < 7.0],GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]]",
+      "IMPLIES[AND[NOT[e > 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[NOT[e > 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[AND[e < 7.0,EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[AND[e < 7.0,EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],NOT[PA7JJ <= 1492.7]]",
+      "IMPLIES[AND[e < 7.0,GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[AND[e < 7.0,ap_q22_is_AE2fHF],PA7JJ >= 1492.7]",
+      "IMPLIES[AND[e > 7.0,EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]",
+      "IMPLIES[AND[e > 7.0,GLOBALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[AND[e > 7.0,GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[AND[e > 7.0,NOT[ap_q22_is_AE2fHF]],NOT[PA7JJ >= 1492.7]]",
+      "IMPLIES[AND[e > 7.0,ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][PA7JJ <= 1492.7]]",
+      "IMPLIES[EVENTUALLY I=[0, 1][AND[e < 7.0,NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[EVENTUALLY I=[0, 1][OR[NOT[e > 7.0],NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]",
+      "IMPLIES[EVENTUALLY I=[0, 40][AND[e < 7.0,ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[EVENTUALLY I=[0, 40][AND[e < 7.0,ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[EVENTUALLY I=[0, 40][AND[e < 7.0,ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "IMPLIES[EVENTUALLY I=[0, 40][OR[e > 7.0,ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[EVENTUALLY I=[0, 40][OR[e > 7.0,ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "IMPLIES[EVENTUALLY I=[0, 40][PA7JJ >= 1492.7],EVENTUALLY I=[0, 40][OR[NOT[ap_q22_is_AE2fHF],NOT[e < 7.0]]]]",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[NOT[ap_q22_is_AE2fHF],e < 7.0]],NOT[NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[NOT[e < 7.0],ap_q22_is_AE2fHF]],PA7JJ >= 1492.7]",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[NOT[e > 7.0],NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[NOT[e > 7.0],ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[e < 7.0,ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[e > 7.0,NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][NOT[NOT[PA7JJ <= 1492.7]]]]",
+      "IMPLIES[OR[EVENTUALLY I=[0, 1][NOT[e > 7.0]],EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 1][PA7JJ >= 1492.7]]]",
+      "IMPLIES[OR[EVENTUALLY I=[0, 1][e < 7.0],EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[OR[EVENTUALLY I=[0, 40][e < 7.0],NOT[ap_q22_is_AE2fHF]],NOT[NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[OR[e < 7.0,GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "IMPLIES[OR[e < 7.0,NOT[ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]",
+      "IMPLIES[OR[e > 7.0,EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]",
+      "IMPLIES[OR[e > 7.0,NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][PA7JJ <= 1492.7]]",
+      "IMPLIES[PA7JJ >= 1492.7,GLOBALLY I=[0, 40][AND[e > 7.0,ap_q22_is_AE2fHF]]]",
+      "NOT[GLOBALLY I=[0, 40][NOT[IMPLIES[PA7JJ >= 1492.7,AND[e < 7.0,ap_q22_is_AE2fHF]]]]]",
+      "NOT[IMPLIES[EVENTUALLY I=[0, 40][PA7JJ <= 1492.7],AND[e > 7.0,ap_q22_is_AE2fHF]]]",
+      "NOT[IMPLIES[OR[EVENTUALLY I=[0, 40][NOT[e > 7.0]],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "NOT[IMPLIES[OR[NOT[e > 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ <= 1492.7]]]",
+      "NOT[IMPLIES[OR[e < 7.0,NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]",
+      "NOT[IMPLIES[PA7JJ <= 1492.7,GLOBALLY I=[0, 40][AND[e > 7.0,ap_q22_is_AE2fHF]]]]"
+    ],
+    "candidate_pool_equivalence": {
+      "EVENTUALLY I=[0, 1][GLOBALLY I=[0, 1][IMPLIES[NOT[NOT[PA7JJ >= 1492.7]],AND[e < 7.0,NOT[ap_q22_is_AE2fHF]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 1][IMPLIES[NOT[NOT[PA7JJ >= 1492.7]],AND[EVENTUALLY I=[0, 1][e < 7.0],GLOBALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 1][IMPLIES[OR[e > 7.0,NOT[ap_q22_is_AE2fHF]],NOT[NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 40][IMPLIES[AND[NOT[e < 7.0],ap_q22_is_AE2fHF],PA7JJ >= 1492.7]]": "not_equivalent",
+      "EVENTUALLY I=[0, 40][IMPLIES[AND[e > 7.0,ap_q22_is_AE2fHF],PA7JJ >= 1492.7]]": "not_equivalent",
+      "EVENTUALLY I=[0, 40][IMPLIES[OR[e > 7.0,NOT[ap_q22_is_AE2fHF]],NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,AND[e < 7.0,ap_q22_is_AE2fHF]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,AND[e > 7.0,NOT[ap_q22_is_AE2fHF]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,OR[e < 7.0,ap_q22_is_AE2fHF]]]": "not_equivalent",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[NOT[ap_q22_is_AE2fHF],EVENTUALLY I=[0, 1][e < 7.0]],GLOBALLY I=[0, 1][NOT[NOT[PA7JJ <= 1492.7]]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[NOT[ap_q22_is_AE2fHF],EVENTUALLY I=[0, 1][e < 7.0]],GLOBALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[NOT[e > 7.0],NOT[ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[NOT[e > 7.0],NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 1][IMPLIES[AND[e > 7.0,NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[NOT[e < 7.0],ap_q22_is_AE2fHF],PA7JJ <= 1492.7]]": "not_equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[NOT[e < 7.0],ap_q22_is_AE2fHF],PA7JJ >= 1492.7]]": "not_equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[ap_q22_is_AE2fHF,NOT[e > 7.0]],NOT[PA7JJ >= 1492.7]]]": "equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[ap_q22_is_AE2fHF,NOT[e > 7.0]],PA7JJ <= 1492.7]]": "equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[AND[ap_q22_is_AE2fHF,e < 7.0],PA7JJ <= 1492.7]]": "equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[NOT[NOT[PA7JJ >= 1492.7]],AND[e > 7.0,NOT[ap_q22_is_AE2fHF]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[OR[e < 7.0,ap_q22_is_AE2fHF],NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,OR[NOT[ap_q22_is_AE2fHF],NOT[e < 7.0]]]]": "equivalent",
+      "GLOBALLY I=[0, 40][IMPLIES[PA7JJ >= 1492.7,OR[NOT[e < 7.0],ap_q22_is_AE2fHF]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e < 7.0],EVENTUALLY I=[0, 1][ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 1][NOT[NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e < 7.0],GLOBALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],GLOBALLY I=[0, 1][NOT[NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e < 7.0],NOT[ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 1][NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e > 7.0],EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e > 7.0],EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 1][e > 7.0],NOT[EVENTUALLY I=[0, 1][ap_q22_is_AE2fHF]]],NOT[NOT[EVENTUALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],PA7JJ <= 1492.7]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][PA7JJ <= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],PA7JJ <= 1492.7]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e < 7.0]],ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e > 7.0]],EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e > 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][NOT[e > 7.0]],GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][PA7JJ <= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[e > 7.0]]],NOT[EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF],NOT[e > 7.0]],GLOBALLY I=[0, 40][PA7JJ <= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][e < 7.0],ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][e < 7.0],ap_q22_is_AE2fHF],NOT[PA7JJ <= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][e > 7.0],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][NOT[NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[EVENTUALLY I=[0, 40][e > 7.0],ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 1][NOT[e > 7.0]],NOT[ap_q22_is_AE2fHF]],NOT[PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 1][e < 7.0],ap_q22_is_AE2fHF],NOT[GLOBALLY I=[0, 1][NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e < 7.0]],GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e < 7.0]],ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][NOT[NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e < 7.0]],ap_q22_is_AE2fHF],PA7JJ <= 1492.7]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e > 7.0]],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][NOT[e > 7.0]],NOT[ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][e < 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][e < 7.0],ap_q22_is_AE2fHF],EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][e > 7.0],EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[GLOBALLY I=[0, 40][e > 7.0],NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][NOT[NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[NOT[e < 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[NOT[e < 7.0],GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[NOT[e < 7.0],GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[NOT[e > 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[NOT[e > 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[e < 7.0,EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[e < 7.0,EVENTUALLY I=[0, 40][ap_q22_is_AE2fHF]],NOT[PA7JJ <= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[e < 7.0,GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[e < 7.0,ap_q22_is_AE2fHF],PA7JJ >= 1492.7]": "not_equivalent",
+      "IMPLIES[AND[e > 7.0,EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[e > 7.0,GLOBALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[AND[e > 7.0,GLOBALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[AND[e > 7.0,NOT[ap_q22_is_AE2fHF]],NOT[PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[AND[e > 7.0,ap_q22_is_AE2fHF],GLOBALLY I=[0, 40][PA7JJ <= 1492.7]]": "not_equivalent",
+      "IMPLIES[EVENTUALLY I=[0, 1][AND[e < 7.0,NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[EVENTUALLY I=[0, 1][OR[NOT[e > 7.0],NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[EVENTUALLY I=[0, 40][AND[e < 7.0,ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[EVENTUALLY I=[0, 40][AND[e < 7.0,ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[EVENTUALLY I=[0, 40][AND[e < 7.0,ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[EVENTUALLY I=[0, 40][OR[e > 7.0,ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[EVENTUALLY I=[0, 40][OR[e > 7.0,ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[EVENTUALLY I=[0, 40][PA7JJ >= 1492.7],EVENTUALLY I=[0, 40][OR[NOT[ap_q22_is_AE2fHF],NOT[e < 7.0]]]]": "not_equivalent",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[NOT[ap_q22_is_AE2fHF],e < 7.0]],NOT[NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[NOT[e < 7.0],ap_q22_is_AE2fHF]],PA7JJ >= 1492.7]": "not_equivalent",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[NOT[e > 7.0],NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ >= 1492.7]]": "not_equivalent",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[NOT[e > 7.0],ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[e < 7.0,ap_q22_is_AE2fHF]],NOT[EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[GLOBALLY I=[0, 40][AND[e > 7.0,NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][NOT[NOT[PA7JJ <= 1492.7]]]]": "not_equivalent",
+      "IMPLIES[OR[EVENTUALLY I=[0, 1][NOT[e > 7.0]],EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[GLOBALLY I=[0, 1][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[OR[EVENTUALLY I=[0, 1][e < 7.0],EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[OR[EVENTUALLY I=[0, 40][e < 7.0],NOT[ap_q22_is_AE2fHF]],NOT[NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[OR[e < 7.0,GLOBALLY I=[0, 40][ap_q22_is_AE2fHF]],NOT[GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[OR[e < 7.0,NOT[ap_q22_is_AE2fHF]],EVENTUALLY I=[0, 40][NOT[PA7JJ >= 1492.7]]]": "not_equivalent",
+      "IMPLIES[OR[e > 7.0,EVENTUALLY I=[0, 1][NOT[ap_q22_is_AE2fHF]]],NOT[NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "IMPLIES[OR[e > 7.0,NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][PA7JJ <= 1492.7]]": "not_equivalent",
+      "IMPLIES[PA7JJ >= 1492.7,GLOBALLY I=[0, 40][AND[e > 7.0,ap_q22_is_AE2fHF]]]": "not_equivalent",
+      "NOT[GLOBALLY I=[0, 40][NOT[IMPLIES[PA7JJ >= 1492.7,AND[e < 7.0,ap_q22_is_AE2fHF]]]]]": "not_equivalent",
+      "NOT[IMPLIES[EVENTUALLY I=[0, 40][PA7JJ <= 1492.7],AND[e > 7.0,ap_q22_is_AE2fHF]]]": "not_equivalent",
+      "NOT[IMPLIES[OR[EVENTUALLY I=[0, 40][NOT[e > 7.0]],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],EVENTUALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "NOT[IMPLIES[OR[NOT[e > 7.0],EVENTUALLY I=[0, 40][NOT[ap_q22_is_AE2fHF]]],NOT[PA7JJ <= 1492.7]]]": "not_equivalent",
+      "NOT[IMPLIES[OR[e < 7.0,NOT[ap_q22_is_AE2fHF]],GLOBALLY I=[0, 40][PA7JJ >= 1492.7]]]": "not_equivalent",
+      "NOT[IMPLIES[PA7JJ <= 1492.7,GLOBALLY I=[0, 40][AND[e > 7.0,ap_q22_is_AE2fHF]]]]": "not_equivalent"
+    },
+    "canonical_exact": false,
+    "edits_applied": 3,
+    "equivalence": {
+      "method": "canonical",
+      "time_s": 0.00039926200406625867,
+      "verdict": "equivalent"
+    },
+    "exact": false,
+    "final_formula": "GLOBALLY I=[0, 40][IMPLIES[AND[ap_q22_is_AE2fHF,NOT[e > 7.0]],NOT[PA7JJ >= 1492.7]]]",
+    "first_success_round": 3,
+    "fitness_evals_star": 1246,
+    "fitness_evals_total": 1802,
+    "heldout_bool_agree": 1.0,
+    "heldout_sign_agree": 0.855,
+    "observed_trace_set": {
+      "boolean_agreement": 1.0,
+      "edits_skipped_by_type": 0,
+      "edits_trialled_total": 0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 2,
+        "queries": 2,
+        "round": 1,
+        "schedule": "refine"
+      },
+      "first_gate": null,
+      "gate_expansions": [],
+      "heldout_bool_agree": 1.0,
+      "heldout_count": 200,
+      "heldout_incomplete": false,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.855,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.0,
+      "robustness_sign_agreement": 1.0,
+      "trace_count": 81
+    },
+    "plausible": true,
+    "pool_contains_equivalent": true,
+    "q_censored": false,
+    "repaired_formula": "GLOBALLY I=[0, 40][IMPLIES[AND[ap_q22_is_AE2fHF,NOT[e > 7.0]],NOT[PA7JJ >= 1492.7]]]",
+    "search": {
+      "completed": 3,
+      "process_failures": 0,
+      "started": 3,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "canonical",
+      "result": "equivalent",
+      "time_s": 0.00039926200406625867,
+      "timeout": false,
+      "verdict": "equivalent"
+    },
+    "status": "repaired",
+    "ted_to_initial": 3,
+    "ted_to_oracle": 4,
+    "time_s": {
+      "labelling": 131.45384910260327,
+      "other": 144.60173465992557,
+      "search": 11.188725462008733,
+      "tracegen": 647.8389283814467
+    },
+    "train_accuracy": 1.0,
+    "training_consistent": true,
+    "wall_time_s": 950.9659244039794
+  },
+  "rounds": [
+    {
+      "fitness_evals": 2,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 32,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 3,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 17,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 0,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 4,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "B3__DeepSTL-0092__gpt-5.6-sol__t0__noloc__seed0__5b583d13d4c0__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 2,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 1
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 2,
+      "search_completed": 1,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 100
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 3,
+      "search_completed": 1,
+      "search_log": "round_03/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 10
+    },
+    {
+      "candidate_evaluations": 0,
+      "round": 4,
+      "search_completed": 0,
+      "search_log": "round_04/search_log.jsonl",
+      "search_started": 0,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "repaired",
+  "trace_metrics": {
+    "avg_num_signals": 3.0,
+    "avg_trace_length": 41.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 17,
+    "num_generated": 33392,
+    "num_oracle_queried": 37,
+    "num_oracle_queried_disambiguation": 17,
+    "num_oracle_queried_eq": 20,
+    "time_disambiguation_s": 700.8552169799805,
+    "time_s": {
+      "labelling": 131.45384910260327,
+      "other": 144.60173465992557,
+      "search": 11.188725462008733,
+      "tracegen": 647.8389283814467
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.125384,
+      "matlab_csv_write_s": 1.8423479999999999,
+      "matlab_jobs": 143,
+      "matlab_launches": 1,
+      "matlab_startup_s": 51.67922298445016,
+      "matlab_wall_s": 647.8416747224401,
+      "python_csv_read_s": 0.16824496700428426,
+      "smt_encode_s": 570.4556639999996,
+      "solves_performed": 144,
+      "solves_requested": 144,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 144,
+      "z3_sat": 112,
+      "z3_solve_s": 17.395222,
+      "z3_unknown": 0,
+      "z3_unsat": 32
+    }
+  },
+  "versions": {
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempt": 1,
+  "complete": true,
+  "experiment_tag": "restless_stdp_rw145",
+  "instance": {
+    "instance_id": "STDP__stl_034",
+    "source": "STDP"
+  },
+  "invalid_run": false,
+  "meta": {
+    "instance_id": "STDP__stl_034",
+    "seed": 0,
+    "source": "STDP"
+  },
+  "method": "llm_direct",
+  "result": {
+    "Q": 0,
+    "Q_requested": 0,
+    "Q_star": null,
+    "candidate_pool": [
+      "GLOBALLY I=[0,15][AND[dist_dining_table < 2.9,dist_dresser > 2.3]]"
+    ],
+    "edits_applied": 0,
+    "equivalence": {
+      "method": "smt",
+      "time_s": 2.5097391250310466,
+      "verdict": "not_equivalent"
+    },
+    "final_formula": "GLOBALLY I=[0,15][AND[dist_dining_table < 2.9,dist_dresser > 2.3]]",
+    "fitness_evals_star": null,
+    "fitness_evals_total": 0,
+    "observed_trace_set": {
+      "first_eq": {
+        "ce_found": false,
+        "q_to_first_ce": null,
+        "queries": 0
+      }
+    },
+    "plausible": false,
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "smt",
+      "result": "not_equivalent",
+      "time_s": 2.5097391250310466,
+      "verdict": "not_equivalent"
+    },
+    "status": "not_repaired",
+    "ted_to_initial": 0,
+    "ted_to_oracle": null,
+    "time_s": {
+      "labelling": 0.0,
+      "other": 0.5532655409770086,
+      "search": 1.956473584054038,
+      "tracegen": 0.0
+    },
+    "wall_time_s": 2.5097391250310466
+  },
+  "run_id": "STDP__STDP__stl_034__llm_direct__seed0__attempt1",
+  "schema_version": "3.0",
+  "status": "not_repaired",
+  "trace_metrics": {
+    "num_generated": 0,
+    "num_oracle_queried": 0,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 0,
+    "time_disambiguation_s": 0.0
+  }
+}

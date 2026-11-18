@@ -1,0 +1,11 @@
+run_key,shard,source,upstream_method,instance_id,method,spec
+STDP__stl_005__llm_direct,a,STDP,curated,STDP__stl_005,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_005/spec.json
+STDP__stl_006__llm_direct,a,STDP,curated,STDP__stl_006,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_006/spec.json
+STDP__stl_019__llm_direct,c,STDP,curated,STDP__stl_019,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_019/spec.json
+STDP__stl_021__llm_direct,d,STDP,curated,STDP__stl_021,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_021/spec.json
+STDP__stl_022__llm_direct,b,STDP,curated,STDP__stl_022,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_022/spec.json
+STDP__stl_031__llm_direct,c,STDP,curated,STDP__stl_031,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_031/spec.json
+STDP__stl_033__llm_direct,d,STDP,curated,STDP__stl_033,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_033/spec.json
+STDP__stl_034__llm_direct,b,STDP,curated,STDP__stl_034,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_034/spec.json
+STDP__stl_036__llm_direct,a,STDP,curated,STDP__stl_036,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_036/spec.json
+STDP__stl_050__llm_direct,d,STDP,curated,STDP__stl_050,llm_direct,experiments/frozen/restless_stdp_rw145/instances/STDP__stl_050/spec.json

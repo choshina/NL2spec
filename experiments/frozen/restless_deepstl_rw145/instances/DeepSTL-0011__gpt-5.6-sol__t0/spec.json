@@ -1,0 +1,40 @@
+{
+  "uid": "DeepSTL-0011__gpt-5.6-sol__t0",
+  "source": "DeepSTL",
+  "family": "DeepSTL",
+  "upstream_method": "gpt-5.6-sol",
+  "record_id": "DeepSTL-0011__gpt-5.6-sol__t0",
+  "split": "test",
+  "cohort": "confirmed_fault",
+  "phase": "formal",
+  "experiment_tag": "restless_deepstl_rw145",
+  "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+  "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+  "reachable_edit_distance": null,
+  "G_i": [],
+  "G_i_paths": [],
+  "total_query_budget": 64,
+  "methods": [
+    "llm_direct"
+  ],
+  "profile": "ec2",
+  "params": {
+    "rounds": 10,
+    "repair_iterations": 30,
+    "repair_population": 30,
+    "localization_top_k": 3,
+    "matlab_timeout": 300,
+    "time_limit_s": 1800.0,
+    "ceclass_traces_per_class": 1,
+    "localization_top_k_ratio": 0.3
+  },
+  "heldout": {
+    "random": 100,
+    "ceclass": 100,
+    "seed": 910241,
+    "k_gen": 8
+  },
+  "config": "experiments/frozen/restless_deepstl_rw145/instances/DeepSTL-0011__gpt-5.6-sol__t0/config.json",
+  "initial_traces": false,
+  "requirement_id": "DeepSTL-REQ-0009"
+}

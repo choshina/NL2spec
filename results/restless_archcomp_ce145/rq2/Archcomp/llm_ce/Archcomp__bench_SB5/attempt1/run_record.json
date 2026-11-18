@@ -1,0 +1,725 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": true,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "responsibility",
+    "responsibility_enabled": true,
+    "self_coefficient_enabled": true
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": true,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "responsibility",
+      "responsibility_enabled": true,
+      "self_coefficient_enabled": true
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [],
+    "ceclass_class_limit": 10,
+    "ceclass_k": 1,
+    "ceclass_schedule": "refine",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "",
+    "derived_signal_definitions": {},
+    "discrete_signals": [],
+    "domain_config": {
+      "boolean_signals": [],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": false,
+          "max": 20.0,
+          "min": 0.0,
+          "source": "b1",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 20.0,
+          "min": 0.0,
+          "source": "b2",
+          "static": false
+        }
+      ],
+      "time_end": 24.0,
+      "time_start": 0.0,
+      "time_step": 0.2
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_archcomp_ce145",
+    "fairness_check": {
+      "allowed": {
+        "llm_ce": [
+          "repair_backend"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_archcomp_ce145/_stage0/heldout/Archcomp__bench_SB5",
+    "initial_trace_ids": [],
+    "k_gen": 12,
+    "k_gen_init": 12,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "sgrl",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "b1": [
+        0.0,
+        20.0
+      ],
+      "b2": [
+        0.0,
+        20.0
+      ]
+    },
+    "signals": [
+      "b1",
+      "b2"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 24.0,
+    "time_start": 0.0,
+    "time_step": 0.2,
+    "total_query_budget": 64,
+    "type_priority": true
+  },
+  "config_hash": "4f525012f25d0c48f1ecce053e1478ac8c6d8522e33b2097e5986ef818105b2a",
+  "cost": {
+    "candidate_evaluations": 10,
+    "generated_traces": 295,
+    "oracle_queries": 24,
+    "rounds": 10,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.16129900000000008,
+      "matlab_csv_write_s": 3.4312579999999984,
+      "matlab_jobs": 113,
+      "matlab_launches": 1,
+      "matlab_startup_s": 43.78644411370556,
+      "matlab_wall_s": 342.87591859477106,
+      "python_csv_read_s": 0.12169296620413661,
+      "smt_encode_s": 211.35953400000005,
+      "solves_performed": 295,
+      "solves_requested": 295,
+      "time_grid": {
+        "actual_points": 121,
+        "actual_time_step": 0.2,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 121,
+        "original_time_step": 0.2,
+        "truncated": false
+      },
+      "z3_calls": 295,
+      "z3_sat": 295,
+      "z3_solve_s": 86.165402,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    },
+    "wall_time_s": 915.7914189730072
+  },
+  "experiment_tag": "restless_archcomp_ce145",
+  "fairness_check": {
+    "allowed": {
+      "llm_ce": [
+        "repair_backend"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 5,
+      "ast_nodes": 7,
+      "atom_count": 2,
+      "signal_count": 2,
+      "temporal_count": 4,
+      "temporal_depth": 3
+    },
+    "fault_types": [
+      "replace_and_with_eventually"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "Archcomp__bench_SB5",
+    "n_nodes": 7,
+    "reachable_edit_distance": null,
+    "source": "Archcomp",
+    "split": "test"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [],
+  "logical_run_id": "Archcomp__Archcomp__bench_SB5__llm_ce__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": true,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "responsibility",
+        "responsibility_enabled": true,
+        "self_coefficient_enabled": true
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [],
+      "ceclass_class_limit": 10,
+      "ceclass_k": 1,
+      "ceclass_schedule": "refine",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "",
+      "derived_signal_definitions": {},
+      "discrete_signals": [],
+      "domain_config": {
+        "boolean_signals": [],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": false,
+            "max": 20.0,
+            "min": 0.0,
+            "source": "b1",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 20.0,
+            "min": 0.0,
+            "source": "b2",
+            "static": false
+          }
+        ],
+        "time_end": 24.0,
+        "time_start": 0.0,
+        "time_step": 0.2
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_archcomp_ce145",
+      "fairness_check": {
+        "allowed": {
+          "llm_ce": [
+            "repair_backend"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_archcomp_ce145/_stage0/heldout/Archcomp__bench_SB5",
+      "initial_trace_ids": [],
+      "k_gen": 12,
+      "k_gen_init": 12,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "sgrl",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "b1": [
+          0.0,
+          20.0
+        ],
+        "b2": [
+          0.0,
+          20.0
+        ]
+      },
+      "signals": [
+        "b1",
+        "b2"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 24.0,
+      "time_start": 0.0,
+      "time_step": 0.2,
+      "total_query_budget": 64,
+      "type_priority": true
+    },
+    "edits": [
+      {
+        "edit": "replace_and_with_eventually",
+        "faulty_node": "n1",
+        "faulty_path": "root.child",
+        "faulty_subformula": "AND[EVENTUALLY I=[0,2][GLOBALLY I=[0,1][b1 <= 9]],GLOBALLY I=[1,5][b2 >= 9]]",
+        "oracle_path": "root.child",
+        "oracle_subformula": "EVENTUALLY I=[0,2][OR[NOT[GLOBALLY I=[0,1][b1 >= 9]],GLOBALLY I=[1,5][b2 >= 9]]]"
+      }
+    ],
+    "fault_nodes": [
+      "n1"
+    ],
+    "fault_types": [
+      "replace_and_with_eventually"
+    ],
+    "faulty_formula": "GLOBALLY I=[0,17][AND[EVENTUALLY I=[0,2][GLOBALLY I=[0,1][b1 <= 9]],GLOBALLY I=[1,5][b2 >= 9]]]",
+    "formula_row": 1,
+    "gold_formula": "GLOBALLY I=[0,17][EVENTUALLY I=[0,2][OR[NOT[GLOBALLY I=[0,1][b1 >= 9]],GLOBALLY I=[1,5][b2 >= 9]]]]",
+    "in_scope": false,
+    "instance_id": "Archcomp__bench_SB5",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "llm_ce",
+    "num_faults": 1,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "llm_ce",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 24,
+    "Q_requested": 295,
+    "Q_star": null,
+    "atoms_preserved": 1.0,
+    "candidate_pool": [],
+    "candidate_pool_equivalence": {},
+    "canonical_exact": false,
+    "edits_applied": 0,
+    "equivalence": {
+      "method": "smt",
+      "time_s": 0.13097416691016406,
+      "verdict": "not_equivalent"
+    },
+    "exact": false,
+    "final_formula": "GLOBALLY I=[0,17][AND[EVENTUALLY I=[0,2][GLOBALLY I=[0,1][b1 <= 9]],GLOBALLY I=[1,5][b2 >= 9]]]",
+    "first_success_round": null,
+    "fitness_evals_star": null,
+    "fitness_evals_total": 10,
+    "heldout_bool_agree": 0.53,
+    "heldout_sign_agree": 0.515,
+    "observed_trace_set": {
+      "boolean_agreement": 0.73125,
+      "edits_skipped_by_type": 0,
+      "edits_trialled_total": 0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 2,
+        "queries": 2,
+        "round": 1,
+        "schedule": "refine"
+      },
+      "first_gate": null,
+      "gate_expansions": [],
+      "heldout_bool_agree": 0.53,
+      "heldout_count": 200,
+      "heldout_incomplete": false,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.515,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 5.46247319491125,
+      "robustness_sign_agreement": 0.73125,
+      "trace_count": 160
+    },
+    "plausible": false,
+    "pool_contains_equivalent": false,
+    "q_censored": true,
+    "repaired_formula": "GLOBALLY I=[0,17][AND[EVENTUALLY I=[0,2][GLOBALLY I=[0,1][b1 <= 9]],GLOBALLY I=[1,5][b2 >= 9]]]",
+    "search": {
+      "completed": 10,
+      "process_failures": 0,
+      "started": 10,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "smt",
+      "result": "not_equivalent",
+      "time_s": 0.13097416691016406,
+      "timeout": false,
+      "verdict": "not_equivalent"
+    },
+    "status": "not_repaired",
+    "ted_to_initial": 0,
+    "ted_to_oracle": 4,
+    "time_s": {
+      "labelling": 29.312077408423647,
+      "other": 15.798945135320537,
+      "search": 533.4460034370422,
+      "tracegen": 342.873586904956
+    },
+    "train_accuracy": 0.73125,
+    "training_consistent": false,
+    "wall_time_s": 915.7898090570234
+  },
+  "rounds": [
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 3,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 4,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 5,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 6,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 7,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 8,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 9,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 1,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 10,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "Archcomp__Archcomp__bench_SB5__llm_ce__seed0__4f525012f25d__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 1,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 2,
+      "search_completed": 1,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 3,
+      "search_completed": 1,
+      "search_log": "round_03/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 4,
+      "search_completed": 1,
+      "search_log": "round_04/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 5,
+      "search_completed": 1,
+      "search_log": "round_05/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 6,
+      "search_completed": 1,
+      "search_log": "round_06/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 7,
+      "search_completed": 1,
+      "search_log": "round_07/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 8,
+      "search_completed": 1,
+      "search_log": "round_08/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 9,
+      "search_completed": 1,
+      "search_log": "round_09/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 1,
+      "round": 10,
+      "search_completed": 1,
+      "search_log": "round_10/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "not_repaired",
+  "trace_metrics": {
+    "avg_num_signals": 2.0,
+    "avg_trace_length": 121.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 0,
+    "num_generated": 295,
+    "num_oracle_queried": 24,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 24,
+    "time_disambiguation_s": 0.0,
+    "time_s": {
+      "labelling": 29.312077408423647,
+      "other": 15.798945135320537,
+      "search": 533.4460034370422,
+      "tracegen": 342.873586904956
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.16129900000000008,
+      "matlab_csv_write_s": 3.4312579999999984,
+      "matlab_jobs": 113,
+      "matlab_launches": 1,
+      "matlab_startup_s": 43.78644411370556,
+      "matlab_wall_s": 342.87591859477106,
+      "python_csv_read_s": 0.12169296620413661,
+      "smt_encode_s": 211.35953400000005,
+      "solves_performed": 295,
+      "solves_requested": 295,
+      "time_grid": {
+        "actual_points": 121,
+        "actual_time_step": 0.2,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 121,
+        "original_time_step": 0.2,
+        "truncated": false
+      },
+      "z3_calls": 295,
+      "z3_sat": 295,
+      "z3_solve_s": 86.165402,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    }
+  },
+  "versions": {
+    "dataset_hash": "",
+    "protocol_hash": ""
+  }
+}

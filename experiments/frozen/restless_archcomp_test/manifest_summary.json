@@ -1,0 +1,34 @@
+{
+  "tag": "restless_archcomp_test",
+  "source_tag": "archcomp_v1",
+  "split": "test",
+  "instances": 12,
+  "runs": 72,
+  "methods": [
+    "llm_ce",
+    "llm_direct",
+    "no_ceclass",
+    "no_self_coeff",
+    "noloc",
+    "restless"
+  ],
+  "budgets": {
+    "Q_max": 64,
+    "B_EQ": 16,
+    "n_cls": 1,
+    "time_limit_s": 1800.0,
+    "rounds": 10,
+    "rho": 0.3
+  },
+  "per_shard": {
+    "d": 40,
+    "c": 16,
+    "a": 24,
+    "b": 16
+  },
+  "merged_from": [
+    "restless_archcomp_v2n (noloc seed 0)",
+    "restless_archcomp_ce (llm_ce)",
+    "restless_lld7_archcomp_test (llm_direct)"
+  ]
+}

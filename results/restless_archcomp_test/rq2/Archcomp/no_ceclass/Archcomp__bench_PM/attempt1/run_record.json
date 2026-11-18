@@ -1,0 +1,697 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": true,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "responsibility",
+    "responsibility_enabled": true,
+    "self_coefficient_enabled": true
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": true,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "responsibility",
+      "responsibility_enabled": true,
+      "self_coefficient_enabled": true
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [],
+    "ceclass_class_limit": 10,
+    "ceclass_k": 1,
+    "ceclass_schedule": "none",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "",
+    "derived_signal_definitions": {},
+    "discrete_signals": [
+      "paceCount"
+    ],
+    "domain_config": {
+      "boolean_signals": [],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": true,
+          "max": 20.0,
+          "min": 0.0,
+          "source": "paceCount",
+          "static": false
+        }
+      ],
+      "time_end": 10.0,
+      "time_start": 0.0,
+      "time_step": 0.01
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_archcomp_test",
+    "fairness_check": {
+      "allowed": {
+        "no_ceclass": [
+          "ceclass_schedule"
+        ],
+        "no_self_coeff": [
+          "repair_localization_self_coefficient_cap"
+        ],
+        "noloc": [
+          "repair_localization"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_archcomp_test/_stage0/heldout/Archcomp__bench_PM",
+    "initial_trace_ids": [],
+    "k_gen": 12,
+    "k_gen_init": 12,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "sgrl",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "paceCount": [
+        0.0,
+        20.0
+      ]
+    },
+    "signals": [
+      "paceCount"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 10.0,
+    "time_start": 0.0,
+    "time_step": 0.01,
+    "total_query_budget": 64
+  },
+  "config_hash": "c18d64b0cb00887ea10598cf3a0c4a0d92efe83940627c528e57c0a567399c76",
+  "cost": {
+    "candidate_evaluations": 1800,
+    "generated_traces": 48,
+    "oracle_queries": 28,
+    "rounds": 3,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.06172600000000001,
+      "matlab_csv_write_s": 0.9135199999999999,
+      "matlab_jobs": 6,
+      "matlab_launches": 1,
+      "matlab_startup_s": 35.024031880998265,
+      "matlab_wall_s": 33.779240335017676,
+      "python_csv_read_s": 0.16060095399734564,
+      "smt_encode_s": 7.426619,
+      "solves_performed": 48,
+      "solves_requested": 48,
+      "time_grid": {
+        "actual_points": 1001,
+        "actual_time_step": 0.01,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 1001,
+        "original_time_step": 0.01,
+        "truncated": false
+      },
+      "z3_calls": 48,
+      "z3_sat": 48,
+      "z3_solve_s": 4.662788000000001,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    },
+    "wall_time_s": 46.65739118299098
+  },
+  "experiment_tag": "restless_archcomp_test",
+  "fairness_check": {
+    "allowed": {
+      "no_ceclass": [
+        "ceclass_schedule"
+      ],
+      "no_self_coeff": [
+        "repair_localization_self_coefficient_cap"
+      ],
+      "noloc": [
+        "repair_localization"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 3,
+      "ast_nodes": 4,
+      "atom_count": 2,
+      "signal_count": 1,
+      "temporal_count": 1,
+      "temporal_depth": 1
+    },
+    "fault_types": [
+      "replace_always_with_and"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "Archcomp__bench_PM",
+    "n_nodes": 4,
+    "reachable_edit_distance": null,
+    "source": "Archcomp",
+    "split": "test"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [
+    {
+      "fault_ranks": {
+        "n0": 2
+      },
+      "fault_recall_in_slice": 1.0,
+      "initial_gate_edit_candidates": 27,
+      "initial_gate_reduction_ratio": 0.0,
+      "mutation_attempts_reported": 27,
+      "positive_muse_attempts": 9,
+      "ranking": [
+        {
+          "best_operator": "flip_direction",
+          "edit_score": 0.2333333333,
+          "evidence": 0.4666666667,
+          "muse": 0.0,
+          "node_id": "n2",
+          "node_type": "PROP",
+          "path": "root/child/left",
+          "rank": 1,
+          "report_rank": 4
+        },
+        {
+          "best_operator": "flip_temporal",
+          "edit_score": 1.6333333333,
+          "evidence": 0.2666666667,
+          "muse": 0.75,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 2,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": 1.1333333333,
+          "evidence": 0.2666666667,
+          "muse": 0.5,
+          "node_id": "n1",
+          "node_type": "AND",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 2
+        }
+      ],
+      "repair_slice": [
+        "n2",
+        "n0",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_01/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 1,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": false,
+      "top3_hit": true,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {
+        "n0": 1
+      },
+      "fault_recall_in_slice": 1.0,
+      "initial_gate_edit_candidates": 23,
+      "initial_gate_reduction_ratio": 0.0,
+      "mutation_attempts_reported": 50,
+      "positive_muse_attempts": 6,
+      "ranking": [
+        {
+          "best_operator": "sink_temporal_left",
+          "edit_score": 0.7759259259,
+          "evidence": 0.5518518519,
+          "muse": 0.25,
+          "node_id": "n0",
+          "node_type": "EVENTUALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": -0.2462962963,
+          "evidence": 0.5074074074,
+          "muse": -0.25,
+          "node_id": "n1",
+          "node_type": "AND",
+          "path": "root/child",
+          "rank": 2,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": 0.4502314815,
+          "evidence": 0.400462963,
+          "muse": 0.125,
+          "node_id": "n2",
+          "node_type": "PROP",
+          "path": "root/child/left",
+          "rank": 3,
+          "report_rank": 2
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n1",
+        "n2"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_02/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 2,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": true,
+      "top3_hit": true,
+      "top5_hit": true
+    }
+  ],
+  "logical_run_id": "Archcomp__Archcomp__bench_PM__no_ceclass__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": true,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "responsibility",
+        "responsibility_enabled": true,
+        "self_coefficient_enabled": true
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [],
+      "ceclass_class_limit": 10,
+      "ceclass_k": 1,
+      "ceclass_schedule": "none",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "",
+      "derived_signal_definitions": {},
+      "discrete_signals": [
+        "paceCount"
+      ],
+      "domain_config": {
+        "boolean_signals": [],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": true,
+            "max": 20.0,
+            "min": 0.0,
+            "source": "paceCount",
+            "static": false
+          }
+        ],
+        "time_end": 10.0,
+        "time_start": 0.0,
+        "time_step": 0.01
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_archcomp_test",
+      "fairness_check": {
+        "allowed": {
+          "no_ceclass": [
+            "ceclass_schedule"
+          ],
+          "no_self_coeff": [
+            "repair_localization_self_coefficient_cap"
+          ],
+          "noloc": [
+            "repair_localization"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_archcomp_test/_stage0/heldout/Archcomp__bench_PM",
+      "initial_trace_ids": [],
+      "k_gen": 12,
+      "k_gen_init": 12,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "sgrl",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "paceCount": [
+          0.0,
+          20.0
+        ]
+      },
+      "signals": [
+        "paceCount"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 10.0,
+      "time_start": 0.0,
+      "time_step": 0.01,
+      "total_query_budget": 64
+    },
+    "edits": [
+      {
+        "edit": "replace_always_with_and",
+        "faulty_node": "n0",
+        "faulty_path": "root",
+        "faulty_subformula": "GLOBALLY I=[0,10][AND[paceCount >= 8,paceCount <= 15]]",
+        "oracle_path": "root",
+        "oracle_subformula": "AND[GLOBALLY I=[0,10][paceCount <= 15],EVENTUALLY I=[0,10][paceCount >= 8]]"
+      }
+    ],
+    "fault_nodes": [
+      "n0"
+    ],
+    "fault_types": [
+      "replace_always_with_and"
+    ],
+    "faulty_formula": "GLOBALLY I=[0,10][AND[paceCount >= 8,paceCount <= 15]]",
+    "formula_row": 1,
+    "gold_formula": "AND[GLOBALLY I=[0,10][paceCount <= 15],EVENTUALLY I=[0,10][paceCount >= 8]]",
+    "in_scope": false,
+    "instance_id": "Archcomp__bench_PM",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "no_ceclass",
+    "num_faults": 1,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "no_ceclass",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 28,
+    "Q_requested": 48,
+    "Q_star": 18,
+    "atoms_preserved": 1.0,
+    "candidate_pool": [
+      "AND[EVENTUALLY I=[0, 10][paceCount >= 8.0],GLOBALLY I=[0, 10][paceCount <= 15.0]]"
+    ],
+    "candidate_pool_equivalence": {
+      "AND[EVENTUALLY I=[0, 10][paceCount >= 8.0],GLOBALLY I=[0, 10][paceCount <= 15.0]]": "equivalent"
+    },
+    "canonical_exact": true,
+    "edits_applied": 3,
+    "equivalence": {
+      "method": "canonical_exact",
+      "time_s": 0.0,
+      "verdict": "equivalent"
+    },
+    "exact": false,
+    "final_formula": "AND[EVENTUALLY I=[0, 10][paceCount >= 8.0],GLOBALLY I=[0, 10][paceCount <= 15.0]]",
+    "first_success_round": 2,
+    "fitness_evals_star": 903,
+    "fitness_evals_total": 1800,
+    "heldout_bool_agree": 1.0,
+    "heldout_sign_agree": 0.6622516556291391,
+    "observed_trace_set": {
+      "boolean_agreement": 1.0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 3,
+        "queries": 8,
+        "round": 1,
+        "schedule": "none"
+      },
+      "first_gate": {
+        "formula_nodes": 4,
+        "gate": [
+          "root",
+          "root/child",
+          "root/child/left"
+        ],
+        "levels": 2,
+        "source": "round_01/repair_attempt_00/repair_output/first_gate.json"
+      },
+      "heldout_bool_agree": 1.0,
+      "heldout_count": 151,
+      "heldout_incomplete": true,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.6622516556291391,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.0,
+      "robustness_sign_agreement": 1.0,
+      "trace_count": 48
+    },
+    "plausible": true,
+    "pool_contains_equivalent": true,
+    "q_censored": false,
+    "repaired_formula": "AND[EVENTUALLY I=[0, 10][paceCount >= 8.0],GLOBALLY I=[0, 10][paceCount <= 15.0]]",
+    "search": {
+      "completed": 2,
+      "process_failures": 0,
+      "started": 2,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "horizon": null,
+      "method": "canonical_exact",
+      "result": "equivalent",
+      "time_s": 0.0,
+      "timeout": false
+    },
+    "status": "repaired",
+    "ted_to_initial": 3,
+    "ted_to_oracle": 4,
+    "time_s": {
+      "labelling": 6.290654762065969,
+      "other": 0.0,
+      "search": 4.062992754013976,
+      "tracegen": 33.77913914696546
+    },
+    "train_accuracy": 1.0,
+    "training_consistent": true,
+    "wall_time_s": 46.657035559008364
+  },
+  "rounds": [
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n2",
+        "n0",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.2666666667,
+        "root/child": 0.2666666667,
+        "root/child/left": 0.4666666667
+      },
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n1",
+        "n2"
+      ],
+      "node_scores": {
+        "root": 0.5518518519,
+        "root/child": 0.5074074074,
+        "root/child/left": 0.400462963
+      },
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 0,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 3,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "Archcomp__Archcomp__bench_PM__no_ceclass__seed0__c18d64b0cb00__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 900,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 2,
+      "search_completed": 1,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 869
+    },
+    {
+      "candidate_evaluations": 0,
+      "round": 3,
+      "search_completed": 0,
+      "search_log": "round_03/search_log.jsonl",
+      "search_started": 0,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "repaired",
+  "trace_metrics": {
+    "avg_num_signals": 1.0,
+    "avg_trace_length": 1001.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 0,
+    "num_generated": 48,
+    "num_oracle_queried": 28,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 28,
+    "time_disambiguation_s": 0.0,
+    "time_s": {
+      "labelling": 6.290654762065969,
+      "other": 0.0,
+      "search": 4.062992754013976,
+      "tracegen": 33.77913914696546
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.06172600000000001,
+      "matlab_csv_write_s": 0.9135199999999999,
+      "matlab_jobs": 6,
+      "matlab_launches": 1,
+      "matlab_startup_s": 35.024031880998265,
+      "matlab_wall_s": 33.779240335017676,
+      "python_csv_read_s": 0.16060095399734564,
+      "smt_encode_s": 7.426619,
+      "solves_performed": 48,
+      "solves_requested": 48,
+      "time_grid": {
+        "actual_points": 1001,
+        "actual_time_step": 0.01,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 1001,
+        "original_time_step": 0.01,
+        "truncated": false
+      },
+      "z3_calls": 48,
+      "z3_sat": 48,
+      "z3_solve_s": 4.662788000000001,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    }
+  },
+  "versions": {
+    "dataset_hash": "",
+    "protocol_hash": ""
+  }
+}

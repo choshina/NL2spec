@@ -1,0 +1,2 @@
+formula
+"G[0,15](F[0,15](dist_kitchen_counter < 4.0) ∧ dist_TV > 3.4 ∧ dist_fridge > 1.5)"

@@ -1,0 +1,62 @@
+{
+  "dataset_name": "DeepSTL",
+  "benchmark": "DeepSTL",
+  "instance_id": "DeepSTL-0004__gpt-5.6-sol__t0",
+  "source": "DeepSTL",
+  "llm_formula_csv": "experiments/frozen/deepstl_v1/instances/DeepSTL-0004__gpt-5.6-sol__t0/Incorrect_STL.csv",
+  "oracle_formula_csv": "experiments/frozen/deepstl_v1/instances/DeepSTL-0004__gpt-5.6-sol__t0/Oracle_STL.csv",
+  "formula_row": 1,
+  "oracle_formula_row": 1,
+  "signals": [
+    {
+      "source": "IiM",
+      "target": "IiM",
+      "min": 0.0,
+      "max": 2.0,
+      "discrete": false
+    },
+    {
+      "source": "eq_IiM_1",
+      "target": "eq_IiM_1",
+      "min": 0.0,
+      "max": 1.0,
+      "discrete": true
+    },
+    {
+      "source": "gPJd2",
+      "target": "gPJd2",
+      "min": 7.0,
+      "max": 9.0,
+      "discrete": false
+    },
+    {
+      "source": "yOK1BxoQ",
+      "target": "yOK1BxoQ",
+      "min": 7.0,
+      "max": 9.0,
+      "discrete": false
+    }
+  ],
+  "boolean_signals": [
+    "eq_IiM_1"
+  ],
+  "discrete_signals": [
+    "eq_IiM_1"
+  ],
+  "one_hot_groups": {},
+  "derived_signal_definitions": {
+    "eq_IiM_1": {
+      "op": "equals",
+      "left": "IiM",
+      "value": "1"
+    }
+  },
+  "time_start": 0.0,
+  "time_end": 40.0,
+  "time_step": 1.0,
+  "ceclass_k": 1,
+  "k_gen": 8,
+  "ceclass_class_limit": 5,
+  "round_trace_budget": 10,
+  "generation_mode": "ceclass"
+}

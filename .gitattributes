@@ -1,0 +1,6 @@
+# Keep experiment inputs self-contained; generated output CSVs are ignored.
+*.csv text
+
+# The inherited MATLAB sources use CRLF. Treat CR as part of the line ending
+# when checking provenance-comment-only diffs for whitespace errors.
+stl-trace-generation/STL_TO_SMT/*.m whitespace=trailing-space,space-before-tab,cr-at-eol

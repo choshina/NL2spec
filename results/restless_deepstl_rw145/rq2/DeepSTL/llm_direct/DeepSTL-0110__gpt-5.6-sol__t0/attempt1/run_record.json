@@ -1,0 +1,69 @@
+{
+  "attempt": 1,
+  "complete": true,
+  "experiment_tag": "restless_deepstl_rw145",
+  "instance": {
+    "instance_id": "DeepSTL-0110__gpt-5.6-sol__t0",
+    "source": "DeepSTL",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_run": false,
+  "meta": {
+    "instance_id": "DeepSTL-0110__gpt-5.6-sol__t0",
+    "seed": 0,
+    "source": "DeepSTL"
+  },
+  "method": "llm_direct",
+  "result": {
+    "Q": 0,
+    "Q_requested": 0,
+    "Q_star": null,
+    "candidate_pool": [
+      "GLOBALLY I=[0,40][IMPLIES[IneoEj2dF >= 3,GLOBALLY I=[76,88][o < 8.2]]]"
+    ],
+    "edits_applied": 0,
+    "equivalence": {
+      "method": "none",
+      "time_s": 33.43421112501528,
+      "verdict": "unknown"
+    },
+    "final_formula": "GLOBALLY I=[0,40][IMPLIES[IneoEj2dF >= 3,GLOBALLY I=[76,88][o < 8.2]]]",
+    "fitness_evals_star": null,
+    "fitness_evals_total": 0,
+    "observed_trace_set": {
+      "first_eq": {
+        "ce_found": false,
+        "q_to_first_ce": null,
+        "queries": 0
+      }
+    },
+    "plausible": false,
+    "semantic_equivalence": {
+      "detail": "time_end does not cover the formula horizon",
+      "method": "none",
+      "result": "unknown",
+      "time_s": 33.43421112501528,
+      "verdict": "unknown"
+    },
+    "status": "not_repaired",
+    "ted_to_initial": 3,
+    "ted_to_oracle": null,
+    "time_s": {
+      "labelling": 0.0,
+      "other": 0.5187388750491664,
+      "search": 32.915472249966115,
+      "tracegen": 0.0
+    },
+    "wall_time_s": 33.43421112501528
+  },
+  "run_id": "B3__DeepSTL-0110__gpt-5.6-sol__t0__llm_direct__seed0__attempt1",
+  "schema_version": "3.0",
+  "status": "not_repaired",
+  "trace_metrics": {
+    "num_generated": 0,
+    "num_oracle_queried": 0,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 0,
+    "time_disambiguation_s": 0.0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "uid": "STDP__stl_005",
+  "source": "STDP",
+  "family": "STDP",
+  "upstream_method": "curated",
+  "record_id": "stl_005",
+  "split": "test",
+  "cohort": "confirmed_fault",
+  "phase": "formal",
+  "experiment_tag": "restless_stdp_ce145",
+  "reachable_edit_distance": null,
+  "G_i": [],
+  "G_i_paths": [],
+  "total_query_budget": 64,
+  "methods": [
+    "llm_ce"
+  ],
+  "profile": "ec2",
+  "params": {
+    "rounds": 10,
+    "repair_iterations": 30,
+    "repair_population": 30,
+    "localization_top_k": 3,
+    "matlab_timeout": 300,
+    "time_limit_s": 1800.0,
+    "ceclass_traces_per_class": 1,
+    "localization_top_k_ratio": 0.3
+  },
+  "heldout": {
+    "random": 100,
+    "ceclass": 100,
+    "seed": 910241,
+    "k_gen": 12
+  },
+  "config": "experiments/frozen/restless_stdp_ce145/instances/STDP__stl_005/config.json",
+  "initial_traces": false,
+  "requirement_id": "STDP-REQ-005"
+}

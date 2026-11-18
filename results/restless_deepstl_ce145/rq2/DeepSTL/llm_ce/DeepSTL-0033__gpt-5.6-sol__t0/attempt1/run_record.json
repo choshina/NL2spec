@@ -1,0 +1,554 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": true,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "responsibility",
+    "responsibility_enabled": true,
+    "self_coefficient_enabled": true
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": true,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "responsibility",
+      "responsibility_enabled": true,
+      "self_coefficient_enabled": true
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [
+      "ap_u90zNNNbx_is_A"
+    ],
+    "ceclass_class_limit": 5,
+    "ceclass_k": 1,
+    "ceclass_schedule": "refine",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "derived_signal_definitions": {},
+    "discrete_signals": [
+      "ap_u90zNNNbx_is_A"
+    ],
+    "domain_config": {
+      "boolean_signals": [
+        "ap_u90zNNNbx_is_A"
+      ],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": true,
+          "max": 1.0,
+          "min": 0.0,
+          "source": "ap_u90zNNNbx_is_A",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 15.4,
+          "min": 12.6,
+          "source": "qgVt31S9a",
+          "static": false
+        }
+      ],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_deepstl_ce145",
+    "fairness_check": {
+      "allowed": {
+        "llm_ce": [
+          "repair_backend"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_deepstl_ce145/_stage0/heldout/DeepSTL-0033__gpt-5.6-sol__t0",
+    "initial_trace_ids": [],
+    "k_gen": 8,
+    "k_gen_init": 8,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "sgrl",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "ap_u90zNNNbx_is_A": [
+        0.0,
+        1.0
+      ],
+      "qgVt31S9a": [
+        12.6,
+        15.4
+      ]
+    },
+    "signals": [
+      "ap_u90zNNNbx_is_A",
+      "qgVt31S9a"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 40.0,
+    "time_start": 0.0,
+    "time_step": 1.0,
+    "total_query_budget": 64,
+    "type_priority": true,
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "config_hash": "93593ae35f7dbd7c2ba3e94f7428e5151731d40eaf04ad9599fd3092b947b4f1",
+  "cost": {
+    "candidate_evaluations": 2,
+    "generated_traces": 19,
+    "oracle_queries": 15,
+    "rounds": 2,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.077281,
+      "matlab_csv_write_s": 0.3047330000000001,
+      "matlab_jobs": 18,
+      "matlab_launches": 1,
+      "matlab_startup_s": 26.30343218797454,
+      "matlab_wall_s": 52.15338598494418,
+      "python_csv_read_s": 0.015168327139690518,
+      "smt_encode_s": 31.267117000000002,
+      "solves_performed": 19,
+      "solves_requested": 19,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 19,
+      "z3_sat": 19,
+      "z3_solve_s": 2.162131,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    },
+    "wall_time_s": 73.42020638799295
+  },
+  "experiment_tag": "restless_deepstl_ce145",
+  "fairness_check": {
+    "allowed": {
+      "llm_ce": [
+        "repair_backend"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 3,
+      "ast_nodes": 4,
+      "atom_count": 2,
+      "signal_count": 2,
+      "temporal_count": 1,
+      "temporal_depth": 1
+    },
+    "fault_types": [
+      "flip_boolean"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "DeepSTL-0033__gpt-5.6-sol__t0",
+    "n_nodes": 4,
+    "reachable_edit_distance": null,
+    "source": "DeepSTL",
+    "split": "test",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [],
+  "logical_run_id": "B3__DeepSTL-0033__gpt-5.6-sol__t0__llm_ce__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": true,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "responsibility",
+        "responsibility_enabled": true,
+        "self_coefficient_enabled": true
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [
+        "ap_u90zNNNbx_is_A"
+      ],
+      "ceclass_class_limit": 5,
+      "ceclass_k": 1,
+      "ceclass_schedule": "refine",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+      "derived_signal_definitions": {},
+      "discrete_signals": [
+        "ap_u90zNNNbx_is_A"
+      ],
+      "domain_config": {
+        "boolean_signals": [
+          "ap_u90zNNNbx_is_A"
+        ],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": true,
+            "max": 1.0,
+            "min": 0.0,
+            "source": "ap_u90zNNNbx_is_A",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 15.4,
+            "min": 12.6,
+            "source": "qgVt31S9a",
+            "static": false
+          }
+        ],
+        "time_end": 40.0,
+        "time_start": 0.0,
+        "time_step": 1.0
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_deepstl_ce145",
+      "fairness_check": {
+        "allowed": {
+          "llm_ce": [
+            "repair_backend"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_deepstl_ce145/_stage0/heldout/DeepSTL-0033__gpt-5.6-sol__t0",
+      "initial_trace_ids": [],
+      "k_gen": 8,
+      "k_gen_init": 8,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "sgrl",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "ap_u90zNNNbx_is_A": [
+          0.0,
+          1.0
+        ],
+        "qgVt31S9a": [
+          12.6,
+          15.4
+        ]
+      },
+      "signals": [
+        "ap_u90zNNNbx_is_A",
+        "qgVt31S9a"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0,
+      "total_query_budget": 64,
+      "type_priority": true,
+      "upstream_method": "gpt-5.6-sol"
+    },
+    "edits": [
+      {
+        "edit": "flip_boolean",
+        "faulty_node": "n1",
+        "faulty_path": "root.child",
+        "faulty_subformula": "OR[ap_u90zNNNbx_is_A,qgVt31S9a >= 14]",
+        "oracle_path": "root.child",
+        "oracle_subformula": "AND[ap_u90zNNNbx_is_A,qgVt31S9a >= 14]"
+      }
+    ],
+    "fault_nodes": [
+      "n1"
+    ],
+    "fault_types": [
+      "flip_boolean"
+    ],
+    "faulty_formula": "EVENTUALLY I=[14,19][OR[ap_u90zNNNbx_is_A,qgVt31S9a >= 14]]",
+    "formula_row": 1,
+    "gold_formula": "EVENTUALLY I=[14,19][AND[ap_u90zNNNbx_is_A,qgVt31S9a >= 14]]",
+    "in_scope": true,
+    "instance_id": "DeepSTL-0033__gpt-5.6-sol__t0",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "llm_ce",
+    "num_faults": 1,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "llm_ce",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 15,
+    "Q_requested": 19,
+    "Q_star": null,
+    "atoms_preserved": 1.0,
+    "candidate_pool": [
+      "EVENTUALLY I=[27,36][AND[EVENTUALLY I=[0,40][ap_u90zNNNbx_is_A],EVENTUALLY I=[0,40][qgVt31S9a >= 14]]]",
+      "EVENTUALLY I=[27,36][AND[ap_u90zNNNbx_is_A,qgVt31S9a >= 14]]"
+    ],
+    "candidate_pool_equivalence": {
+      "EVENTUALLY I=[27,36][AND[EVENTUALLY I=[0,40][ap_u90zNNNbx_is_A],EVENTUALLY I=[0,40][qgVt31S9a >= 14]]]": "unknown",
+      "EVENTUALLY I=[27,36][AND[ap_u90zNNNbx_is_A,qgVt31S9a >= 14]]": "not_equivalent"
+    },
+    "canonical_exact": false,
+    "edits_applied": 4,
+    "equivalence": {
+      "method": "none",
+      "time_s": 0.00031972990836948156,
+      "verdict": "unknown"
+    },
+    "exact": false,
+    "final_formula": "EVENTUALLY I=[27,36][AND[EVENTUALLY I=[0,40][ap_u90zNNNbx_is_A],EVENTUALLY I=[0,40][qgVt31S9a >= 14]]]",
+    "first_success_round": null,
+    "fitness_evals_star": null,
+    "fitness_evals_total": 2,
+    "heldout_bool_agree": 0.6684210526315789,
+    "heldout_sign_agree": 0.6684210526315789,
+    "observed_trace_set": {
+      "boolean_agreement": 1.0,
+      "edits_skipped_by_type": 0,
+      "edits_trialled_total": 0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 1,
+        "queries": 2,
+        "round": 1,
+        "schedule": "refine"
+      },
+      "first_gate": null,
+      "gate_expansions": [],
+      "heldout_bool_agree": 0.6684210526315789,
+      "heldout_count": 190,
+      "heldout_incomplete": true,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.6684210526315789,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.22708322050000004,
+      "robustness_sign_agreement": 1.0,
+      "trace_count": 32
+    },
+    "plausible": true,
+    "pool_contains_equivalent": false,
+    "q_censored": true,
+    "repaired_formula": "EVENTUALLY I=[27,36][AND[EVENTUALLY I=[0,40][ap_u90zNNNbx_is_A],EVENTUALLY I=[0,40][qgVt31S9a >= 14]]]",
+    "search": {
+      "completed": 1,
+      "process_failures": 0,
+      "started": 1,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "detail": "time_end does not cover the formula horizon",
+      "method": "none",
+      "result": "unknown",
+      "time_s": 0.00031972990836948156,
+      "timeout": false,
+      "verdict": "unknown"
+    },
+    "status": "plausible_only",
+    "ted_to_initial": 4,
+    "ted_to_oracle": 3,
+    "time_s": {
+      "labelling": 4.097983709885739,
+      "other": 2.5516741240862757,
+      "search": 14.490261793136597,
+      "tracegen": 52.153097553760745
+    },
+    "train_accuracy": 1.0,
+    "training_consistent": true,
+    "wall_time_s": 73.41960217698943
+  },
+  "rounds": [
+    {
+      "fitness_evals": 2,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 0,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "B3__DeepSTL-0033__gpt-5.6-sol__t0__llm_ce__seed0__93593ae35f7d__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 2,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 2
+    },
+    {
+      "candidate_evaluations": 0,
+      "round": 2,
+      "search_completed": 0,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 0,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "plausible_only",
+  "trace_metrics": {
+    "avg_num_signals": 2.0,
+    "avg_trace_length": 41.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 0,
+    "num_generated": 19,
+    "num_oracle_queried": 15,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 15,
+    "time_disambiguation_s": 0.0,
+    "time_s": {
+      "labelling": 4.097983709885739,
+      "other": 2.5516741240862757,
+      "search": 14.490261793136597,
+      "tracegen": 52.153097553760745
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.077281,
+      "matlab_csv_write_s": 0.3047330000000001,
+      "matlab_jobs": 18,
+      "matlab_launches": 1,
+      "matlab_startup_s": 26.30343218797454,
+      "matlab_wall_s": 52.15338598494418,
+      "python_csv_read_s": 0.015168327139690518,
+      "smt_encode_s": 31.267117000000002,
+      "solves_performed": 19,
+      "solves_requested": 19,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 19,
+      "z3_sat": 19,
+      "z3_solve_s": 2.162131,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    }
+  },
+  "versions": {
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb"
+  }
+}

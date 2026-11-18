@@ -1,0 +1,673 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": true,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "responsibility",
+    "responsibility_enabled": true,
+    "self_coefficient_enabled": false
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": true,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "responsibility",
+      "responsibility_enabled": true,
+      "self_coefficient_enabled": false
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [],
+    "ceclass_class_limit": 10,
+    "ceclass_k": 1,
+    "ceclass_schedule": "refine",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "",
+    "derived_signal_definitions": {},
+    "discrete_signals": [],
+    "domain_config": {
+      "boolean_signals": [],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": false,
+          "max": 10.0,
+          "min": 0.0,
+          "source": "dist_kitchen_counter",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 10.0,
+          "min": 0.0,
+          "source": "dist_coffee_table",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 10.0,
+          "min": 0.0,
+          "source": "dist_fridge",
+          "static": false
+        }
+      ],
+      "time_end": 15.0,
+      "time_start": 0.0,
+      "time_step": 1.0
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_stdp_test",
+    "fairness_check": {
+      "allowed": {
+        "no_ceclass": [
+          "ceclass_schedule"
+        ],
+        "no_self_coeff": [
+          "repair_localization_self_coefficient_cap"
+        ],
+        "noloc": [
+          "repair_localization"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_stdp_test/_stage0/heldout/STDP__stl_005",
+    "initial_trace_ids": [],
+    "k_gen": 12,
+    "k_gen_init": 12,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "sgrl",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 1,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "dist_coffee_table": [
+        0.0,
+        10.0
+      ],
+      "dist_fridge": [
+        0.0,
+        10.0
+      ],
+      "dist_kitchen_counter": [
+        0.0,
+        10.0
+      ]
+    },
+    "signals": [
+      "dist_kitchen_counter",
+      "dist_coffee_table",
+      "dist_fridge"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 15.0,
+    "time_start": 0.0,
+    "time_step": 1.0,
+    "total_query_budget": 64
+  },
+  "config_hash": "71d5d3f8e087006eb8c8392e1668378e10b56774d37775fedf1d5c899c4b46e9",
+  "cost": {
+    "candidate_evaluations": 2,
+    "generated_traces": 18,
+    "oracle_queries": 16,
+    "rounds": 2,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.08441999999999998,
+      "matlab_csv_write_s": 0.261425,
+      "matlab_jobs": 18,
+      "matlab_launches": 1,
+      "matlab_startup_s": 38.40637710497423,
+      "matlab_wall_s": 70.60452199197607,
+      "python_csv_read_s": 0.0034415290283504874,
+      "smt_encode_s": 39.343091,
+      "solves_performed": 18,
+      "solves_requested": 18,
+      "time_grid": {
+        "actual_points": 16,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 16,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 18,
+      "z3_sat": 18,
+      "z3_solve_s": 6.158342,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    },
+    "wall_time_s": 93.03381402700325
+  },
+  "experiment_tag": "restless_stdp_test",
+  "fairness_check": {
+    "allowed": {
+      "no_ceclass": [
+        "ceclass_schedule"
+      ],
+      "no_self_coeff": [
+        "repair_localization_self_coefficient_cap"
+      ],
+      "noloc": [
+        "repair_localization"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 4,
+      "ast_nodes": 8,
+      "atom_count": 3,
+      "signal_count": 3,
+      "temporal_count": 3,
+      "temporal_depth": 1
+    },
+    "fault_types": [
+      "flip_boolean",
+      "replace_eventually_with_and",
+      "replace_and_with_always"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "STDP__stl_005",
+    "n_nodes": 8,
+    "reachable_edit_distance": null,
+    "source": "STDP",
+    "split": "test"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [
+    {
+      "fault_ranks": {
+        "n0": 1,
+        "n1": 2
+      },
+      "fault_recall_in_slice": 0.6666666666666666,
+      "initial_gate_edit_candidates": 9,
+      "initial_gate_reduction_ratio": 0.0,
+      "mutation_attempts_reported": 9,
+      "positive_muse_attempts": 7,
+      "ranking": [
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": 2.2777777778,
+          "evidence": 0.5555555556,
+          "muse": 1.0,
+          "node_id": "n0",
+          "node_type": "OR",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": 2.1277777778,
+          "evidence": 0.5555555556,
+          "muse": 1.0,
+          "node_id": "n1",
+          "node_type": "EVENTUALLY",
+          "path": "root/left",
+          "rank": 2,
+          "report_rank": 4
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": 1.2777777778,
+          "evidence": 0.5555555556,
+          "muse": 0.5,
+          "node_id": "n2",
+          "node_type": "PROP",
+          "path": "root/left/child",
+          "rank": 3,
+          "report_rank": 6
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n1",
+        "n2"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_01/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 1,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": true,
+      "top3_hit": true,
+      "top5_hit": true
+    }
+  ],
+  "logical_run_id": "STDP__STDP__stl_005__no_self_coeff__seed0",
+  "meta": {
+    "benchmark": "rq3",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": true,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "responsibility",
+        "responsibility_enabled": true,
+        "self_coefficient_enabled": false
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [],
+      "ceclass_class_limit": 10,
+      "ceclass_k": 1,
+      "ceclass_schedule": "refine",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "",
+      "derived_signal_definitions": {},
+      "discrete_signals": [],
+      "domain_config": {
+        "boolean_signals": [],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": false,
+            "max": 10.0,
+            "min": 0.0,
+            "source": "dist_kitchen_counter",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 10.0,
+            "min": 0.0,
+            "source": "dist_coffee_table",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 10.0,
+            "min": 0.0,
+            "source": "dist_fridge",
+            "static": false
+          }
+        ],
+        "time_end": 15.0,
+        "time_start": 0.0,
+        "time_step": 1.0
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_stdp_test",
+      "fairness_check": {
+        "allowed": {
+          "no_ceclass": [
+            "ceclass_schedule"
+          ],
+          "no_self_coeff": [
+            "repair_localization_self_coefficient_cap"
+          ],
+          "noloc": [
+            "repair_localization"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_stdp_test/_stage0/heldout/STDP__stl_005",
+      "initial_trace_ids": [],
+      "k_gen": 12,
+      "k_gen_init": 12,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "sgrl",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 1,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "dist_coffee_table": [
+          0.0,
+          10.0
+        ],
+        "dist_fridge": [
+          0.0,
+          10.0
+        ],
+        "dist_kitchen_counter": [
+          0.0,
+          10.0
+        ]
+      },
+      "signals": [
+        "dist_kitchen_counter",
+        "dist_coffee_table",
+        "dist_fridge"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 15.0,
+      "time_start": 0.0,
+      "time_step": 1.0,
+      "total_query_budget": 64
+    },
+    "edits": [
+      {
+        "edit": "flip_boolean",
+        "faulty_node": "n0",
+        "faulty_path": "root",
+        "faulty_subformula": "OR[EVENTUALLY I=[0,15][dist_kitchen_counter < 3.4],AND[GLOBALLY I=[0,15][dist_coffee_table > 0.9],GLOBALLY I=[0,15][dist_fridge > 1.3]]]",
+        "oracle_path": "root",
+        "oracle_subformula": "AND[AND[EVENTUALLY I=[0,15][dist_kitchen_counter < 3.4],GLOBALLY I=[0,15][dist_coffee_table > 0.9]],GLOBALLY I=[0,15][dist_fridge > 1.3]]"
+      },
+      {
+        "edit": "replace_eventually_with_and",
+        "faulty_node": "n1",
+        "faulty_path": "root.left",
+        "faulty_subformula": "EVENTUALLY I=[0,15][dist_kitchen_counter < 3.4]",
+        "oracle_path": "root.left",
+        "oracle_subformula": "AND[EVENTUALLY I=[0,15][dist_kitchen_counter < 3.4],GLOBALLY I=[0,15][dist_coffee_table > 0.9]]"
+      },
+      {
+        "edit": "replace_and_with_always",
+        "faulty_node": "n3",
+        "faulty_path": "root.right",
+        "faulty_subformula": "AND[GLOBALLY I=[0,15][dist_coffee_table > 0.9],GLOBALLY I=[0,15][dist_fridge > 1.3]]",
+        "oracle_path": "root.right",
+        "oracle_subformula": "GLOBALLY I=[0,15][dist_fridge > 1.3]"
+      }
+    ],
+    "fault_nodes": [
+      "n0",
+      "n1",
+      "n3"
+    ],
+    "fault_types": [
+      "flip_boolean",
+      "replace_eventually_with_and",
+      "replace_and_with_always"
+    ],
+    "faulty_formula": "OR[EVENTUALLY I=[0,15][dist_kitchen_counter < 3.4],AND[GLOBALLY I=[0,15][dist_coffee_table > 0.9],GLOBALLY I=[0,15][dist_fridge > 1.3]]]",
+    "formula_row": 1,
+    "gold_formula": "AND[AND[EVENTUALLY I=[0,15][dist_kitchen_counter < 3.4],GLOBALLY I=[0,15][dist_coffee_table > 0.9]],GLOBALLY I=[0,15][dist_fridge > 1.3]]",
+    "in_scope": false,
+    "instance_id": "STDP__stl_005",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "no_self_coeff",
+    "num_faults": 3,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "no_self_coeff",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 16,
+    "Q_requested": 18,
+    "Q_star": 2,
+    "atoms_preserved": 1.0,
+    "candidate_pool": [
+      "AND[EVENTUALLY I=[0, 15][dist_kitchen_counter < 3.4],AND[GLOBALLY I=[0, 15][dist_coffee_table > 0.9],GLOBALLY I=[0, 15][dist_fridge > 1.3]]]"
+    ],
+    "candidate_pool_equivalence": {
+      "AND[EVENTUALLY I=[0, 15][dist_kitchen_counter < 3.4],AND[GLOBALLY I=[0, 15][dist_coffee_table > 0.9],GLOBALLY I=[0, 15][dist_fridge > 1.3]]]": "equivalent"
+    },
+    "canonical_exact": true,
+    "edits_applied": 1,
+    "equivalence": {
+      "method": "canonical_exact",
+      "time_s": 0.0,
+      "verdict": "equivalent"
+    },
+    "exact": false,
+    "final_formula": "AND[EVENTUALLY I=[0, 15][dist_kitchen_counter < 3.4],AND[GLOBALLY I=[0, 15][dist_coffee_table > 0.9],GLOBALLY I=[0, 15][dist_fridge > 1.3]]]",
+    "first_success_round": 1,
+    "fitness_evals_star": 2,
+    "fitness_evals_total": 2,
+    "heldout_bool_agree": 1.0,
+    "heldout_sign_agree": 0.9646464646464646,
+    "observed_trace_set": {
+      "boolean_agreement": 1.0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 1,
+        "queries": 2,
+        "round": 1,
+        "schedule": "refine"
+      },
+      "first_gate": {
+        "formula_nodes": 8,
+        "gate": [
+          "root",
+          "root/left",
+          "root/left/child"
+        ],
+        "levels": 1,
+        "source": "round_01/repair_attempt_00/repair_output/first_gate.json"
+      },
+      "heldout_bool_agree": 1.0,
+      "heldout_count": 198,
+      "heldout_incomplete": true,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.9646464646464646,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.0,
+      "robustness_sign_agreement": 1.0,
+      "trace_count": 32
+    },
+    "plausible": true,
+    "pool_contains_equivalent": true,
+    "q_censored": false,
+    "repaired_formula": "AND[EVENTUALLY I=[0, 15][dist_kitchen_counter < 3.4],AND[GLOBALLY I=[0, 15][dist_coffee_table > 0.9],GLOBALLY I=[0, 15][dist_fridge > 1.3]]]",
+    "search": {
+      "completed": 1,
+      "process_failures": 0,
+      "started": 1,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "horizon": null,
+      "method": "canonical_exact",
+      "result": "equivalent",
+      "time_s": 0.0,
+      "timeout": false
+    },
+    "status": "repaired",
+    "ted_to_initial": 1,
+    "ted_to_oracle": 2,
+    "time_s": {
+      "labelling": 3.3466916759789456,
+      "other": 18.30474873800995,
+      "search": 0.49536518901004456,
+      "tracegen": 70.60419970104704
+    },
+    "train_accuracy": 1.0,
+    "training_consistent": true,
+    "wall_time_s": 93.03344607001054
+  },
+  "rounds": [
+    {
+      "fitness_evals": 2,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n1",
+        "n2"
+      ],
+      "node_scores": {
+        "root": 0.5555555556,
+        "root/left": 0.5555555556,
+        "root/left/child": 0.5555555556
+      },
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 0,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "STDP__STDP__stl_005__no_self_coeff__seed0__71d5d3f8e087__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 2,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 1,
+      "training_consistent_candidates": 1
+    },
+    {
+      "candidate_evaluations": 0,
+      "round": 2,
+      "search_completed": 0,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 0,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "repaired",
+  "trace_metrics": {
+    "avg_num_signals": 3.0,
+    "avg_trace_length": 16.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 0,
+    "num_generated": 18,
+    "num_oracle_queried": 16,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 16,
+    "time_disambiguation_s": 0.0,
+    "time_s": {
+      "labelling": 3.3466916759789456,
+      "other": 18.30474873800995,
+      "search": 0.49536518901004456,
+      "tracegen": 70.60419970104704
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.08441999999999998,
+      "matlab_csv_write_s": 0.261425,
+      "matlab_jobs": 18,
+      "matlab_launches": 1,
+      "matlab_startup_s": 38.40637710497423,
+      "matlab_wall_s": 70.60452199197607,
+      "python_csv_read_s": 0.0034415290283504874,
+      "smt_encode_s": 39.343091,
+      "solves_performed": 18,
+      "solves_requested": 18,
+      "time_grid": {
+        "actual_points": 16,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 16,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 18,
+      "z3_sat": 18,
+      "z3_solve_s": 6.158342,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    }
+  },
+  "versions": {
+    "dataset_hash": "",
+    "protocol_hash": ""
+  }
+}

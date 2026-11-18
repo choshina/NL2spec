@@ -1,0 +1,4 @@
+reason,count,definition
+already_correct,48,"The generated formula is equivalent to the reference formula under the evaluation equivalence procedure."
+syntax_error_or_no_trace,2,"The formula does not parse, does not match the interface, or admits no traces for the equivalence query."
+error_outside_the_edit_scope,0,"The difference from the reference formula cannot be expressed by the permitted repair edits."

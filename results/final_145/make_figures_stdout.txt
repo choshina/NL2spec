@@ -1,0 +1,20 @@
+instances: 145; rows: 870; methods: ['llm_ce', 'llm_direct', 'no_ceclass', 'no_self_coeff', 'noloc', 'restless']
+fig_rq2
+  outcomes noloc         : correct=42.1 overfit=40.0 not plausible=17.9
+  outcomes no_self_coeff : correct=60.7 overfit=27.6 not plausible=11.7
+  outcomes restless      : correct=62.8 overfit=27.6 not plausible=9.7
+  by fault kind noloc         : local=49.4 structural=32.8
+  by fault kind no_self_coeff : local=65.4 structural=54.7
+  by fault kind restless      : local=77.8 structural=43.8
+  gate  no_self_coeff  (n=128): mean=0.720 whole formula: 25.0%
+  gate  restless       (n=128): mean=0.661 whole formula: 16.4%
+fig_rq3
+  discovery no_ceclass  after 1/2/8/16 queries: 32.4 41.4 64.8 86.2
+  discovery restless    after 1/2/8/16 queries: 26.9 55.9 80.0 88.3
+  curve no_ceclass     at 0/8/16/32/64 queries: 0.0 4.1 37.2 57.9 62.1
+  curve restless       at 0/8/16/32/64 queries: 0.0 40.0 50.3 59.3 62.8
+fig_fault_types
+  by type llm_direct    : temporal=50.0 boolean=33.3 predicate=31.6 structural=28.8 mixed=35.9
+  by type llm_ce        : temporal=46.2 boolean=33.3 predicate=52.6 structural=67.3 mixed=66.7
+  by type restless      : temporal=65.4 boolean=44.4 predicate=94.7 structural=40.4 mixed=79.5
+done -> <out>

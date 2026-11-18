@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: >-
+  Please cite this software artifact and the upstream methods used by your
+  experiment. See CITATIONS.bib and THIRD_PARTY.md for component citations.
+title: "STL Repair: Semantic Repair of Signal Temporal Logic Specifications"
+type: software
+authors:
+  - name: "Anonymous"
+abstract: >-
+  A research framework for semantic STL formula repair using responsibility-
+  guided localization, repair edits, counterexample classification, and
+  distinguishing-trace generation.
+keywords:
+  - signal temporal logic
+  - automated program repair
+  - counterexample classification
+  - specification repair
+

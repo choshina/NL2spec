@@ -1,0 +1,807 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": false,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "off",
+    "responsibility_enabled": false,
+    "self_coefficient_enabled": false
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": false,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "off",
+      "responsibility_enabled": false,
+      "self_coefficient_enabled": false
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [],
+    "ceclass_class_limit": 10,
+    "ceclass_k": 1,
+    "ceclass_schedule": "refine",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "",
+    "derived_signal_definitions": {},
+    "discrete_signals": [],
+    "domain_config": {
+      "boolean_signals": [],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": false,
+          "max": 20.0,
+          "min": 0.0,
+          "source": "b1",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 20.0,
+          "min": 0.0,
+          "source": "b2",
+          "static": false
+        }
+      ],
+      "time_end": 24.0,
+      "time_start": 0.0,
+      "time_step": 0.2
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_archcomp_v2n",
+    "fairness_check": {
+      "allowed": {
+        "noloc": [
+          "repair_localization"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_archcomp_v2n/_stage0/heldout/Archcomp__bench_SB5",
+    "initial_trace_ids": [],
+    "k_gen": 12,
+    "k_gen_init": 12,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "off",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "b1": [
+        0.0,
+        20.0
+      ],
+      "b2": [
+        0.0,
+        20.0
+      ]
+    },
+    "signals": [
+      "b1",
+      "b2"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 24.0,
+    "time_start": 0.0,
+    "time_step": 0.2,
+    "total_query_budget": 64,
+    "type_priority": true
+  },
+  "config_hash": "3199fa7ed61e0788b92b6ef459fe66591fe09119be303ead5178961973d7032c",
+  "cost": {
+    "candidate_evaluations": 7210,
+    "generated_traces": 3676,
+    "oracle_queries": 64,
+    "rounds": 9,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.12359499999999995,
+      "matlab_csv_write_s": 2.0489260000000002,
+      "matlab_jobs": 79,
+      "matlab_launches": 1,
+      "matlab_startup_s": 32.39236300583219,
+      "matlab_wall_s": 170.66501081787283,
+      "python_csv_read_s": 0.048278963775373995,
+      "smt_encode_s": 109.96440700000001,
+      "solves_performed": 94,
+      "solves_requested": 94,
+      "time_grid": {
+        "actual_points": 121,
+        "actual_time_step": 0.2,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 121,
+        "original_time_step": 0.2,
+        "truncated": false
+      },
+      "z3_calls": 94,
+      "z3_sat": 92,
+      "z3_solve_s": 28.764691999999986,
+      "z3_unknown": 0,
+      "z3_unsat": 2
+    },
+    "wall_time_s": 432.9580139829777
+  },
+  "experiment_tag": "restless_archcomp_v2n",
+  "fairness_check": {
+    "allowed": {
+      "noloc": [
+        "repair_localization"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 5,
+      "ast_nodes": 7,
+      "atom_count": 2,
+      "signal_count": 2,
+      "temporal_count": 4,
+      "temporal_depth": 3
+    },
+    "fault_types": [
+      "replace_and_with_eventually"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "Archcomp__bench_SB5",
+    "n_nodes": 7,
+    "reachable_edit_distance": null,
+    "source": "Archcomp",
+    "split": "test"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [],
+  "logical_run_id": "Archcomp__Archcomp__bench_SB5__noloc__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": false,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "off",
+        "responsibility_enabled": false,
+        "self_coefficient_enabled": false
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [],
+      "ceclass_class_limit": 10,
+      "ceclass_k": 1,
+      "ceclass_schedule": "refine",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "",
+      "derived_signal_definitions": {},
+      "discrete_signals": [],
+      "domain_config": {
+        "boolean_signals": [],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": false,
+            "max": 20.0,
+            "min": 0.0,
+            "source": "b1",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 20.0,
+            "min": 0.0,
+            "source": "b2",
+            "static": false
+          }
+        ],
+        "time_end": 24.0,
+        "time_start": 0.0,
+        "time_step": 0.2
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_archcomp_v2n",
+      "fairness_check": {
+        "allowed": {
+          "noloc": [
+            "repair_localization"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_archcomp_v2n/_stage0/heldout/Archcomp__bench_SB5",
+      "initial_trace_ids": [],
+      "k_gen": 12,
+      "k_gen_init": 12,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "off",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "b1": [
+          0.0,
+          20.0
+        ],
+        "b2": [
+          0.0,
+          20.0
+        ]
+      },
+      "signals": [
+        "b1",
+        "b2"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 24.0,
+      "time_start": 0.0,
+      "time_step": 0.2,
+      "total_query_budget": 64,
+      "type_priority": true
+    },
+    "edits": [
+      {
+        "edit": "replace_and_with_eventually",
+        "faulty_node": "n1",
+        "faulty_path": "root.child",
+        "faulty_subformula": "AND[EVENTUALLY I=[0,2][GLOBALLY I=[0,1][b1 <= 9]],GLOBALLY I=[1,5][b2 >= 9]]",
+        "oracle_path": "root.child",
+        "oracle_subformula": "EVENTUALLY I=[0,2][OR[NOT[GLOBALLY I=[0,1][b1 >= 9]],GLOBALLY I=[1,5][b2 >= 9]]]"
+      }
+    ],
+    "fault_nodes": [
+      "n1"
+    ],
+    "fault_types": [
+      "replace_and_with_eventually"
+    ],
+    "faulty_formula": "GLOBALLY I=[0,17][AND[EVENTUALLY I=[0,2][GLOBALLY I=[0,1][b1 <= 9]],GLOBALLY I=[1,5][b2 >= 9]]]",
+    "formula_row": 1,
+    "gold_formula": "GLOBALLY I=[0,17][EVENTUALLY I=[0,2][OR[NOT[GLOBALLY I=[0,1][b1 >= 9]],GLOBALLY I=[1,5][b2 >= 9]]]]",
+    "in_scope": false,
+    "instance_id": "Archcomp__bench_SB5",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "noloc",
+    "num_faults": 1,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "noloc",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 64,
+    "Q_requested": 3676,
+    "Q_star": null,
+    "atoms_preserved": 0.5,
+    "candidate_pool": [
+      "AND[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][NOT[b1 >= 9.0]]],b2 >= 9.0]",
+      "AND[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 2][GLOBALLY I=[0, 1][b1 <= 9.0]]],EVENTUALLY I=[0, 17][GLOBALLY I=[1, 5][b2 <= 9.0]]]",
+      "AND[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 1][b1 <= 9.0]],NOT[b2 <= 9.0]]",
+      "AND[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 1][b1 <= 9.0]],b2 >= 9.0]",
+      "AND[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 2][b1 <= 9.0]],EVENTUALLY I=[0, 17][NOT[b2 <= 9.0]]]",
+      "AND[EVENTUALLY I=[0, 17][NOT[b1 >= 9.0]],EVENTUALLY I=[0, 17][NOT[b2 <= 9.0]]]",
+      "AND[EVENTUALLY I=[0, 17][NOT[b1 >= 9.0]],EVENTUALLY I=[0, 17][b2 >= 9.0]]",
+      "AND[EVENTUALLY I=[0, 1][b1 <= 9.0],EVENTUALLY I=[0, 17][NOT[GLOBALLY I=[0, 1][b2 <= 9.0]]]]",
+      "AND[EVENTUALLY I=[0, 1][b1 <= 9.0],EVENTUALLY I=[0, 1][EVENTUALLY I=[0, 17][NOT[b2 <= 9.0]]]]",
+      "AND[EVENTUALLY I=[0, 2][b1 <= 9.0],EVENTUALLY I=[0, 17][b2 >= 9.0]]",
+      "AND[b2 >= 9.0,EVENTUALLY I=[0, 17][GLOBALLY I=[0, 2][NOT[b1 >= 9.0]]]]",
+      "EVENTUALLY I=[0, 17][AND[NOT[GLOBALLY I=[0, 1][b2 <= 9.0]],NOT[b1 >= 9.0]]]",
+      "EVENTUALLY I=[0, 17][AND[NOT[b1 >= 9.0],b2 >= 9.0]]",
+      "EVENTUALLY I=[0, 17][OR[EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]],b1 >= 9.0]]",
+      "EVENTUALLY I=[0, 17][OR[GLOBALLY I=[0, 2][b1 <= 9.0],GLOBALLY I=[1, 5][NOT[b2 <= 9.0]]]]",
+      "EVENTUALLY I=[0, 1][OR[EVENTUALLY I=[0, 1][b1 <= 9.0],GLOBALLY I=[0, 1][NOT[b2 >= 9.0]]]]",
+      "EVENTUALLY I=[0, 1][OR[b1 <= 9.0,EVENTUALLY I=[0, 1][GLOBALLY I=[0, 17][NOT[b2 >= 9.0]]]]]",
+      "EVENTUALLY I=[0, 2][AND[EVENTUALLY I=[0, 17][b2 >= 9.0],EVENTUALLY I=[0, 2][b1 <= 9.0]]]",
+      "EVENTUALLY I=[1, 5][OR[NOT[b2 <= 9.0],EVENTUALLY I=[0, 1][b1 <= 9.0]]]",
+      "EVENTUALLY I=[1, 5][OR[NOT[b2 >= 9.0],EVENTUALLY I=[0, 1][NOT[b1 <= 9.0]]]]",
+      "GLOBALLY I=[0, 2][GLOBALLY I=[0, 17][OR[b2 >= 9.0,NOT[b1 >= 9.0]]]]",
+      "GLOBALLY I=[1, 5][OR[EVENTUALLY I=[0, 17][b2 >= 9.0],NOT[EVENTUALLY I=[0, 17][b1 >= 9.0]]]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][NOT[b1 >= 9.0]]],GLOBALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 <= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][NOT[b1 >= 9.0]]],NOT[EVENTUALLY I=[0, 1][b2 >= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][b1 <= 9.0]],EVENTUALLY I=[0, 17][EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]]]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][b1 >= 9.0]],GLOBALLY I=[0, 17][EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]]]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][b1 >= 9.0]],GLOBALLY I=[0, 17][b2 <= 9.0]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 2][EVENTUALLY I=[0, 1][b1 <= 9.0]]],GLOBALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 >= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 2][b1 <= 9.0]],GLOBALLY I=[0, 17][GLOBALLY I=[1, 5][b2 <= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 <= 9.0]],EVENTUALLY I=[0, 1][NOT[b1 >= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 >= 9.0]],NOT[b1 >= 9.0]]",
+      "OR[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 1][b1 <= 9.0]],EVENTUALLY I=[0, 17][GLOBALLY I=[1, 5][b2 >= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 1][b1 <= 9.0]],NOT[EVENTUALLY I=[0, 1][b2 >= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 2][EVENTUALLY I=[0, 1][b1 <= 9.0]]],EVENTUALLY I=[0, 17][GLOBALLY I=[1, 5][b2 <= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][NOT[b1 <= 9.0]],b2 >= 9.0]",
+      "OR[EVENTUALLY I=[0, 17][NOT[b1 >= 9.0]],GLOBALLY I=[1, 5][b2 <= 9.0]]",
+      "OR[EVENTUALLY I=[0, 17][b1 <= 9.0],EVENTUALLY I=[0, 17][b2 <= 9.0]]",
+      "OR[EVENTUALLY I=[0, 17][b1 <= 9.0],EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][b1 <= 9.0],GLOBALLY I=[1, 5][b2 >= 9.0]]",
+      "OR[EVENTUALLY I=[0, 17][b1 >= 9.0],EVENTUALLY I=[0, 17][GLOBALLY I=[1, 5][NOT[b2 >= 9.0]]]]",
+      "OR[EVENTUALLY I=[0, 17][b1 >= 9.0],EVENTUALLY I=[0, 17][b2 <= 9.0]]",
+      "OR[EVENTUALLY I=[0, 17][b1 >= 9.0],GLOBALLY I=[0, 17][GLOBALLY I=[1, 5][b2 <= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 17][b2 >= 9.0],GLOBALLY I=[0, 17][EVENTUALLY I=[0, 2][b1 >= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 1][b1 <= 9.0],EVENTUALLY I=[1, 5][b2 >= 9.0]]",
+      "OR[EVENTUALLY I=[0, 1][b1 <= 9.0],GLOBALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 >= 9.0]]]",
+      "OR[EVENTUALLY I=[0, 1][b1 <= 9.0],NOT[EVENTUALLY I=[0, 1][b2 >= 9.0]]]",
+      "OR[GLOBALLY I=[0, 17][EVENTUALLY I=[0, 2][EVENTUALLY I=[0, 1][b1 <= 9.0]]],EVENTUALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 >= 9.0]]]",
+      "OR[GLOBALLY I=[0, 17][NOT[b1 <= 9.0]],EVENTUALLY I=[0, 17][b2 >= 9.0]]",
+      "OR[GLOBALLY I=[0, 1][b1 <= 9.0],EVENTUALLY I=[0, 1][NOT[GLOBALLY I=[0, 1][NOT[b2 <= 9.0]]]]]",
+      "OR[GLOBALLY I=[0, 1][b1 <= 9.0],GLOBALLY I=[0, 1][EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]]]]",
+      "OR[GLOBALLY I=[1, 5][b2 >= 9.0],EVENTUALLY I=[1, 5][GLOBALLY I=[0, 17][b1 <= 9.0]]]",
+      "OR[b1 <= 9.0,GLOBALLY I=[1, 5][NOT[b2 >= 9.0]]]"
+    ],
+    "candidate_pool_equivalence": {
+      "AND[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][NOT[b1 >= 9.0]]],b2 >= 9.0]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 2][GLOBALLY I=[0, 1][b1 <= 9.0]]],EVENTUALLY I=[0, 17][GLOBALLY I=[1, 5][b2 <= 9.0]]]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 1][b1 <= 9.0]],NOT[b2 <= 9.0]]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 1][b1 <= 9.0]],b2 >= 9.0]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 2][b1 <= 9.0]],EVENTUALLY I=[0, 17][NOT[b2 <= 9.0]]]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 17][NOT[b1 >= 9.0]],EVENTUALLY I=[0, 17][NOT[b2 <= 9.0]]]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 17][NOT[b1 >= 9.0]],EVENTUALLY I=[0, 17][b2 >= 9.0]]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 1][b1 <= 9.0],EVENTUALLY I=[0, 17][NOT[GLOBALLY I=[0, 1][b2 <= 9.0]]]]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 1][b1 <= 9.0],EVENTUALLY I=[0, 1][EVENTUALLY I=[0, 17][NOT[b2 <= 9.0]]]]": "not_equivalent",
+      "AND[EVENTUALLY I=[0, 2][b1 <= 9.0],EVENTUALLY I=[0, 17][b2 >= 9.0]]": "not_equivalent",
+      "AND[b2 >= 9.0,EVENTUALLY I=[0, 17][GLOBALLY I=[0, 2][NOT[b1 >= 9.0]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 17][AND[NOT[GLOBALLY I=[0, 1][b2 <= 9.0]],NOT[b1 >= 9.0]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 17][AND[NOT[b1 >= 9.0],b2 >= 9.0]]": "not_equivalent",
+      "EVENTUALLY I=[0, 17][OR[EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]],b1 >= 9.0]]": "not_equivalent",
+      "EVENTUALLY I=[0, 17][OR[GLOBALLY I=[0, 2][b1 <= 9.0],GLOBALLY I=[1, 5][NOT[b2 <= 9.0]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 1][OR[EVENTUALLY I=[0, 1][b1 <= 9.0],GLOBALLY I=[0, 1][NOT[b2 >= 9.0]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 1][OR[b1 <= 9.0,EVENTUALLY I=[0, 1][GLOBALLY I=[0, 17][NOT[b2 >= 9.0]]]]]": "not_equivalent",
+      "EVENTUALLY I=[0, 2][AND[EVENTUALLY I=[0, 17][b2 >= 9.0],EVENTUALLY I=[0, 2][b1 <= 9.0]]]": "not_equivalent",
+      "EVENTUALLY I=[1, 5][OR[NOT[b2 <= 9.0],EVENTUALLY I=[0, 1][b1 <= 9.0]]]": "not_equivalent",
+      "EVENTUALLY I=[1, 5][OR[NOT[b2 >= 9.0],EVENTUALLY I=[0, 1][NOT[b1 <= 9.0]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 2][GLOBALLY I=[0, 17][OR[b2 >= 9.0,NOT[b1 >= 9.0]]]]": "not_equivalent",
+      "GLOBALLY I=[1, 5][OR[EVENTUALLY I=[0, 17][b2 >= 9.0],NOT[EVENTUALLY I=[0, 17][b1 >= 9.0]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][NOT[b1 >= 9.0]]],GLOBALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 <= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][NOT[b1 >= 9.0]]],NOT[EVENTUALLY I=[0, 1][b2 >= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][b1 <= 9.0]],EVENTUALLY I=[0, 17][EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][b1 >= 9.0]],GLOBALLY I=[0, 17][EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 1][b1 >= 9.0]],GLOBALLY I=[0, 17][b2 <= 9.0]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 2][EVENTUALLY I=[0, 1][b1 <= 9.0]]],GLOBALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 >= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[0, 2][b1 <= 9.0]],GLOBALLY I=[0, 17][GLOBALLY I=[1, 5][b2 <= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 <= 9.0]],EVENTUALLY I=[0, 1][NOT[b1 >= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 >= 9.0]],NOT[b1 >= 9.0]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 1][b1 <= 9.0]],EVENTUALLY I=[0, 17][GLOBALLY I=[1, 5][b2 >= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 1][b1 <= 9.0]],NOT[EVENTUALLY I=[0, 1][b2 >= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][GLOBALLY I=[0, 2][EVENTUALLY I=[0, 1][b1 <= 9.0]]],EVENTUALLY I=[0, 17][GLOBALLY I=[1, 5][b2 <= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][NOT[b1 <= 9.0]],b2 >= 9.0]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][NOT[b1 >= 9.0]],GLOBALLY I=[1, 5][b2 <= 9.0]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][b1 <= 9.0],EVENTUALLY I=[0, 17][b2 <= 9.0]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][b1 <= 9.0],EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][b1 <= 9.0],GLOBALLY I=[1, 5][b2 >= 9.0]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][b1 >= 9.0],EVENTUALLY I=[0, 17][GLOBALLY I=[1, 5][NOT[b2 >= 9.0]]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][b1 >= 9.0],EVENTUALLY I=[0, 17][b2 <= 9.0]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][b1 >= 9.0],GLOBALLY I=[0, 17][GLOBALLY I=[1, 5][b2 <= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 17][b2 >= 9.0],GLOBALLY I=[0, 17][EVENTUALLY I=[0, 2][b1 >= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 1][b1 <= 9.0],EVENTUALLY I=[1, 5][b2 >= 9.0]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 1][b1 <= 9.0],GLOBALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 >= 9.0]]]": "not_equivalent",
+      "OR[EVENTUALLY I=[0, 1][b1 <= 9.0],NOT[EVENTUALLY I=[0, 1][b2 >= 9.0]]]": "not_equivalent",
+      "OR[GLOBALLY I=[0, 17][EVENTUALLY I=[0, 2][EVENTUALLY I=[0, 1][b1 <= 9.0]]],EVENTUALLY I=[0, 17][EVENTUALLY I=[1, 5][b2 >= 9.0]]]": "not_equivalent",
+      "OR[GLOBALLY I=[0, 17][NOT[b1 <= 9.0]],EVENTUALLY I=[0, 17][b2 >= 9.0]]": "not_equivalent",
+      "OR[GLOBALLY I=[0, 1][b1 <= 9.0],EVENTUALLY I=[0, 1][NOT[GLOBALLY I=[0, 1][NOT[b2 <= 9.0]]]]]": "not_equivalent",
+      "OR[GLOBALLY I=[0, 1][b1 <= 9.0],GLOBALLY I=[0, 1][EVENTUALLY I=[1, 5][NOT[b2 >= 9.0]]]]": "not_equivalent",
+      "OR[GLOBALLY I=[1, 5][b2 >= 9.0],EVENTUALLY I=[1, 5][GLOBALLY I=[0, 17][b1 <= 9.0]]]": "not_equivalent",
+      "OR[b1 <= 9.0,GLOBALLY I=[1, 5][NOT[b2 >= 9.0]]]": "not_equivalent"
+    },
+    "canonical_exact": false,
+    "edits_applied": 6,
+    "equivalence": {
+      "method": "smt",
+      "time_s": 0.10965397098334506,
+      "verdict": "not_equivalent"
+    },
+    "exact": false,
+    "final_formula": "GLOBALLY I=[0, 17][OR[GLOBALLY I=[1, 5][NOT[b2 <= 9.0]],EVENTUALLY I=[0, 2][b1 <= 9.0]]]",
+    "first_success_round": null,
+    "fitness_evals_star": null,
+    "fitness_evals_total": 7210,
+    "heldout_bool_agree": 0.93,
+    "heldout_sign_agree": 0.795,
+    "observed_trace_set": {
+      "boolean_agreement": 0.9925925925925926,
+      "edits_skipped_by_type": 0,
+      "edits_trialled_total": 0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 2,
+        "queries": 2,
+        "round": 1,
+        "schedule": "refine"
+      },
+      "first_gate": null,
+      "gate_expansions": [],
+      "heldout_bool_agree": 0.93,
+      "heldout_count": 200,
+      "heldout_incomplete": false,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.795,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.37047007752,
+      "robustness_sign_agreement": 0.9851851851851852,
+      "trace_count": 135
+    },
+    "plausible": false,
+    "pool_contains_equivalent": false,
+    "q_censored": true,
+    "repaired_formula": "GLOBALLY I=[0, 17][OR[GLOBALLY I=[1, 5][NOT[b2 <= 9.0]],EVENTUALLY I=[0, 2][b1 <= 9.0]]]",
+    "search": {
+      "completed": 9,
+      "process_failures": 0,
+      "started": 9,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "smt",
+      "result": "not_equivalent",
+      "time_s": 0.10965397098334506,
+      "timeout": false,
+      "verdict": "not_equivalent"
+    },
+    "status": "not_repaired",
+    "ted_to_initial": 6,
+    "ted_to_oracle": 6,
+    "time_s": {
+      "labelling": 137.11478486994747,
+      "other": 6.682186293066479,
+      "search": 81.77661807305412,
+      "tracegen": 170.6632309970446
+    },
+    "train_accuracy": 0.9925925926,
+    "training_consistent": false,
+    "wall_time_s": 432.95731972699286
+  },
+  "rounds": [
+    {
+      "fitness_evals": 10,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 22,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 3,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 18,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 4,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 5,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 6,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 7,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 8,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 15,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 9,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 0,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "Archcomp__Archcomp__bench_SB5__noloc__seed0__3199fa7ed61e__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 10,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 1
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 2,
+      "search_completed": 1,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 49
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 3,
+      "search_completed": 1,
+      "search_log": "round_03/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 2
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 4,
+      "search_completed": 1,
+      "search_log": "round_04/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 5,
+      "search_completed": 1,
+      "search_log": "round_05/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 6,
+      "search_completed": 1,
+      "search_log": "round_06/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 7,
+      "search_completed": 1,
+      "search_log": "round_07/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 8,
+      "search_completed": 1,
+      "search_log": "round_08/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 9,
+      "search_completed": 1,
+      "search_log": "round_09/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "not_repaired",
+  "trace_metrics": {
+    "avg_num_signals": 2.0,
+    "avg_trace_length": 121.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 8,
+    "num_generated": 3676,
+    "num_oracle_queried": 64,
+    "num_oracle_queried_disambiguation": 8,
+    "num_oracle_queried_eq": 56,
+    "time_disambiguation_s": 57.43357253074646,
+    "time_s": {
+      "labelling": 137.11478486994747,
+      "other": 6.682186293066479,
+      "search": 81.77661807305412,
+      "tracegen": 170.6632309970446
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.12359499999999995,
+      "matlab_csv_write_s": 2.0489260000000002,
+      "matlab_jobs": 79,
+      "matlab_launches": 1,
+      "matlab_startup_s": 32.39236300583219,
+      "matlab_wall_s": 170.66501081787283,
+      "python_csv_read_s": 0.048278963775373995,
+      "smt_encode_s": 109.96440700000001,
+      "solves_performed": 94,
+      "solves_requested": 94,
+      "time_grid": {
+        "actual_points": 121,
+        "actual_time_step": 0.2,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 121,
+        "original_time_step": 0.2,
+        "truncated": false
+      },
+      "z3_calls": 94,
+      "z3_sat": 92,
+      "z3_solve_s": 28.764691999999986,
+      "z3_unknown": 0,
+      "z3_unsat": 2
+    }
+  },
+  "versions": {
+    "dataset_hash": "",
+    "protocol_hash": ""
+  }
+}

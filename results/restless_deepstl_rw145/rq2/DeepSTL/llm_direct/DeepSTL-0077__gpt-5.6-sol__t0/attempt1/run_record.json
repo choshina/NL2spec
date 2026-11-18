@@ -1,0 +1,69 @@
+{
+  "attempt": 1,
+  "complete": true,
+  "experiment_tag": "restless_deepstl_rw145",
+  "instance": {
+    "instance_id": "DeepSTL-0077__gpt-5.6-sol__t0",
+    "source": "DeepSTL",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_run": false,
+  "meta": {
+    "instance_id": "DeepSTL-0077__gpt-5.6-sol__t0",
+    "seed": 0,
+    "source": "DeepSTL"
+  },
+  "method": "llm_direct",
+  "result": {
+    "Q": 0,
+    "Q_requested": 0,
+    "Q_star": null,
+    "candidate_pool": [
+      "IMPLIES[OR[aOOV > 30.8,MV2k4YO <= 61],GLOBALLY I=[0,40][y9z <= 9]]"
+    ],
+    "edits_applied": 0,
+    "equivalence": {
+      "method": "smt",
+      "time_s": 15.300974166020751,
+      "verdict": "not_equivalent"
+    },
+    "final_formula": "IMPLIES[OR[aOOV > 30.8,MV2k4YO <= 61],GLOBALLY I=[0,40][y9z <= 9]]",
+    "fitness_evals_star": null,
+    "fitness_evals_total": 0,
+    "observed_trace_set": {
+      "first_eq": {
+        "ce_found": false,
+        "q_to_first_ce": null,
+        "queries": 0
+      }
+    },
+    "plausible": false,
+    "semantic_equivalence": {
+      "detail": "",
+      "method": "smt",
+      "result": "not_equivalent",
+      "time_s": 15.300974166020751,
+      "verdict": "not_equivalent"
+    },
+    "status": "not_repaired",
+    "ted_to_initial": 2,
+    "ted_to_oracle": null,
+    "time_s": {
+      "labelling": 0.0,
+      "other": 0.518441999098286,
+      "search": 14.782532166922465,
+      "tracegen": 0.0
+    },
+    "wall_time_s": 15.300974166020751
+  },
+  "run_id": "B3__DeepSTL-0077__gpt-5.6-sol__t0__llm_direct__seed0__attempt1",
+  "schema_version": "3.0",
+  "status": "not_repaired",
+  "trace_metrics": {
+    "num_generated": 0,
+    "num_oracle_queried": 0,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 0,
+    "time_disambiguation_s": 0.0
+  }
+}

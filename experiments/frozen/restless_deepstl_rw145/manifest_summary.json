@@ -1,0 +1,24 @@
+{
+  "tag": "restless_deepstl_rw145",
+  "source_tag": "deepstl_v1",
+  "split": "all",
+  "instances": 123,
+  "runs": 123,
+  "methods": [
+    "llm_direct"
+  ],
+  "budgets": {
+    "Q_max": 64,
+    "B_EQ": 16,
+    "n_cls": 1,
+    "time_limit_s": 1800.0,
+    "rounds": 10,
+    "rho": 0.3
+  },
+  "per_shard": {
+    "c": 31,
+    "b": 35,
+    "a": 29,
+    "d": 28
+  }
+}

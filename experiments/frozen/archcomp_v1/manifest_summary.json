@@ -1,0 +1,10 @@
+{
+  "tag": "archcomp_v1",
+  "source": "Archcomp",
+  "input": "benchmarks/Archcomp/instances.jsonl",
+  "instances": 12,
+  "dev": 0,
+  "test": 12,
+  "excluded": 0,
+  "split_seed": 20260101
+}

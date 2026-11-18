@@ -1,0 +1,24 @@
+{
+  "tag": "restless_stdp_ce145",
+  "source_tag": "stdp_v1",
+  "split": "all",
+  "instances": 10,
+  "runs": 10,
+  "methods": [
+    "llm_ce"
+  ],
+  "budgets": {
+    "Q_max": 64,
+    "B_EQ": 16,
+    "n_cls": 1,
+    "time_limit_s": 1800.0,
+    "rounds": 10,
+    "rho": 0.3
+  },
+  "per_shard": {
+    "a": 3,
+    "c": 2,
+    "d": 3,
+    "b": 2
+  }
+}

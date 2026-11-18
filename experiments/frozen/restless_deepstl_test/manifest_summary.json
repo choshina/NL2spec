@@ -1,0 +1,34 @@
+{
+  "tag": "restless_deepstl_test",
+  "source_tag": "deepstl_v1",
+  "split": "test",
+  "instances": 123,
+  "runs": 738,
+  "methods": [
+    "llm_ce",
+    "llm_direct",
+    "no_ceclass",
+    "no_self_coeff",
+    "noloc",
+    "restless"
+  ],
+  "budgets": {
+    "Q_max": 64,
+    "B_EQ": 16,
+    "n_cls": 1,
+    "time_limit_s": 1800.0,
+    "rounds": 10,
+    "rho": 0.3
+  },
+  "per_shard": {
+    "c": 248,
+    "b": 280,
+    "a": 232,
+    "d": 224
+  },
+  "merged_from": [
+    "restless_deepstl_v2n (noloc seed 0)",
+    "restless_deepstl_ce (llm_ce)",
+    "restless_lld7_b3_test (llm_direct)"
+  ]
+}

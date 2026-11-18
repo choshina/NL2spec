@@ -1,0 +1,37 @@
+path	classification	upstream_matlab_counterpart
+ceclass/__init__.py	port-support-addition	
+ceclass/examples/__init__.py	port-support-addition	
+ceclass/examples/autotrans.py	port-support-addition	
+ceclass/examples/benchmark.py	port-support-addition	
+ceclass/formula/__init__.py	port-support-addition	
+ceclass/formula/converter.py	port-support-addition	
+ceclass/formula/stl_node.py	ceclass-derived-port	in_STL_Formula/ representation
+ceclass/lattice/__init__.py	port-support-addition	
+ceclass/lattice/parser.py	ceclass-derived-port	Parser.m
+ceclass/lattice/phi_graph.py	ceclass-derived-port	PhiGraph.m
+ceclass/lattice/phi_node.py	ceclass-derived-port	PhiNode.m
+ceclass/strategies/__init__.py	port-support-addition	
+ceclass/strategies/alw_mid.py	ceclass-derived-port	MyClassProblemAlwMid.m
+ceclass/strategies/base.py	ceclass-derived-port	shared MyClassProblem*.m logic
+ceclass/strategies/bfs.py	ceclass-derived-port	MyClassProblem.m strategy
+ceclass/strategies/bs_random.py	ceclass-derived-port	MyClassProblemBSRandom.m
+ceclass/strategies/long_bs.py	ceclass-derived-port	MyClassProblemLongBS.m
+ceclass/strategies/no_prune.py	ceclass-derived-port	MyClassProblemNoPrune.m
+ceclass/synthesis/__init__.py	port-support-addition	
+ceclass/synthesis/param_synth.py	ceclass-derived-port	MyParamSynthProblem.m
+ceclass/utils/__init__.py	port-support-addition	
+ceclass/utils/data.py	port-support-addition	
+ceclass/utils/stl_eval.py	port-support-addition	
+ceclass/viz/__init__.py	port-support-addition	
+ceclass/viz/landscape.py	port-support-addition	
+ceclass/viz/lattice.py	port-support-addition	
+examples/robot/gen_counterexamples.py	port-support-addition	
+examples/robot/plot_classification.py	port-support-addition	
+examples/robot/plot_counterexamples.py	port-support-addition	
+examples/robot/run_classification.py	port-support-addition	
+plot_paper_results.py	port-support-addition	
+run_paper_experiments.py	port-support-addition	
+tests/__init__.py	port-support-addition	
+tests/test_ceclass.py	port-support-addition	
+visualize_results.py	port-support-addition	
+

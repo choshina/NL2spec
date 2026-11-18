@@ -1,0 +1,36 @@
+STL Repair repository licensing notice
+======================================
+
+Copyright in original contributions remains with their respective
+contributors. This file does not grant a license to third-party code or to
+code derived from third-party projects.
+
+This repository is a composite research artifact and is not currently
+offered under one unified open-source license:
+
+1. The CE-Class-derived Python port under
+   stl-trace-generation/CE-class-C534/ is distributed under GNU GPL version
+   3. See that directory's LICENSE file.
+
+2. The Breach toolbox under stl-trace-generation/breach/ is distributed
+   under its bundled BSD-style license. Additional bundled components inside
+   Breach retain their own licenses.
+
+3. The Java backend contains code derived from BUSTLE. No explicit software
+   license was found in the identified BUSTLE upstream repository when this
+   notice was prepared. No permission to redistribute or relicense that code
+   is asserted by this file.
+
+4. stl-trace-generation/STL_TO_SMT/ contains code associated with Automatic
+   Trace Generation for Signal Temporal Logic. The local snapshot does not
+   include an upstream software license. No permission to redistribute or
+   relicense that code is asserted by this file.
+
+5. Vendored binary dependencies under libs/ retain the terms of their
+   respective copyright holders.
+
+Before publishing or redistributing the complete repository, obtain and
+record permission for items 3 and 4, or replace/remove those source snapshots.
+See THIRD_PARTY.md for source locations, academic citations, and the current
+provenance audit.
+

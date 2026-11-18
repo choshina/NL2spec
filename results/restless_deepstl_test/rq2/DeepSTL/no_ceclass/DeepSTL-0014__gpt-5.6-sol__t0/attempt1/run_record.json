@@ -1,0 +1,1051 @@
+{
+  "ablation": {
+    "distinguishing_probe_enabled": true,
+    "gate_enabled": true,
+    "gate_nodes": "top_k_levels",
+    "localization_score_mode": "responsibility",
+    "responsibility_enabled": true,
+    "self_coefficient_enabled": true
+  },
+  "attempt": 1,
+  "cohort": "confirmed_fault",
+  "complete": true,
+  "config": {
+    "G_i": [],
+    "G_i_paths": [],
+    "ablation": {
+      "distinguishing_probe_enabled": true,
+      "gate_enabled": true,
+      "gate_nodes": "top_k_levels",
+      "localization_score_mode": "responsibility",
+      "responsibility_enabled": true,
+      "self_coefficient_enabled": true
+    },
+    "active_disambiguation": true,
+    "attempt": 1,
+    "boolean_signals": [],
+    "ceclass_class_limit": 5,
+    "ceclass_k": 1,
+    "ceclass_schedule": "none",
+    "cohort": "confirmed_fault",
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "derived_signal_definitions": {},
+    "discrete_signals": [],
+    "domain_config": {
+      "boolean_signals": [],
+      "derived_signal_definitions": {},
+      "signals": [
+        {
+          "discrete": false,
+          "max": 106.7,
+          "min": 85.3,
+          "source": "eOp",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 2635.6,
+          "min": 1967.4,
+          "source": "eYKuFiLP",
+          "static": false
+        },
+        {
+          "discrete": false,
+          "max": 60.17,
+          "min": 49.230000000000004,
+          "source": "ed6",
+          "static": false
+        }
+      ],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0
+    },
+    "early_stop": false,
+    "edit_space": "structural",
+    "equiv_horizon": null,
+    "experiment_tag": "restless_deepstl_test",
+    "fairness_check": {
+      "allowed": {
+        "no_ceclass": [
+          "ceclass_schedule"
+        ],
+        "no_self_coeff": [
+          "repair_localization_self_coefficient_cap"
+        ],
+        "noloc": [
+          "repair_localization"
+        ],
+        "restless": []
+      },
+      "illegal_differences": {},
+      "passed": true,
+      "reference": "restless",
+      "seed": 0
+    },
+    "generation_mode": "ceclass",
+    "heldout_dir": "results/restless_deepstl_test/_stage0/heldout/DeepSTL-0014__gpt-5.6-sol__t0",
+    "initial_trace_ids": [],
+    "k_gen": 8,
+    "k_gen_init": 8,
+    "keep_intermediate_artifacts": false,
+    "neighborhood_stop": false,
+    "oracle_balance_traces": 0,
+    "patience": 2,
+    "phase": "formal",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+    "reachable_edit_distance": null,
+    "repair_dataset_mode": "all",
+    "repair_edit_max_budget": 1,
+    "repair_iterations": 30,
+    "repair_localization": "sgrl",
+    "repair_localization_gate": true,
+    "repair_localization_responsibility": true,
+    "repair_localization_robustness_eta": 0.0,
+    "repair_localization_self_coefficient_cap": 3,
+    "repair_localization_top_k": 3,
+    "repair_localization_top_k_ratio": 0.3,
+    "repair_population": 30,
+    "round_trace_budget": 16,
+    "rounds": 10,
+    "seed": 0,
+    "share_mode": "U",
+    "signal_bounds": {
+      "eOp": [
+        85.3,
+        106.7
+      ],
+      "eYKuFiLP": [
+        1967.4,
+        2635.6
+      ],
+      "ed6": [
+        49.230000000000004,
+        60.17
+      ]
+    },
+    "signals": [
+      "eOp",
+      "eYKuFiLP",
+      "ed6"
+    ],
+    "split": "test",
+    "static_signals": [],
+    "time_end": 40.0,
+    "time_start": 0.0,
+    "time_step": 1.0,
+    "total_query_budget": 64,
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "config_hash": "9e17ec0f34cd0b4880a6acd47730a82c6a3ed8814b678804ab133ef20c20711c",
+  "cost": {
+    "candidate_evaluations": 1802,
+    "generated_traces": 80,
+    "oracle_queries": 53,
+    "rounds": 4,
+    "timing_note": "component timings unavailable in legacy subprocess artifacts",
+    "trace_gen_stats": {
+      "interp_s": 0.076528,
+      "matlab_csv_write_s": 0.365268,
+      "matlab_jobs": 11,
+      "matlab_launches": 1,
+      "matlab_startup_s": 36.67815704502063,
+      "matlab_wall_s": 59.781673966004746,
+      "python_csv_read_s": 0.010312343976693228,
+      "smt_encode_s": 27.916598000000008,
+      "solves_performed": 80,
+      "solves_requested": 80,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 80,
+      "z3_sat": 80,
+      "z3_solve_s": 8.694135999999999,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    },
+    "wall_time_s": 83.77256580398534
+  },
+  "experiment_tag": "restless_deepstl_test",
+  "fairness_check": {
+    "allowed": {
+      "no_ceclass": [
+        "ceclass_schedule"
+      ],
+      "no_self_coeff": [
+        "repair_localization_self_coefficient_cap"
+      ],
+      "noloc": [
+        "repair_localization"
+      ],
+      "restless": []
+    },
+    "illegal_differences": {},
+    "passed": true,
+    "reference": "restless",
+    "seed": 0
+  },
+  "instance": {
+    "G_i": [],
+    "G_i_paths": [],
+    "complexity": {
+      "ast_depth": 6,
+      "ast_nodes": 14,
+      "atom_count": 5,
+      "signal_count": 3,
+      "temporal_count": 3,
+      "temporal_depth": 3
+    },
+    "fault_types": [
+      "flip_temporal",
+      "flip_boolean"
+    ],
+    "has_until": false,
+    "injected_paths": [],
+    "instance_id": "DeepSTL-0014__gpt-5.6-sol__t0",
+    "n_nodes": 14,
+    "reachable_edit_distance": null,
+    "source": "DeepSTL",
+    "split": "test",
+    "upstream_method": "gpt-5.6-sol"
+  },
+  "invalid_reason": null,
+  "invalid_run": false,
+  "localization": [
+    {
+      "fault_ranks": {
+        "n0": 1,
+        "n2": 7
+      },
+      "fault_recall_in_slice": 0.5,
+      "initial_gate_edit_candidates": 11,
+      "initial_gate_reduction_ratio": 0.5,
+      "mutation_attempts_reported": 22,
+      "positive_muse_attempts": 8,
+      "ranking": [
+        {
+          "best_operator": "flip_temporal",
+          "edit_score": 2.1695780881,
+          "evidence": 0.3391561762,
+          "muse": 1.0,
+          "node_id": "n0",
+          "node_type": "EVENTUALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "flip_temporal",
+          "edit_score": 1.6043177944,
+          "evidence": 0.2086355888,
+          "muse": 0.75,
+          "node_id": "n10",
+          "node_type": "EVENTUALLY",
+          "path": "root/child/right",
+          "rank": 2,
+          "report_rank": 2
+        },
+        {
+          "best_operator": "hoist_temporal_right",
+          "edit_score": 0.0565260294,
+          "evidence": 0.1130520587,
+          "muse": 0.0,
+          "node_id": "n1",
+          "node_type": "IMPLIES",
+          "path": "root/child",
+          "rank": 3,
+          "report_rank": 9
+        },
+        {
+          "best_operator": "flip_temporal",
+          "edit_score": 0.0386688865,
+          "evidence": 0.077337773,
+          "muse": 0.0,
+          "node_id": "n11",
+          "node_type": "GLOBALLY",
+          "path": "root/child/right/child",
+          "rank": 4,
+          "report_rank": 10
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -2.4613311135,
+          "evidence": 0.077337773,
+          "muse": -1.25,
+          "node_id": "n12",
+          "node_type": "NOT",
+          "path": "root/child/right/child/child",
+          "rank": 5,
+          "report_rank": 19
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -2.4613311135,
+          "evidence": 0.077337773,
+          "muse": -1.25,
+          "node_id": "n13",
+          "node_type": "PROP",
+          "path": "root/child/right/child/child/child",
+          "rank": 6,
+          "report_rank": 20
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": 0.5178571429,
+          "evidence": 0.0357142857,
+          "muse": 0.25,
+          "node_id": "n2",
+          "node_type": "AND",
+          "path": "root/child/left",
+          "rank": 7,
+          "report_rank": 7
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": 0.5178571429,
+          "evidence": 0.0357142857,
+          "muse": 0.25,
+          "node_id": "n7",
+          "node_type": "AND",
+          "path": "root/child/left/right",
+          "rank": 8,
+          "report_rank": 8
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": 0.0178571429,
+          "evidence": 0.0357142857,
+          "muse": 0.0,
+          "node_id": "n8",
+          "node_type": "PROP",
+          "path": "root/child/left/right/left",
+          "rank": 9,
+          "report_rank": 12
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n10",
+        "n1"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_01/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 1,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": true,
+      "top3_hit": true,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {
+        "n0": 1,
+        "n2": 4
+      },
+      "fault_recall_in_slice": 0.5,
+      "initial_gate_edit_candidates": 44,
+      "initial_gate_reduction_ratio": 0.19999999999999996,
+      "mutation_attempts_reported": 74,
+      "positive_muse_attempts": 37,
+      "ranking": [
+        {
+          "best_operator": "hoist_temporal_right",
+          "edit_score": -3.5,
+          "evidence": 1.0,
+          "muse": -2.0,
+          "node_id": "n0",
+          "node_type": "IMPLIES",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "hoist_temporal_right",
+          "edit_score": -7.822761194,
+          "evidence": 0.3544776119,
+          "muse": -4.0,
+          "node_id": "n1",
+          "node_type": "IMPLIES",
+          "path": "root/child",
+          "rank": 2,
+          "report_rank": 7
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": 0.4406543575,
+          "evidence": 0.2146420484,
+          "muse": 0.1666666667,
+          "node_id": "n10",
+          "node_type": "AND",
+          "path": "root/child/right",
+          "rank": 3,
+          "report_rank": 8
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": 1.1783230312,
+          "evidence": 0.212201618,
+          "muse": 0.6111111111,
+          "node_id": "n2",
+          "node_type": "EVENTUALLY",
+          "path": "root/child/left",
+          "rank": 4,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": -3.973880597,
+          "evidence": 0.052238806,
+          "muse": -2.0,
+          "node_id": "n11",
+          "node_type": "GLOBALLY",
+          "path": "root/child/right/child",
+          "rank": 5,
+          "report_rank": 3
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -17.973880597,
+          "evidence": 0.052238806,
+          "muse": -9.0,
+          "node_id": "n12",
+          "node_type": "NOT",
+          "path": "root/child/right/child/child",
+          "rank": 6,
+          "report_rank": 11
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -17.973880597,
+          "evidence": 0.052238806,
+          "muse": -9.0,
+          "node_id": "n13",
+          "node_type": "PROP",
+          "path": "root/child/right/child/child/child",
+          "rank": 7,
+          "report_rank": 12
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n1",
+        "n10"
+      ],
+      "repair_slice_size": 3,
+      "reports": [
+        "round_02/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 2,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": true,
+      "top3_hit": true,
+      "top5_hit": true
+    },
+    {
+      "fault_ranks": {
+        "n0": 1,
+        "n2": 8
+      },
+      "fault_recall_in_slice": 0.5,
+      "initial_gate_edit_candidates": 39,
+      "initial_gate_reduction_ratio": 0.40909090909090906,
+      "mutation_attempts_reported": 66,
+      "positive_muse_attempts": 6,
+      "ranking": [
+        {
+          "best_operator": "sink_temporal_right",
+          "edit_score": -0.2760889052,
+          "evidence": 0.781155523,
+          "muse": -0.3333333333,
+          "node_id": "n0",
+          "node_type": "GLOBALLY",
+          "path": "root",
+          "rank": 1,
+          "report_rank": 3
+        },
+        {
+          "best_operator": "hoist_temporal_right",
+          "edit_score": -1.8316444607,
+          "evidence": 0.781155523,
+          "muse": -1.1111111111,
+          "node_id": "n1",
+          "node_type": "IMPLIES",
+          "path": "root/child",
+          "rank": 2,
+          "report_rank": 12
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -0.4523809524,
+          "evidence": 0.4285714286,
+          "muse": -0.3333333333,
+          "node_id": "n8",
+          "node_type": "PROP",
+          "path": "root/child/left/right/left",
+          "rank": 3,
+          "report_rank": 5
+        },
+        {
+          "best_operator": "flip_temporal",
+          "edit_score": -2.9276626816,
+          "evidence": 0.366896859,
+          "muse": -1.5555555556,
+          "node_id": "n10",
+          "node_type": "EVENTUALLY",
+          "path": "root/child/right",
+          "rank": 4,
+          "report_rank": 14
+        },
+        {
+          "best_operator": "unwrap_temporal",
+          "edit_score": -0.8132595728,
+          "evidence": 0.1512586322,
+          "muse": -0.4444444444,
+          "node_id": "n11",
+          "node_type": "GLOBALLY",
+          "path": "root/child/right/child",
+          "rank": 5,
+          "report_rank": 9
+        },
+        {
+          "best_operator": "toggle_not",
+          "edit_score": -5.035481795,
+          "evidence": 0.1512586322,
+          "muse": -2.5555555556,
+          "node_id": "n12",
+          "node_type": "NOT",
+          "path": "root/child/right/child/child",
+          "rank": 6,
+          "report_rank": 20
+        },
+        {
+          "best_operator": "flip_direction",
+          "edit_score": -5.035481795,
+          "evidence": 0.1512586322,
+          "muse": -2.5555555556,
+          "node_id": "n13",
+          "node_type": "PROP",
+          "path": "root/child/right/child/child/child",
+          "rank": 7,
+          "report_rank": 21
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": 2.0714285714,
+          "evidence": 0.1428571429,
+          "muse": 1.0,
+          "node_id": "n2",
+          "node_type": "AND",
+          "path": "root/child/left",
+          "rank": 8,
+          "report_rank": 1
+        },
+        {
+          "best_operator": "flip_boolean",
+          "edit_score": 1.1825396825,
+          "evidence": 0.1428571429,
+          "muse": 0.5555555556,
+          "node_id": "n7",
+          "node_type": "AND",
+          "path": "root/child/left/right",
+          "rank": 9,
+          "report_rank": 2
+        }
+      ],
+      "repair_slice": [
+        "n0",
+        "n1",
+        "n8",
+        "n10"
+      ],
+      "repair_slice_size": 4,
+      "reports": [
+        "round_03/repair_attempt_00/repair_output/localization_report.csv"
+      ],
+      "round": 3,
+      "search_space_counter_basis": "localization_report rows and initial top-evidence-level gate",
+      "top1_hit": true,
+      "top3_hit": true,
+      "top5_hit": true
+    }
+  ],
+  "logical_run_id": "B3__DeepSTL-0014__gpt-5.6-sol__t0__no_ceclass__seed0",
+  "meta": {
+    "benchmark": "rq2",
+    "config": {
+      "G_i": [],
+      "G_i_paths": [],
+      "ablation": {
+        "distinguishing_probe_enabled": true,
+        "gate_enabled": true,
+        "gate_nodes": "top_k_levels",
+        "localization_score_mode": "responsibility",
+        "responsibility_enabled": true,
+        "self_coefficient_enabled": true
+      },
+      "active_disambiguation": true,
+      "attempt": 1,
+      "boolean_signals": [],
+      "ceclass_class_limit": 5,
+      "ceclass_k": 1,
+      "ceclass_schedule": "none",
+      "cohort": "confirmed_fault",
+      "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+      "derived_signal_definitions": {},
+      "discrete_signals": [],
+      "domain_config": {
+        "boolean_signals": [],
+        "derived_signal_definitions": {},
+        "signals": [
+          {
+            "discrete": false,
+            "max": 106.7,
+            "min": 85.3,
+            "source": "eOp",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 2635.6,
+            "min": 1967.4,
+            "source": "eYKuFiLP",
+            "static": false
+          },
+          {
+            "discrete": false,
+            "max": 60.17,
+            "min": 49.230000000000004,
+            "source": "ed6",
+            "static": false
+          }
+        ],
+        "time_end": 40.0,
+        "time_start": 0.0,
+        "time_step": 1.0
+      },
+      "early_stop": false,
+      "edit_space": "structural",
+      "equiv_horizon": null,
+      "experiment_tag": "restless_deepstl_test",
+      "fairness_check": {
+        "allowed": {
+          "no_ceclass": [
+            "ceclass_schedule"
+          ],
+          "no_self_coeff": [
+            "repair_localization_self_coefficient_cap"
+          ],
+          "noloc": [
+            "repair_localization"
+          ],
+          "restless": []
+        },
+        "illegal_differences": {},
+        "passed": true,
+        "reference": "restless",
+        "seed": 0
+      },
+      "generation_mode": "ceclass",
+      "heldout_dir": "results/restless_deepstl_test/_stage0/heldout/DeepSTL-0014__gpt-5.6-sol__t0",
+      "initial_trace_ids": [],
+      "k_gen": 8,
+      "k_gen_init": 8,
+      "keep_intermediate_artifacts": false,
+      "neighborhood_stop": false,
+      "oracle_balance_traces": 0,
+      "patience": 2,
+      "phase": "formal",
+      "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+      "reachable_edit_distance": null,
+      "repair_dataset_mode": "all",
+      "repair_edit_max_budget": 1,
+      "repair_iterations": 30,
+      "repair_localization": "sgrl",
+      "repair_localization_gate": true,
+      "repair_localization_responsibility": true,
+      "repair_localization_robustness_eta": 0.0,
+      "repair_localization_self_coefficient_cap": 3,
+      "repair_localization_top_k": 3,
+      "repair_localization_top_k_ratio": 0.3,
+      "repair_population": 30,
+      "round_trace_budget": 16,
+      "rounds": 10,
+      "seed": 0,
+      "share_mode": "U",
+      "signal_bounds": {
+        "eOp": [
+          85.3,
+          106.7
+        ],
+        "eYKuFiLP": [
+          1967.4,
+          2635.6
+        ],
+        "ed6": [
+          49.230000000000004,
+          60.17
+        ]
+      },
+      "signals": [
+        "eOp",
+        "eYKuFiLP",
+        "ed6"
+      ],
+      "split": "test",
+      "static_signals": [],
+      "time_end": 40.0,
+      "time_start": 0.0,
+      "time_step": 1.0,
+      "total_query_budget": 64,
+      "upstream_method": "gpt-5.6-sol"
+    },
+    "edits": [
+      {
+        "edit": "flip_temporal",
+        "faulty_node": "n0",
+        "faulty_path": "root",
+        "faulty_subformula": "EVENTUALLY I=[0,13][IMPLIES[AND[NOT[AND[eYKuFiLP > 2207,eYKuFiLP < 2396]],AND[eOp > 95,eOp <= 97]],EVENTUALLY I=[0,13][GLOBALLY I=[0,13][NOT[ed6 <= 54.7]]]]]",
+        "oracle_path": "root",
+        "oracle_subformula": "GLOBALLY I=[0,13][IMPLIES[OR[NOT[AND[eYKuFiLP > 2207,eYKuFiLP < 2396]],AND[eOp > 95,eOp <= 97]],EVENTUALLY I=[0,13][GLOBALLY I=[0,13][NOT[ed6 <= 54.7]]]]]"
+      },
+      {
+        "edit": "flip_boolean",
+        "faulty_node": "n2",
+        "faulty_path": "root.child.left",
+        "faulty_subformula": "AND[NOT[AND[eYKuFiLP > 2207,eYKuFiLP < 2396]],AND[eOp > 95,eOp <= 97]]",
+        "oracle_path": "root.child.left",
+        "oracle_subformula": "OR[NOT[AND[eYKuFiLP > 2207,eYKuFiLP < 2396]],AND[eOp > 95,eOp <= 97]]"
+      }
+    ],
+    "fault_nodes": [
+      "n0",
+      "n2"
+    ],
+    "fault_types": [
+      "flip_temporal",
+      "flip_boolean"
+    ],
+    "faulty_formula": "EVENTUALLY I=[0,13][IMPLIES[AND[NOT[AND[eYKuFiLP > 2207,eYKuFiLP < 2396]],AND[eOp > 95,eOp <= 97]],EVENTUALLY I=[0,13][GLOBALLY I=[0,13][NOT[ed6 <= 54.7]]]]]",
+    "formula_row": 1,
+    "gold_formula": "GLOBALLY I=[0,13][IMPLIES[OR[NOT[AND[eYKuFiLP > 2207,eYKuFiLP < 2396]],AND[eOp > 95,eOp <= 97]],EVENTUALLY I=[0,13][GLOBALLY I=[0,13][NOT[ed6 <= 54.7]]]]]",
+    "in_scope": true,
+    "instance_id": "DeepSTL-0014__gpt-5.6-sol__t0",
+    "mapping_basis": "faulty_formula_preorder",
+    "method": "no_ceclass",
+    "num_faults": 2,
+    "oracle_formula_row": 1,
+    "seed": 0,
+    "source": "automatic_structural_diff"
+  },
+  "method": "no_ceclass",
+  "phase": "formal",
+  "refinement": {
+    "candidate_elimination_rate": 0.0,
+    "candidate_metric_basis": "sum of prediction-equivalent neighborhood survivors before and after witness checks across probe invocations",
+    "candidate_reduction_by_probe": [],
+    "candidates_after": 0,
+    "candidates_before": 0,
+    "directions": {},
+    "discriminating_traces_found": 0,
+    "grid_fallbacks": 0,
+    "index_files": [],
+    "neighbors_generated": 0,
+    "oracle_queries_added": 0,
+    "replay_verified_batches": 0,
+    "smt_failed": 0,
+    "smt_probes": 0,
+    "smt_success": 0,
+    "triggered": false
+  },
+  "result": {
+    "Q": 53,
+    "Q_requested": 80,
+    "Q_star": 37,
+    "atoms_preserved": 1.0,
+    "candidate_pool": [
+      "GLOBALLY I=[0, 13][IMPLIES[AND[NOT[AND[eYKuFiLP > 2207.0,eYKuFiLP < 2396.0]],AND[eOp > 95.0,eOp <= 97.0]],EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[ed6 <= 54.7]]]]]",
+      "GLOBALLY I=[0, 13][IMPLIES[OR[NOT[AND[eYKuFiLP > 2207.0,eYKuFiLP < 2396.0]],AND[eOp > 95.0,eOp <= 97.0]],EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[ed6 <= 54.7]]]]]"
+    ],
+    "candidate_pool_equivalence": {
+      "GLOBALLY I=[0, 13][IMPLIES[AND[NOT[AND[eYKuFiLP > 2207.0,eYKuFiLP < 2396.0]],AND[eOp > 95.0,eOp <= 97.0]],EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[ed6 <= 54.7]]]]]": "not_equivalent",
+      "GLOBALLY I=[0, 13][IMPLIES[OR[NOT[AND[eYKuFiLP > 2207.0,eYKuFiLP < 2396.0]],AND[eOp > 95.0,eOp <= 97.0]],EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[ed6 <= 54.7]]]]]": "equivalent"
+    },
+    "canonical_exact": true,
+    "edits_applied": 2,
+    "equivalence": {
+      "method": "canonical_exact",
+      "time_s": 0.0,
+      "verdict": "equivalent"
+    },
+    "exact": false,
+    "final_formula": "GLOBALLY I=[0, 13][IMPLIES[OR[NOT[AND[eYKuFiLP > 2207.0,eYKuFiLP < 2396.0]],AND[eOp > 95.0,eOp <= 97.0]],EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[ed6 <= 54.7]]]]]",
+    "first_success_round": 3,
+    "fitness_evals_star": 904,
+    "fitness_evals_total": 1802,
+    "heldout_bool_agree": 1.0,
+    "heldout_sign_agree": 0.94,
+    "observed_trace_set": {
+      "boolean_agreement": 1.0,
+      "first_eq": {
+        "ce_found": true,
+        "kce": 1,
+        "q_to_first_ce": 12,
+        "queries": 16,
+        "round": 1,
+        "schedule": "none"
+      },
+      "first_gate": {
+        "formula_nodes": 14,
+        "gate": [
+          "root",
+          "root/child",
+          "root/child/right",
+          "root/child/right/child",
+          "root/child/right/child/child",
+          "root/child/right/child/child/child",
+          "root/child/left",
+          "root/child/left/right",
+          "root/child/left/right/left"
+        ],
+        "levels": 5,
+        "source": "round_01/repair_attempt_00/repair_output/first_gate.json"
+      },
+      "heldout_bool_agree": 1.0,
+      "heldout_count": 200,
+      "heldout_incomplete": false,
+      "heldout_protocol": "respstl_v1_heldout_100_100",
+      "heldout_sign_agree": 0.94,
+      "name": "accumulated_generated_traces",
+      "robustness_mae": 0.0,
+      "robustness_sign_agreement": 1.0,
+      "trace_count": 64
+    },
+    "plausible": true,
+    "pool_contains_equivalent": true,
+    "q_censored": false,
+    "repaired_formula": "GLOBALLY I=[0, 13][IMPLIES[OR[NOT[AND[eYKuFiLP > 2207.0,eYKuFiLP < 2396.0]],AND[eOp > 95.0,eOp <= 97.0]],EVENTUALLY I=[0, 13][GLOBALLY I=[0, 13][NOT[ed6 <= 54.7]]]]]",
+    "search": {
+      "completed": 3,
+      "process_failures": 0,
+      "started": 3,
+      "state": "executed"
+    },
+    "semantic_equivalence": {
+      "horizon": null,
+      "method": "canonical_exact",
+      "result": "equivalent",
+      "time_s": 0.0,
+      "timeout": false
+    },
+    "status": "repaired",
+    "ted_to_initial": 2,
+    "ted_to_oracle": 0,
+    "time_s": {
+      "labelling": 8.74433654602035,
+      "other": 0.0,
+      "search": 13.63184061399079,
+      "tracegen": 59.7815018860274
+    },
+    "train_accuracy": 1.0,
+    "training_consistent": true,
+    "wall_time_s": 83.77223379400675
+  },
+  "rounds": [
+    {
+      "fitness_evals": 2,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n10",
+        "n1"
+      ],
+      "node_scores": {
+        "root": 0.3391561762,
+        "root/child": 0.1130520587,
+        "root/child/left": 0.0357142857,
+        "root/child/left/right": 0.0357142857,
+        "root/child/left/right/left": 0.0357142857,
+        "root/child/right": 0.2086355888,
+        "root/child/right/child": 0.077337773,
+        "root/child/right/child/child": 0.077337773,
+        "root/child/right/child/child/child": 0.077337773
+      },
+      "round": 1,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n1",
+        "n10"
+      ],
+      "node_scores": {
+        "root": 1.0,
+        "root/child": 0.3544776119,
+        "root/child/left": 0.212201618,
+        "root/child/right": 0.2146420484,
+        "root/child/right/child": 0.052238806,
+        "root/child/right/child/child": 0.052238806,
+        "root/child/right/child/child/child": 0.052238806
+      },
+      "round": 2,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 900,
+      "gate_expansions": 0,
+      "gate_nodes": [
+        "n0",
+        "n1",
+        "n8",
+        "n10"
+      ],
+      "node_scores": {
+        "root": 0.781155523,
+        "root/child": 0.781155523,
+        "root/child/left": 0.1428571429,
+        "root/child/left/right": 0.1428571429,
+        "root/child/left/right/left": 0.4285714286,
+        "root/child/right": 0.366896859,
+        "root/child/right/child": 0.1512586322,
+        "root/child/right/child/child": 0.1512586322,
+        "root/child/right/child/child/child": 0.1512586322
+      },
+      "round": 3,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    },
+    {
+      "fitness_evals": 0,
+      "gate_expansions": 0,
+      "gate_nodes": [],
+      "node_scores": {},
+      "round": 4,
+      "time_s": {
+        "labelling": null,
+        "other": null,
+        "search": null,
+        "tracegen": null
+      },
+      "traces_labelled": 16,
+      "traces_requested": 16
+    }
+  ],
+  "run_id": "B3__DeepSTL-0014__gpt-5.6-sol__t0__no_ceclass__seed0__9e17ec0f34cd__a1",
+  "schema_version": "3.0",
+  "search": [
+    {
+      "candidate_evaluations": 2,
+      "round": 1,
+      "search_completed": 1,
+      "search_log": "round_01/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 1,
+      "training_consistent_candidates": 1
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 2,
+      "search_completed": 1,
+      "search_log": "round_02/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 0
+    },
+    {
+      "candidate_evaluations": 900,
+      "round": 3,
+      "search_completed": 1,
+      "search_log": "round_03/search_log.jsonl",
+      "search_started": 1,
+      "sgrl_guided_candidates": 870,
+      "training_consistent_candidates": 870
+    },
+    {
+      "candidate_evaluations": 0,
+      "round": 4,
+      "search_completed": 0,
+      "search_log": "round_04/search_log.jsonl",
+      "search_started": 0,
+      "sgrl_guided_candidates": 0,
+      "training_consistent_candidates": 0
+    }
+  ],
+  "status": "repaired",
+  "trace_metrics": {
+    "avg_num_signals": 3.0,
+    "avg_trace_length": 41.0,
+    "counting_basis": "generated candidates; unique oracle-labelled trace contents; repeated monitor replay excluded",
+    "num_discriminating": 0,
+    "num_generated": 80,
+    "num_oracle_queried": 53,
+    "num_oracle_queried_disambiguation": 0,
+    "num_oracle_queried_eq": 53,
+    "time_disambiguation_s": 0.0,
+    "time_s": {
+      "labelling": 8.74433654602035,
+      "other": 0.0,
+      "search": 13.63184061399079,
+      "tracegen": 59.7815018860274
+    },
+    "trace_gen_stats": {
+      "interp_s": 0.076528,
+      "matlab_csv_write_s": 0.365268,
+      "matlab_jobs": 11,
+      "matlab_launches": 1,
+      "matlab_startup_s": 36.67815704502063,
+      "matlab_wall_s": 59.781673966004746,
+      "python_csv_read_s": 0.010312343976693228,
+      "smt_encode_s": 27.916598000000008,
+      "solves_performed": 80,
+      "solves_requested": 80,
+      "time_grid": {
+        "actual_points": 41,
+        "actual_time_step": 1.0,
+        "limited_by_interval": false,
+        "max_trace_points": 0,
+        "original_points": 41,
+        "original_time_step": 1.0,
+        "truncated": false
+      },
+      "z3_calls": 80,
+      "z3_sat": 80,
+      "z3_solve_s": 8.694135999999999,
+      "z3_unknown": 0,
+      "z3_unsat": 0
+    }
+  },
+  "versions": {
+    "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+    "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb"
+  }
+}

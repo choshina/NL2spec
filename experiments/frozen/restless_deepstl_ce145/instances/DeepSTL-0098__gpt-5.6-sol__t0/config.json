@@ -1,0 +1,62 @@
+{
+  "dataset_name": "DeepSTL",
+  "benchmark": "DeepSTL",
+  "instance_id": "DeepSTL-0098__gpt-5.6-sol__t0",
+  "source": "DeepSTL",
+  "llm_formula_csv": "experiments/frozen/deepstl_v1/instances/DeepSTL-0098__gpt-5.6-sol__t0/Incorrect_STL.csv",
+  "oracle_formula_csv": "experiments/frozen/deepstl_v1/instances/DeepSTL-0098__gpt-5.6-sol__t0/Oracle_STL.csv",
+  "formula_row": 1,
+  "oracle_formula_row": 1,
+  "signals": [
+    {
+      "source": "BYn3jLF",
+      "target": "BYn3jLF",
+      "min": -0.52,
+      "max": 1.48,
+      "discrete": false
+    },
+    {
+      "source": "Iw98N6",
+      "target": "Iw98N6",
+      "min": 1541.7,
+      "max": 1884.3,
+      "discrete": false
+    },
+    {
+      "source": "eq_iEZg6_587",
+      "target": "eq_iEZg6_587",
+      "min": 0.0,
+      "max": 1.0,
+      "discrete": true
+    },
+    {
+      "source": "iEZg6",
+      "target": "iEZg6",
+      "min": 528.3,
+      "max": 645.7,
+      "discrete": false
+    }
+  ],
+  "boolean_signals": [
+    "eq_iEZg6_587"
+  ],
+  "discrete_signals": [
+    "eq_iEZg6_587"
+  ],
+  "one_hot_groups": {},
+  "derived_signal_definitions": {
+    "eq_iEZg6_587": {
+      "op": "equals",
+      "left": "iEZg6",
+      "value": "587"
+    }
+  },
+  "time_start": 0.0,
+  "time_end": 40.0,
+  "time_step": 1.0,
+  "ceclass_k": 1,
+  "k_gen": 8,
+  "ceclass_class_limit": 5,
+  "round_trace_budget": 16,
+  "generation_mode": "ceclass"
+}

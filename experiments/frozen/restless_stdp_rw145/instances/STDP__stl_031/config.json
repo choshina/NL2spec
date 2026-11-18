@@ -1,0 +1,45 @@
+{
+  "dataset_name": "STDP",
+  "benchmark": "STDP",
+  "instance_id": "STDP__stl_031",
+  "source": "STDP",
+  "formula_row": 1,
+  "oracle_formula_row": 1,
+  "signals": [
+    {
+      "source": "dist_sofa",
+      "target": "dist_sofa",
+      "min": 0.0,
+      "max": 10.0,
+      "discrete": false
+    },
+    {
+      "source": "dist_wardrobe",
+      "target": "dist_wardrobe",
+      "min": 0.0,
+      "max": 10.0,
+      "discrete": false
+    },
+    {
+      "source": "dist_dining_table",
+      "target": "dist_dining_table",
+      "min": 0.0,
+      "max": 10.0,
+      "discrete": false
+    }
+  ],
+  "boolean_signals": [],
+  "discrete_signals": [],
+  "derived_signal_definitions": {},
+  "one_hot_groups": {},
+  "time_start": 0.0,
+  "time_end": 25.0,
+  "time_step": 1.0,
+  "ceclass_k": 1,
+  "k_gen": 12,
+  "ceclass_class_limit": 10,
+  "round_trace_budget": 16,
+  "generation_mode": "ceclass",
+  "llm_formula_csv": "experiments/frozen/stdp_v1/instances/STDP__stl_031/Incorrect_STL.csv",
+  "oracle_formula_csv": "experiments/frozen/stdp_v1/instances/STDP__stl_031/Oracle_STL.csv"
+}

@@ -1,0 +1,26 @@
+{
+  "tag": "deepstl_v1",
+  "source": "DeepSTL",
+  "input": "benchmarks/DeepSTL/instances.jsonl",
+  "phase": "formal",
+  "protocol_hash": "7d15dea6e624845ac8fe9274bd20ab1b2e3ae54827207de2f5349ccf3deacbdb",
+  "dataset_hash": "92286729d68aa1996c42ed0c094a2927c5a03a0c675080de3171a8ed58897b64",
+  "instances": 123,
+  "dev": 0,
+  "test": 123,
+  "excluded": 0,
+  "runs": 900,
+  "not_applicable": 161,
+  "per_shard": {
+    "a": 214,
+    "c": 223,
+    "d": 208,
+    "b": 255
+  },
+  "per_benchmark": {
+    "DeepSTL": 900
+  },
+  "complete_G_i": {
+    "DeepSTL": 65
+  }
+}

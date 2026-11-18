@@ -1,0 +1,64 @@
+{
+  "dataset_name": "DeepSTL",
+  "benchmark": "DeepSTL",
+  "instance_id": "DeepSTL-0013__gpt-5.6-sol__t0",
+  "source": "DeepSTL",
+  "llm_formula_csv": "experiments/frozen/deepstl_v1/instances/DeepSTL-0013__gpt-5.6-sol__t0/Incorrect_STL.csv",
+  "oracle_formula_csv": "experiments/frozen/deepstl_v1/instances/DeepSTL-0013__gpt-5.6-sol__t0/Oracle_STL.csv",
+  "formula_row": 1,
+  "oracle_formula_row": 1,
+  "signals": [
+    {
+      "source": "FZsCeCi6",
+      "target": "FZsCeCi6",
+      "min": 30.509999999999998,
+      "max": 37.29,
+      "discrete": false
+    },
+    {
+      "source": "M2c",
+      "target": "M2c",
+      "min": 34.2,
+      "max": 41.8,
+      "discrete": false
+    },
+    {
+      "source": "ap_zR8b_is_u9VKd",
+      "target": "ap_zR8b_is_u9VKd",
+      "min": 0.0,
+      "max": 1.0,
+      "discrete": true
+    },
+    {
+      "source": "eq_M2c_38",
+      "target": "eq_M2c_38",
+      "min": 0.0,
+      "max": 1.0,
+      "discrete": true
+    }
+  ],
+  "boolean_signals": [
+    "ap_zR8b_is_u9VKd",
+    "eq_M2c_38"
+  ],
+  "discrete_signals": [
+    "ap_zR8b_is_u9VKd",
+    "eq_M2c_38"
+  ],
+  "one_hot_groups": {},
+  "derived_signal_definitions": {
+    "eq_M2c_38": {
+      "op": "equals",
+      "left": "M2c",
+      "value": "38"
+    }
+  },
+  "time_start": 0.0,
+  "time_end": 40.0,
+  "time_step": 1.0,
+  "ceclass_k": 1,
+  "k_gen": 8,
+  "ceclass_class_limit": 5,
+  "round_trace_budget": 10,
+  "generation_mode": "ceclass"
+}
