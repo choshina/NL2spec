@@ -341,24 +341,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--seed-base", type=int, default=22001)
     p.add_argument("--repair-iterations", type=int, default=20)
     p.add_argument("--repair-population", type=int, default=20)
-    p.add_argument("--repair-parameter-ga-ratio", type=float, default=0.0,
-                   help="Deprecated no-op. Numeric STL constants are preserved.")
-    p.add_argument("--repair-parameter-refit", action=argparse.BooleanOptionalAction, default=False,
-                   help="Deprecated no-op. Numeric/time parameters are never refit.")
-    p.add_argument("--refit-selected-template", action=argparse.BooleanOptionalAction, default=False,
-                   help="Deprecated no-op. Selected templates are not numerically refit.")
-    p.add_argument("--repair-parameter-budget", type=int, default=50,
-                   help="Local parameter optimization budget per BUSTLE structure candidate.")
-    p.add_argument("--parameter-refit-min-traces", type=int, default=100,
-                   help="Minimum accumulated repair traces required before any GA parameter refit is enabled.")
-    p.add_argument("--parameter-phase-top-n", type=int, default=5,
-                   help="Top pool candidates used to decide whether the structure template has stabilized.")
-    p.add_argument("--parameter-phase-stability-rounds", type=int, default=3,
-                   help="Consecutive stable-template rounds required before enabling parameter refit.")
     p.add_argument("--repair-edit-max-budget", type=int, default=1,
                    help="Maximum number of repair-specific AST edits applied to one BUSTLE candidate.")
-    p.add_argument("--repair-fuzz-queue-limit", type=int, default=0,
-                   help="Maximum BUSTLE fuzz-queue size; 0 keeps every unique valid candidate.")
     p.add_argument(
         "--repair-parent-selection",
         choices=("ucb", "weighted", "tournament"),
@@ -369,13 +353,6 @@ def parse_args() -> argparse.Namespace:
             "and 'tournament' remain accepted as compatibility aliases."
         ),
     )
-    p.add_argument(
-        "--pool-selection-objective",
-        default="accuracy",
-        help=argparse.SUPPRESS,
-    )
-    p.add_argument("--active-disambiguation-max-candidates", type=int, default=2,
-                   help="Deprecated compatibility flag; active disambiguation now considers every accuracy=1 pair.")
     p.add_argument("--active-disambiguation-trace-budget", type=int, default=2,
                    help="Maximum requested active disambiguation traces per candidate pair.")
     p.add_argument(
@@ -401,12 +378,8 @@ def parse_args() -> argparse.Namespace:
                    help="Switch to multi-solution collection once |D| reaches this many repair traces.")
     p.add_argument("--multi-solution-k", type=int, default=2,
                    help="Target number of accuracy=1 candidates before active disambiguation.")
-    p.add_argument("--repair-class-focus-mode", choices=("off", "prefer", "only"), default="off",
-                   help="Prioritize or restrict one-step edits to predicates from misclassified CE-classes.")
     p.add_argument("--repair-class-focus-top-k", type=int, default=3,
                    help="Number of highest-mismatch CE-classes selected for focused repair.")
-    p.add_argument("--repair-attempts-per-round", type=int, default=1,
-                   help="Max repeated repair attempts on the current accumulated trace set.")
     p.add_argument("--repair-stop-on-perfect", action=argparse.BooleanOptionalAction, default=True,
                    help="Allow the Java BUSTLE repair loop to stop as soon as a candidate has zero misclassified traces.")
     p.add_argument("--threads", type=int, default=1)
@@ -453,7 +426,6 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--repair-localization-stagnation-window", type=int, default=10)
     p.add_argument("--repair-localization-expansion-step", type=int, default=2)
     p.add_argument("--repair-localization-ucb-beta", type=float, default=0.35)
-    p.add_argument("--repair-localization-temporal-cell-limit", type=int, default=3)
     p.add_argument("--repair-localization-self-coefficient-cap", type=int, default=3)
     p.add_argument("--repair-localization-evidence-weight", type=float, default=0.5)
     p.add_argument("--repair-localization-muse-weight", type=float, default=2.0)
@@ -497,15 +469,6 @@ def parse_args() -> argparse.Namespace:
             "'unsat' (default) is output-identical to 'off': each blocking clause only "
             "shrinks the model set, so a solve after unsat is unsat. 'nonsat' also "
             "stops on unknown (can differ from 'off'); 'off' runs all requested solves."
-        ),
-    )
-    p.add_argument(
-        "--share-round-budget", action="store_true",
-        help=(
-            "Treat round_trace_budget as a hard cap on SMT solves shared by all CE classes "
-            "and the seed fallback: class quota = ceil(remaining / classes left), unused "
-            "quota flows to later classes, fallback only gets what is left. Off by default "
-            "(original per-class budgets, which can exceed the round budget)."
         ),
     )
     p.add_argument(
@@ -575,7 +538,6 @@ def parse_args() -> argparse.Namespace:
             "the trace seed formula and of its negation (Kce = 1)."
         ),
     )
-    p.add_argument("--ceclass-max-evals", type=int, default=200)
     p.add_argument("--ceclass-traces-per-class", type=int, default=3)
     p.add_argument("--ceclass-class-limit", type=int, default=5,
                    help="Max number of covered CE-classes to expand per round.")
@@ -605,7 +567,6 @@ def parse_args() -> argparse.Namespace:
             "solutions that replay on the wrong side of current STL."
         ),
     )
-    p.add_argument("--independent-traces-per-mode", type=int, default=5)
     p.add_argument("--round-trace-budget", type=int, default=10,
                    help="Fixed total traces per round. 0 = derive from ceclass budget.")
     p.add_argument("--no-independent", action="store_true",
@@ -621,9 +582,6 @@ def parse_args() -> argparse.Namespace:
     )
     p.add_argument("--oracle-balance-traces", type=int, default=0)
     p.add_argument("--no-oracle-balance-generation", action="store_true")
-    p.add_argument("--anchor-per-class", type=int, default=1)
-    p.add_argument("--error-representatives-per-class", type=int, default=1)
-    p.add_argument("--balance-repair-labels", action="store_true")
     p.add_argument(
         "--trace-seed-formula",
         choices=("initial", "current", "uncertainty"),
@@ -1621,43 +1579,6 @@ def remove_prediction_neutral_strictness_edits(
     return bustle_print(candidate_root), accepted_predictions, reverted
 
 
-def structure_phase_status(
-    pool_eval_rows: list[dict[str, str]],
-    pool_predictions: dict[str, tuple[int, ...]],
-    top_n: int,
-) -> tuple[bool, str, int]:
-    ranked_rows = sorted(
-        [
-            row for row in pool_eval_rows
-            if row.get("balanced_accuracy") not in {"", None}
-        ],
-        key=lambda row: (
-            float(row.get("balanced_accuracy") or "-inf"),
-            float(row.get("accuracy") or "-inf"),
-            -int(row.get("formula_size") or "0"),
-            -int(row.get("first_round") or "0"),
-        ),
-        reverse=True,
-    )
-    top_rows = ranked_rows[:max(1, top_n)]
-    if not top_rows:
-        return False, "no_ranked_candidates", 0
-    signatures = {
-        formula_structure_signature(row["formula"])
-        for row in top_rows
-    }
-    if len(signatures) == 1:
-        prediction_vectors = {
-            pool_predictions[row["formula"]]
-            for row in top_rows
-            if row["formula"] in pool_predictions
-        }
-        if len(top_rows) > 1 and len(prediction_vectors) == 1:
-            return True, "top_candidates_single_structure_same_predictions", len(top_rows)
-        return True, "top_candidates_single_structure", len(top_rows)
-    return False, f"top_structures={len(signatures)}", len(top_rows)
-
-
 def formula_size(formula: str) -> int:
     return len(
         re.findall(
@@ -1931,11 +1852,8 @@ def run_repair_round(
         f"repairTraceMetadata={dataset_dir / 'trace_metadata.csv'}",
         f"repairIterations={args.repair_iterations}",
         f"repairPopulation={args.repair_population}",
-        f"repairParameterGaRatio={args.repair_parameter_ga_ratio}",
-        f"repairRefitParameters={str(args.repair_parameter_refit).lower()}",
         f"repairStopOnPerfect={str(args.repair_stop_on_perfect).lower()}",
         f"repairMultiSolutionMinTraces={max(0, args.multi_solution_min_traces)}",
-        f"repairParameterBudget={max(1, args.repair_parameter_budget)}",
         f"repairTimeStep={args.time_step}",
         f"repairEditMaxBudget={max(1, args.repair_edit_max_budget)}",
         f"repairParentSelection={args.repair_parent_selection}",
@@ -4167,19 +4085,6 @@ def main() -> None:
         "oracle_trace_fingerprints": set(),
         "oracle_trace_lengths": [],
     }
-    requested_numeric_repair = (
-        bool(args.repair_parameter_refit)
-        or bool(args.refit_selected_template)
-        or float(args.repair_parameter_ga_ratio) != 0.0
-    )
-    args.repair_parameter_ga_ratio = 0.0
-    args.repair_parameter_refit = False
-    args.refit_selected_template = False
-    if requested_numeric_repair:
-        print(
-            "Numeric repair disabled: preserving all STL numeric constants exactly.",
-            flush=True,
-        )
     args.signal_names = parse_signal_names(args.signal_names)
     args.boolean_signal_names = parse_boolean_signal_names(
         args.boolean_signal_names,
@@ -4397,9 +4302,6 @@ def main() -> None:
             "anchor_size": anchor_size,
         }
     }
-    parameter_phase_active = False
-    structure_fixed_rounds = 0
-    structure_fixed_reason = "not_checked"
     trace_seed_uncertain_formula = current_formula
     summary_rows: list[dict[str, str]] = []
 
@@ -5056,21 +4958,11 @@ def main() -> None:
             )
             continue
 
-        enough_traces_for_refit = len(repair_rows) >= max(0, args.parameter_refit_min_traces)
-        round_parameter_refit_enabled = bool(parameter_phase_active and enough_traces_for_refit)
-        round_repair_phase = "parameter" if round_parameter_refit_enabled else "structure"
         fixed_budget_mode = len(repair_rows) >= max(0, args.multi_solution_min_traces)
         early_stop_on_accuracy1 = not fixed_budget_mode
         multi_solution_mode = fixed_budget_mode
         round_solution_mode = "fixed_budget" if fixed_budget_mode else "accuracy1_early_stop"
-        print(
-            f"  repair phase: {round_repair_phase} "
-            f"(solution_mode={round_solution_mode}, "
-            f"structure_fixed_rounds={structure_fixed_rounds}, "
-            f"repair_traces={len(repair_rows)}/{args.parameter_refit_min_traces}, "
-            f"reason={structure_fixed_reason})",
-            flush=True,
-        )
+        print(f"  solution_mode={round_solution_mode}, repair_traces={len(repair_rows)}", flush=True)
 
         target_new_candidates = max(1, args.repair_population)
         # One CE-class round performs exactly one Java repair call.  Older
@@ -5105,7 +4997,6 @@ def main() -> None:
                 # is found, then move that formula into the next trace round.
                 local_args.repair_population = max(2, budget)
             local_args.repair_stop_on_perfect = bool(args.repair_stop_on_perfect and early_stop_on_accuracy1)
-            local_args.repair_parameter_refit = bool(args.repair_parameter_refit and round_parameter_refit_enabled)
             attempt_dir = round_dir / f"repair_attempt_{attempt_index:02d}"
             attempt_formula_csv = attempt_dir / "input_formula.csv"
             write_single_formula_csv(attempt_formula_csv, parent_formula)
@@ -5446,59 +5337,6 @@ def main() -> None:
         phi_new = best_pool_formula
         if best_uncertainty_formula is not None:
             trace_seed_uncertain_formula = best_uncertainty_formula
-        refit_selected_formula = ""
-        if (
-            phi_new is not None
-            and args.refit_selected_template
-            and args.repair_parameter_refit
-            and round_parameter_refit_enabled
-        ):
-            refit_args = copy.copy(args)
-            refit_args.repair_mode = "baseline"
-            refit_args.repair_iterations = 1
-            refit_args.repair_population = 1
-            refit_args.repair_parameter_refit = True
-            refit_attempt_dir = round_dir / f"repair_attempt_{attempt_index:02d}"
-            refit_formula_csv = refit_attempt_dir / "input_formula.csv"
-            write_single_formula_csv(refit_formula_csv, phi_new)
-            ensure_eval_dataset(refit_args, repair_dataset_dir, repair_rows, repair_labels)
-            try:
-                refit_csv = run_repair_round(
-                    refit_args,
-                    round_index,
-                    attempt_index,
-                    refit_formula_csv,
-                    repair_dataset_dir,
-                    round_dir,
-                )
-                refit_candidates = repair_csv_candidate_formula_scores(refit_args, refit_csv)
-            except subprocess.CalledProcessError as exc:
-                failure_path = refit_attempt_dir / "repair_process_failure.txt"
-                failure_path.parent.mkdir(parents=True, exist_ok=True)
-                failure_path.write_text(
-                    "Selected-template parameter refit failed.\n\n"
-                    + _format_process_failure(exc)
-                )
-                control_progress(
-                    f"ERROR round={round_index} refit_attempt={attempt_index} "
-                    f"exit={exc.returncode} detail={failure_path}"
-                )
-                refit_candidates = []
-            if refit_candidates:
-                refit_selected_formula, _ = refit_candidates[0]
-                if refit_selected_formula:
-                    phi_new = refit_selected_formula
-                    entry = repair_pool.setdefault(
-                        phi_new,
-                        {
-                            "formula": phi_new,
-                            "first_round": round_index,
-                            "last_selected_round": round_index - 1,
-                            "selected_count": 0,
-                            "anchor_size": anchor_size,
-                        },
-                    )
-            attempt_index += 1
         round_pred_new: list[int] = []
         global_accuracy_new = float("-inf")
         global_ba_new = float("-inf")
@@ -5560,24 +5398,6 @@ def main() -> None:
                 if row["formula"] == phi_new:
                     row["selected"] = "true"
 
-        fixed_this_round, fixed_reason, fixed_top_count = structure_phase_status(
-            pool_eval_rows,
-            pool_predictions,
-            args.parameter_phase_top_n,
-        )
-        if fixed_this_round:
-            structure_fixed_rounds += 1
-            structure_fixed_reason = fixed_reason
-        else:
-            structure_fixed_rounds = 0
-            structure_fixed_reason = fixed_reason
-        if (
-            not parameter_phase_active
-            and structure_fixed_rounds >= max(1, args.parameter_phase_stability_rounds)
-        ):
-            parameter_phase_active = True
-            structure_fixed_reason = f"{structure_fixed_reason};parameter_phase_enabled"
-
         write_dict_csv(
             round_dir / "repair_pool_summary.csv",
             pool_eval_rows,
@@ -5621,15 +5441,6 @@ def main() -> None:
             "old_balanced_accuracy": f"{global_ba_old:.10f}",
             "new_accuracy": "" if phi_new is None else f"{global_accuracy_new:.10f}",
             "new_balanced_accuracy": "" if phi_new is None else f"{global_ba_new:.10f}",
-            "refit_selected_template": str(bool(args.refit_selected_template and args.repair_parameter_refit and round_parameter_refit_enabled)).lower(),
-            "parameter_refit_enabled": str(round_parameter_refit_enabled).lower(),
-            "parameter_refit_min_traces": str(args.parameter_refit_min_traces),
-            "refit_selected_formula": refit_selected_formula,
-            "repair_phase": round_repair_phase,
-            "parameter_phase_active_next": str(parameter_phase_active).lower(),
-            "structure_fixed_rounds": str(structure_fixed_rounds),
-            "structure_fixed_reason": structure_fixed_reason,
-            "structure_fixed_top_count": str(fixed_top_count),
             "round_source_accuracy": f"{round_accuracy_source:.10f}",
             "round_categories": category_summary,
             "independent_consistent": "false",
